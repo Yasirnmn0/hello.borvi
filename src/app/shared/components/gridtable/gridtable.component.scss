@@ -1,0 +1,319 @@
+/* gridtable.component.scss */
+@use "../../../../assets/scss/abstracts/mixins" as *;
+@use "../../../../assets/scss/abstracts/_variables" as *;
+
+// Bold headings utility class
+.bold-heading {
+  font-weight: 700 !important;
+  font-family: Inter, sans-serif;
+}
+
+.custom-grid {
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .k-grid-header {
+    background-color: $purple-accent;
+    
+    .k-header {
+      font-weight: 700;
+      color: $white-color;
+      text-align: center;
+      padding: 12px 8px;
+      font-size: 14px;
+      font-family: Inter, sans-serif;
+
+      @include respond(mobile) {
+        padding: 8px 4px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .k-grid-content {
+    .k-grid-table {
+      td {
+        vertical-align: middle;
+        padding: 12px 8px;
+        font-size: 14px;
+        color: $header;
+        border-bottom: 1px solid #e9ecef;
+
+        @include respond(mobile) {
+          padding: 8px 4px;
+          font-size: 12px;
+        }
+      }
+
+      tr {
+        transition: background-color 0.2s ease;
+        
+        &:nth-child(even) {
+          background-color: #f8f9fa;
+        }
+        
+        &:hover {
+          background-color: #e9ecef;
+        }
+      }
+    }
+  }
+}
+
+.k-textbox {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.k-pager-wrap {
+  margin-top: 20px;
+  background-color: $white-color;
+  padding: 12px;
+}
+
+// Status Styling
+.status-active {
+  color: $success-color !important;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba($success-color, 0.1);
+  display: inline-block;
+  text-align: center;
+}
+
+.status-inactive {
+  color: $warn-color !important;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba($warn-color, 0.1);
+  display: inline-block;
+  text-align: center;
+}
+
+// Actions Header
+.actions-header {
+  text-align: center;
+  width: 100%;
+}
+
+// Checkbox Styling
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.row-checkbox {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  
+  @include respond(mobile) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// Mini FAB Buttons for Edit/Delete
+.action-buttons-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+
+  @include respond(mobile) {
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+}
+
+.mini-fab-btn {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  @include respond(mobile) {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &.edit-btn {
+    background: $purple-accent !important;
+
+    &:hover {
+      background: #4500e2 !important;
+    }
+  }
+
+  &.delete-btn {
+    background: #dc3545 !important;
+
+    &:hover {
+      background: #c82333 !important;
+    }
+  }
+
+  // Disabled state
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    
+    &:hover {
+      transform: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+
+  @include respond(mobile) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// Center content in all grid cells for consistency
+::ng-deep kendo-grid .k-grid-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+// Responsive table adjustments
+@include respond(tablet) {
+  .custom-grid {
+    .k-grid-header .k-header {
+      font-size: 13px;
+      padding: 10px 6px;
+    }
+    
+    .k-grid-content .k-grid-table td {
+      font-size: 13px;
+      padding: 10px 6px;
+    }
+  }
+}
+
+@include respond(mobile) {
+  .custom-grid {
+    font-size: 12px;
+    
+    .k-grid-header .k-header {
+      font-size: 12px;
+      padding: 8px 4px;
+    }
+    
+    .k-grid-content .k-grid-table td {
+      font-size: 12px;
+      padding: 8px 4px;
+    }
+  }
+  
+  .action-buttons-row {
+    flex-direction: row;
+    gap: 4px;
+  }
+}
+
+// Ensure proper text alignment for different content types
+.k-grid-table {
+  td {
+    // Center align for actions and checkboxes
+    &:last-child {
+      text-align: center;
+    }
+    
+    // Left align for text content
+    &:not(:last-child) {
+      text-align: left;
+      
+      @include respond(mobile) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Status column specific styling
+.status-column {
+  text-align: center !important;
+  font-weight: 600;
+}
+
+// Loading state
+.k-grid {
+  &.k-loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+// Selection styling
+.k-grid {
+  .k-state-selected {
+    background-color: rgba($purple-accent, 0.1) !important;
+    color: $header;
+  }
+}
+
+// Ensure proper contrast and accessibility
+.k-grid {
+  .k-grid-content {
+    .k-grid-table {
+      tr {
+        &:focus {
+          outline: 2px solid $purple-accent;
+          outline-offset: -2px;
+        }
+      }
+    }
+  }
+}
+
+// Pagination improvements
+.k-pager-wrap {
+  .k-pager-numbers {
+    .k-state-selected {
+      background-color: $purple-accent;
+      color: $white-color;
+    }
+    
+    button {
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      
+      &:hover:not(.k-state-selected) {
+        background-color: #e9ecef;
+      }
+    }
+  }
+}

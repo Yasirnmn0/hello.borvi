@@ -1,0 +1,236 @@
+<footer
+  class="bg-[#032b16] text-slate-300 font-sans border-t border-emerald-900/40 w-full"
+>
+  <app-container className="py-8 lg:py-8">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr_1fr] gap-10 lg:gap-6 items-start text-center"
+    >
+      <div class="flex flex-col justify-center item-center space-y-5 w-full">
+        <a routerLink="/" class="items-center justify-center">
+          <app-image
+            src="/images/Borvi-logo1.png"
+            alt="Borvi Logo"
+            [width]="150"
+            [height]="20"
+            className="object-contain"
+          />
+        </a>
+        <p class="text-[14px] leading-relaxed text-slate-300/90">
+          {{ "footer.tagline" | translate }}
+        </p>
+        <div class="flex items-center gap-4 pt-2 text-slate-300 justify-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=61590630387445"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition-colors p-1 bg-white/5 rounded-lg hover:bg-white/10"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition-colors p-1 bg-white/5 rounded-lg hover:bg-white/10"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition-colors p-1 bg-white/5 rounded-lg hover:bg-white/10"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+              />
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/borvi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition-colors p-1 bg-white/5 rounded-lg hover:bg-white/10"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center lg:border-l lg:border-emerald-900/40 w-full h-full"
+      >
+        <h4 class="text-white text-[16px] font-semibold tracking-wide mb-5">
+          {{ "footer.quickLinks" | translate }}
+        </h4>
+        <ul class="space-y-3 text-[14px] font-medium w-full">
+          @for (item of footerNavItems; track item.titleKey) {
+            <li>
+              <a
+                [routerLink]="item.href"
+                class="hover:text-emerald-400 transition-colors block text-slate-300/80"
+              >
+                {{ item.titleKey | translate }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div
+        class="flex flex-col items-center lg:border-l lg:border-emerald-900/40 w-full h-full"
+      >
+        <h4 class="text-white text-[16px] font-semibold tracking-wide mb-5">
+          {{ "footer.categories" | translate }}
+        </h4>
+        <ul class="space-y-3 text-[14px] font-medium w-full">
+          @for (cat of categoryItems; track cat.titleKey) {
+            <li>
+              <a
+                [routerLink]="cat.href"
+                class="hover:text-emerald-400 transition-colors block text-slate-300/80"
+              >
+                {{ cat.titleKey | translate }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div
+        class="flex flex-col items-center lg:border-l lg:border-emerald-900/40 w-full h-full space-y-5"
+      >
+        <h4 class="text-white text-[16px] font-semibold tracking-wide mb-2">
+          {{ "footer.contact" | translate }}
+        </h4>
+        <div class="space-y-4 text-[14px] flex flex-col items-center w-full">
+          <div class="flex items-center gap-3 justify-center w-full">
+            <svg
+              lucidePhone
+              class="w-4 h-4 text-emerald-400 shrink-0"
+              [size]="16"
+            ></svg>
+            <span class="text-slate-300/90 font-medium">+49 176 61653937</span>
+          </div>
+          <div class="flex items-center gap-3 justify-center w-full">
+            <svg
+              lucideMail
+              class="w-4 h-4 text-emerald-400 shrink-0"
+              [size]="16"
+            ></svg>
+            <span class="text-slate-300/90 font-medium"
+              >hello&#64;borvi.de</span
+            >
+          </div>
+          <div class="flex items-start gap-3 justify-center text-center w-full">
+            <svg
+              lucideMapPin
+              class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"
+              [size]="16"
+            ></svg>
+            <span class="text-slate-300/90 leading-normal font-medium">
+              Maisach 82216 / München,
+              <br />
+              Deutschland
+            </span>
+          </div>
+          <div class="flex items-center gap-3 justify-center w-full">
+            <svg
+              lucideClock
+              class="w-4 h-4 text-emerald-400 shrink-0"
+              [size]="16"
+            ></svg>
+            <span class="text-slate-300/90 font-medium">{{
+              "footer.hours" | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center">
+        <div
+          class="w-full max-w-[280px] sm:max-w-full h-32 md:h-36 rounded-2xl overflow-hidden border border-emerald-800/60 shadow-lg bg-emerald-950"
+        >
+          <iframe
+            title="Germany Office Location"
+            src="https://maps.google.com/maps?q=Maisach%2082216,%20München,%20Germany&t=&z=13&ie=UTF-8&iwloc=&output=embed"
+            class="w-full h-full object-cover filter grayscale opacity-75 contrast-[1.1]"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 pt-6 border-t border-emerald-900/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-slate-400 font-medium text-center"
+    >
+      <p>{{ "footer.copyright" | translate }}</p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        @for (item of supportItems; track item.href; let last = $last) {
+          <a
+            [routerLink]="item.href"
+            class="hover:text-emerald-400 transition-colors"
+          >
+            {{ item.titleKey | translate }}
+          </a>
+
+          @if (!last) {
+            <span class="text-emerald-900/60">|</span>
+          }
+        }
+      </div>
+    </div>
+  </app-container>
+</footer>

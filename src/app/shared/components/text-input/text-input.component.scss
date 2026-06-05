@@ -1,0 +1,41 @@
+::ng-deep {
+  /* Remove background and padding from filled input fields */
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Remove all padding from hint and error wrappers */
+  .mat-mdc-form-field-hint-wrapper,
+  .mat-mdc-form-field-error-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    //animation: _mat-form-field-subscript-animation 0ms cubic-bezier(0.55, 0, 0.55, 0.2);
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Set width for all Material form fields */
+  .mat-mdc-form-field {
+    width: 100% !important;
+  }
+
+  /* More specific selector for mat-input type */
+  .mat-mdc-form-field.mat-mdc-form-field-type-mat-input {
+    width: 100% !important;
+  }
+}
+
+/* Icon styling */
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  border: none;
+  outline: none;
+}

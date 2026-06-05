@@ -1,0 +1,66 @@
+<section class="pb-16 bg-[#f6f6f6]">
+  <div class="w-full max-w-7xl mx-auto py-6">
+    <div
+      appFadeIn
+      class="bg-[#042F1A] text-white rounded-2xl p-4 md:p-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md select-none overflow-hidden"
+    >
+      <div class="flex items-center gap-4 sm:gap-6 w-full md:w-auto">
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-emerald-500/40 flex items-center justify-center"
+        >
+          <svg
+            class="w-6 h-6 sm:w-8 sm:h-8 text-white/90"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <rect x="5" y="2" width="14" height="20" rx="3" />
+            <path d="M12 18h.01" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg text-white sm:text-xl font-bold tracking-tight">
+            {{ "about.APP_SECTION.TITLE" | translate }}
+          </h3>
+          <p class="text-xs sm:text-sm text-neutral-300 mt-1 font-medium">
+            {{ "about.APP_SECTION.DESCRIPTION" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between md:justify-end gap-4 lg:gap-8 w-full md:w-auto border-t border-emerald-800/40 md:border-t-0 pt-4 md:pt-0"
+      >
+        <div class="flex items-center gap-3 sm:gap-4">
+          <app-image
+            src="/images/DownloadApp/googleplay-Eng.svg"
+            alt="Get it on Google Play"
+            [width]="135"
+            [height]="40"
+            className="h-9 sm:h-[42px] w-auto object-contain"
+          />
+          <app-image
+            src="/images/DownloadApp/Apple-Eng.svg"
+            alt="Download on the App Store"
+            [width]="135"
+            [height]="40"
+            className="h-9 sm:h-[42px] w-auto object-contain"
+          />
+        </div>
+        <div class="hidden sm:block h-10 w-[1px] bg-emerald-800/60"></div>
+        <div
+          class="bg-white p-1.5 sm:p-2 rounded-xl flex-shrink-0 shadow-inner"
+        >
+          <app-image
+            src="/images/DownloadApp/QR-Techrefi.png"
+            alt="Scan QR Code"
+            [width]="64"
+            [height]="64"
+            className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

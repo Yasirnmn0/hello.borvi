@@ -1,0 +1,51 @@
+<section class="pt-16 bg-[#f6f6f6]">
+  <app-container>
+    <div
+      appFadeIn
+      class="bg-white shadow-md border border-slate-100 rounded-[24px] px-8 py-8 md:py-10"
+    >
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 items-center"
+      >
+        @for (stat of platformStats; track stat.key) {
+          <div
+            appFadeIn
+            class="flex gap-4 px-6 pt-6 sm:pt-0 first:pt-0 lg:first:pl-4 items-center hover:-translate-y-1 transition-transform"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-[#032d22] flex items-center justify-center text-white shrink-0"
+            >
+              @switch (stat.icon) {
+                @case ("users") {
+                  <svg lucideUsers class="w-5 h-5 stroke-[2]" [size]="20"></svg>
+                }
+                @case ("search") {
+                  <svg lucideSearch class="w-5 h-5 stroke-[2]"></svg>
+                }
+                @case ("wallet") {
+                  <svg lucideWallet class="w-5 h-5 stroke-[2]"></svg>
+                }
+                @case ("shield-check") {
+                  <svg lucideShieldCheck class="w-5 h-5 stroke-[2]"></svg>
+                }
+              }
+            </div>
+            <div class="space-y-0.5">
+              <h3 class="text-2xl font-black text-slate-900 tracking-tight">
+                {{ "about.stats." + stat.key + ".metric" | translate }}
+              </h3>
+              <h4 class="text-sm font-bold text-slate-800">
+                {{ "about.stats." + stat.key + ".label" | translate }}
+              </h4>
+              <p
+                class="text-xs text-slate-400 font-medium leading-normal max-w-[170px]"
+              >
+                {{ "about.stats." + stat.key + ".desc" | translate }}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </app-container>
+</section>

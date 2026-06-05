@@ -1,0 +1,60 @@
+<section class="w-full px-10 pb-18 bg-[#f6f6f6] overflow-hidden">
+  <div
+    class="w-full rounded-[24px] bg-white border border-neutral-100 py-8 px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0"
+  >
+    @for (
+      item of miniHighlights;
+      track item.labelKey;
+      let i = $index;
+      let last = $last
+    ) {
+      <div
+        appFadeIn
+        [delay]="i * 70"
+        class="flex items-center w-full relative group hover:-translate-y-1 transition-transform"
+      >
+        <div class="flex items-center gap-4 px-2 sm:px-4 w-full">
+          <div
+            class="w-14 h-14 rounded-full bg-green-300 text-[#032f19] flex items-center justify-center shrink-0"
+          >
+            @switch (item.icon) {
+              @case ("search") {
+                <svg lucideSearch class="w-6 h-6 stroke-[2]" [size]="24"></svg>
+              }
+              @case ("shield") {
+                <svg
+                  lucideShieldCheck
+                  class="w-6 h-6 stroke-[2]"
+                  [size]="24"
+                ></svg>
+              }
+              @case ("calendar") {
+                <svg
+                  lucideCalendarRange
+                  class="w-6 h-6 stroke-[2]"
+                  [size]="24"
+                ></svg>
+              }
+              @case ("users") {
+                <svg lucideUsers class="w-6 h-6 stroke-[2]" [size]="24"></svg>
+              }
+            }
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-bold text-neutral-900">
+              {{ item.labelKey | translate }}
+            </h4>
+            <p class="text-xs text-neutral-500 max-w-[180px]">
+              {{ item.infoKey | translate }}
+            </p>
+          </div>
+        </div>
+        @if (!last) {
+          <div
+            class="hidden lg:block absolute right-0 h-10 w-[1px] bg-neutral-200"
+          ></div>
+        }
+      </div>
+    }
+  </div>
+</section>

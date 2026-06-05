@@ -1,0 +1,85 @@
+<div
+  appFadeIn
+  [delay]="animationDelay"
+  [y]="16"
+  [duration]="500"
+  class="vf-field"
+  [class.vf-field--focused]="focused"
+  [class.vf-field--error]="showError"
+  [class.vf-field--filled]="filled"
+  [class.vf-field--disabled]="disabled || fc?.disabled"
+>
+  <label [for]="id" class="vf-label">
+    {{ label }}
+    @if (required) {
+      <span class="vf-required" aria-hidden="true">*</span>
+    }
+  </label>
+
+  <div class="vf-control">
+    @if (icon) {
+      <span class="vf-icon" [attr.data-icon]="icon" aria-hidden="true"></span>
+    }
+
+    @switch (type) {
+      @case ('textarea') {
+        <textarea
+          [id]="id"
+          [value]="fc?.value ?? value"
+          [placeholder]="placeholder"
+          [rows]="rows"
+          [disabled]="disabled || !!fc?.disabled"
+          (input)="onInput($event)"
+          (focus)="onFocus()"
+          (blur)="onBlur()"
+          class="vf-input vf-textarea"
+        ></textarea>
+      }
+      @case ('select') {
+        <select
+          [id]="id"
+          [value]="fc?.value ?? value"
+          [disabled]="disabled || !!fc?.disabled"
+          (change)="onInput($event)"
+          (focus)="onFocus()"
+          (blur)="onBlur()"
+          class="vf-input vf-select"
+        >
+          @if (placeholder) {
+            <option value="" disabled>{{ placeholder }}</option>
+          }
+          @for (opt of options; track opt.value) {
+            <option [value]="opt.value">{{ opt.label }}</option>
+          }
+        </select>
+      }
+      @default {
+        <input
+          [id]="id"
+          [type]="type"
+          [value]="fc?.value ?? value"
+          [placeholder]="placeholder"
+          [autocomplete]="autocomplete"
+          [min]="min"
+          [max]="max"
+          [disabled]="disabled || !!fc?.disabled"
+          (input)="onInput($event)"
+          (focus)="onFocus()"
+          (blur)="onBlur()"
+          class="vf-input"
+        />
+      }
+    }
+
+    <span class="vf-focus-ring" aria-hidden="true"></span>
+  </div>
+
+  @if (showError) {
+    <p class="vf-message vf-message--error" role="alert">
+      <span class="vf-message-dot"></span>
+      {{ errorMessage }}
+    </p>
+  } @else if (hint) {
+    <p class="vf-message vf-message--hint">{{ hint }}</p>
+  }
+</div>

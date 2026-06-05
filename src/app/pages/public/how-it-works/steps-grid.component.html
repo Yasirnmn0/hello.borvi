@@ -1,0 +1,95 @@
+<section class="w-full py-12 px-10 bg-[#f6f6f6] overflow-hidden">
+  <div appFadeIn class="text-center max-w-xl mx-auto mb-16 space-y-2">
+    <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
+      {{ "HOW_IT_WORKS.STEPS.SECTION_TITLE" | translate }}
+    </h2>
+    <div class="w-10 h-[3px] bg-[#0c7a4b] mx-auto rounded"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+    @for (step of processSteps; track step.stepNum; let idx = $index) {
+      <div
+        appFadeIn
+        [delay]="idx * 80"
+        class="relative flex flex-col items-center text-center space-y-4 group hover:-translate-y-1.5 transition-transform"
+      >
+        <div
+          class="absolute top-0 left-4 z-20 w-8 h-8 rounded-full bg-[#0c7a4b] text-white font-extrabold text-sm flex items-center justify-center shadow-sm"
+        >
+          {{ step.stepNum }}
+        </div>
+        <div
+          class="relative w-full aspect-[4/3] rounded-2xl border border-slate-100 bg-white p-4 flex items-center justify-center overflow-hidden group-hover:bg-white group-hover:shadow-md transition-all duration-300"
+        >
+          @if (idx === 1) {
+            <div
+              class="w-full h-full flex flex-row items-center justify-center gap-2 pl-4"
+            >
+              <div class="relative w-1/2 h-full">
+                <app-image
+                  [src]="step.imgSrc"
+                  [alt]="step.titleKey"
+                  [fill]="true"
+                  className="object-contain p-1"
+                />
+              </div>
+              <div class="flex flex-col gap-1.5 w-1/2 justify-center pr-1">
+                <app-image
+                  src="/images/DownloadApp/googleplay-Eng.svg"
+                  alt="Google Play"
+                  [width]="95"
+                  [height]="28"
+                  className="w-full h-auto object-contain"
+                />
+                <app-image
+                  src="/images/DownloadApp/Apple-Eng.svg"
+                  alt="App Store"
+                  [width]="95"
+                  [height]="28"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          } @else {
+            <div class="relative w-full h-full">
+              <app-image
+                [src]="step.imgSrc"
+                [alt]="step.titleKey"
+                [fill]="true"
+                className="object-contain p-2"
+              />
+            </div>
+          }
+        </div>
+        <div class="space-y-1.5 px-2">
+          <h3 class="font-extrabold text-slate-900 text-base">
+            {{ step.titleKey | translate }}
+          </h3>
+          <p class="text-xs text-slate-500 font-medium leading-relaxed">
+            {{ step.descKey | translate }}
+          </p>
+        </div>
+        @if (idx < 3) {
+          <div
+            class="hidden lg:block absolute top-[35%] -right-8 w-8 h-4 z-10 text-[#0c7a4b] pointer-events-none"
+          >
+            <svg
+              viewBox="0 0 24 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-dasharray="4 3"
+              class="w-full h-full"
+            >
+              <path
+                d="M0 6H22M22 6L17 1M22 6L17 11"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,810 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "delete": "Delete",
+    "required": "Required",
+    "optional": "Optional",
+    "loading": "Loading…",
+    "demo": "Demo",
+    "or": "or",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "vendorLogin": "Vendor Login",
+    "becomeVendor": "Become a Vendor",
+    "downloadApp": "Download App",
+    "downloadAppRent": "Download App",
+    "toWebsite": "Back to Website"
+  },
+  "footer": {
+    "tagline": "Through Borvi, people can share, rent, and lend items to one another. Discover listings nearby and find exactly what you need.",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "contact": "Contact",
+    "hours": "Mon-Sat 8:00 AM - 8:00 PM",
+    "copyright": "© 2026 Borvi. All rights reserved.",
+    "privacytitle": "Privacy Policy",
+    "termstitle": "Terms & Conditions",
+    "impressum": "Imprint",
+    "catTools": "Power Tools",
+    "catCleaning": "Cleaning Equipment",
+    "catGarden": "Garden Care",
+    "catCamping": "Camping & Outdoor",
+    "catSports": "Bikes & Sports",
+    "catConstruction": "Construction Equipment",
+    "faq": "FAQ",
+    "help": "Help Center",
+    "LEGAL": {
+      "IMPRESSUM": {
+        "TITLE": "Legal Notice",
+        "SUBTITLE": "Information according to § 5 TMG",
+        "OPERATOR": "Operator",
+        "ADDRESS": "Address",
+        "CONTACT": "Contact",
+        "RESPONSIBLE": "Responsible for Content"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "Learn how Borvi collects, uses and protects your personal information in accordance with GDPR requirements.",
+
+      "contact": {
+        "title": "Data Protection Contact",
+        "description": "For any privacy-related inquiries, please contact us."
+      },
+
+      "sections": {
+        "controller": {
+          "title": "Data Controller",
+          "content": "The data controller is Emad Mamadoah Amin Barsom (see Legal Notice / Impressum)."
+        },
+        "data": {
+          "title": "Processed Data",
+          "content": "We may process name, email address, phone number, address, profile picture, communication data, log data and transaction data."
+        },
+        "payment": {
+          "title": "Payment Processing",
+          "content": "Payments are processed through Stripe. Payment information is handled directly by Stripe."
+        },
+        "storage": {
+          "title": "Hosting & Storage",
+          "content": "Hosting takes place in Germany. Personal data is stored only as long as necessary for the intended purpose."
+        },
+        "rights": {
+          "title": "Your Rights",
+          "content": "You have the right to access, rectify, erase, restrict processing, data portability and lodge a complaint with a supervisory authority."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Borvi uses technically necessary cookies required for login, security and platform functionality."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "subtitle": "Rules and responsibilities for using the Borvi platform.",
+
+      "contact": {
+        "title": "Questions About Our Terms?",
+        "description": "Contact us if you need clarification regarding the platform terms."
+      },
+
+      "sections": {
+        "platform": {
+          "title": "Platform Role",
+          "content": "Borvi is a technical brokerage platform for rentals between private users. Rental agreements are concluded directly between provider and renter."
+        },
+        "registration": {
+          "title": "Registration & Identity Verification",
+          "content": "Users must register and be of legal age. Borvi may request identity verification."
+        },
+        "payment": {
+          "title": "Payment Processing",
+          "content": "Payments are processed via Stripe. Borvi does not store complete card details."
+        },
+        "disputes": {
+          "title": "Payment Disputes & Chargebacks",
+          "content": "Borvi is not responsible for payment disputes or chargebacks between users."
+        },
+        "refund": {
+          "title": "Cancellation & Refund",
+          "content": "Cancellation conditions are agreed directly between provider and renter. Borvi does not guarantee refunds."
+        },
+        "liability": {
+          "title": "Liability & Contractual Relationship",
+          "content": "Borvi is not a contractual party. Users are responsible for rented items, their condition and return."
+        }
+      }
+    },
+    "FAQ": {
+      "BADGE": "FAQ",
+      "TITLE": "Frequently Asked",
+      "TITLE_HIGHLIGHT": "Questions",
+      "DESCRIPTION": "Find answers about renting, payments, bookings, and using Borvi.",
+
+      "CONTACT_TITLE": "Question not found?",
+      "CONTACT_DESC": "Our team is happy to help you.",
+      "CONTACT_BUTTON": "Contact Us",
+
+      "ITEM1": {
+        "QUESTION": "What is Borvi?",
+        "ANSWER": "Borvi is a platform where users can rent products from other private users. Borvi only provides the technical platform. The rental agreement is created directly between the provider and the renter."
+      },
+
+      "ITEM2": {
+        "QUESTION": "Who is my contracting partner in a rental?",
+        "ANSWER": "The rental agreement is concluded directly between the provider and the renter. Borvi is not a contractual party."
+      },
+
+      "ITEM3": {
+        "QUESTION": "How does the payment work?",
+        "ANSWER": "Payments are processed securely through Stripe. Borvi does not store complete card information."
+      },
+
+      "ITEM4": {
+        "QUESTION": "Can I cancel a booking?",
+        "ANSWER": "Cancellation conditions are determined between the provider and the renter and may vary depending on the listing."
+      },
+
+      "ITEM5": {
+        "QUESTION": "Is there a deposit or insurance through Borvi?",
+        "ANSWER": "No. Borvi currently does not provide insurance coverage or deposit handling."
+      },
+
+      "ITEM6": {
+        "QUESTION": "Why do I need to register?",
+        "ANSWER": "Registration helps create a trusted community and allows secure communication and bookings."
+      },
+
+      "ITEM7": {
+        "QUESTION": "How can I contact Borvi?",
+        "ANSWER": "You can contact us anytime via hello@borvi.de."
+      }
+    },
+    "HELP": {
+      "BADGE": "Help Center",
+      "TITLE_PART1": "How can we",
+      "TITLE_HIGHLIGHT": "help you?",
+      "DESCRIPTION": "Need assistance with your account, bookings, payments or listings? Our team is here to help.",
+
+      "EMAIL": {
+        "TITLE": "Write an Email",
+        "DESCRIPTION": "Contact our support team directly and we'll get back to you as soon as possible."
+      },
+
+      "FAQ": {
+        "TITLE": "Browse FAQ",
+        "DESCRIPTION": "Find answers to the most common questions about Borvi.",
+        "BUTTON": "Open FAQ"
+      },
+
+      "BOTTOM": {
+        "TITLE": "Still need help?",
+        "DESCRIPTION": "If you cannot find the answer you're looking for, our support team will be happy to assist you."
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Rent equipment easily –",
+      "titleLine2": "anytime,",
+      "titleHighlight": "anywhere.",
+      "description": "Tools, cleaning machines, camping gear, bicycles, and more...",
+      "startVendor": "Start as a Vendor",
+      "browseCategories": "Categories",
+
+      "feature1Title": "Verified",
+      "feature1Sub": "Users",
+
+      "feature2Title": "Better",
+      "feature2Sub": "Prices",
+
+      "feature3Title": "Easy",
+      "feature3Sub": "Renting",
+
+      "feature4Title": "Local",
+      "feature4Sub": "Access"
+    },
+    "vendorCta": {
+      "rentTitle": "Want to rent out equipment?",
+      "rentDesc": "Register as a Borvi vendor – profile, verification, and product listing in one professional portal.",
+      "rentBtn": "Register as Vendor",
+      "rentLogin": "Already a vendor? Sign in",
+      "downloadTitle": "Need to rent something?",
+      "downloadDesc": "Download the Borvi app, browse categories, and book equipment in minutes.",
+      "downloadBtn": "Download App"
+    },
+    "appDownload": {
+      "title": "Our app makes renting",
+      "titleHighlight": "faster",
+      "titleEnd": "& easier",
+      "subtitle": "Search, book & manage your rentals anytime, anywhere.",
+      "scanPrefix": "Scan to",
+      "scanApp": "get the",
+      "scanSuffix": "app"
+    },
+    "categories": {
+      "title": "Browse Equipment",
+      "titleHighlight": "Categories",
+      "subtitle": "Find the right equipment for your needs",
+      "searchPlaceholder": "Search equipment...",
+      "filters": {
+        "all": "All",
+        "tools": "Tools",
+        "household": "Household",
+        "moving": "Moving",
+        "garden": "Garden"
+      },
+      "empty": "No equipment found matching your criteria"
+    },
+    "catItems": {
+      "drill": { "title": "Power Tools", "category": "Tools" },
+      "cleaner": { "title": "Cleaning Equipment", "category": "Household" },
+      "lawn": { "title": "Garden Care", "category": "Garden" },
+      "tent": { "title": "Camping & Outdoor", "category": "Garden" },
+      "bike": { "title": "Bikes & Sports", "category": "Moving" },
+      "ladder": { "title": "Construction Tools", "category": "Tools" },
+      "speaker": { "title": "Audio Equipment", "category": "Household" },
+      "camera": { "title": "Photography", "category": "Household" },
+      "party": { "title": "Party Supplies", "category": "Household" },
+      "mixer": { "title": "Kitchen Appliances", "category": "Household" },
+      "printer": { "title": "Office Equipment", "category": "Household" },
+      "generator": { "title": "Generators", "category": "Tools" },
+      "security": { "title": "Home Security", "category": "Household" },
+      "fitness": { "title": "Fitness Equipment", "category": "Moving" },
+      "lighting": { "title": "Event Lighting", "category": "Household" },
+      "handtools": { "title": "Hand Tools", "category": "Tools" },
+      "outdoor": { "title": "Outdoor Games", "category": "Garden" },
+      "airpurifier": { "title": "Air Purifiers", "category": "Household" }
+    },
+    "preview": {
+      "title": "How it",
+      "titleHighlight": "works"
+    },
+    "steps": {
+      "step1Title": "Search equipment",
+      "step1Desc": "Discover a wide range of devices.",
+      "step2Title": "Download our app",
+      "step2Desc": "Get our app on Play Store or App Store.",
+      "step3Title": "Book via app",
+      "step3Desc": "Choose device, set duration & book.",
+      "step4Title": "Connect & Arrange Rentals",
+      "step4Desc": "Browse available items, connect with owners."
+    },
+    "stats": {
+      "community": "Trusted Community",
+      "selection": "Wide Selection",
+      "rentals": "Local Rentals",
+      "secure": "Safe & Easy"
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+
+      "items": {
+        "1": {
+          "name": "Lukas Müller",
+          "location": "Berlin",
+          "text": "Great experience! The equipment was in excellent condition and delivery was right on time."
+        },
+        "2": {
+          "name": "Hannah Schmidt",
+          "location": "Munich",
+          "text": "Very affordable and the app is so easy to use. Highly recommended!"
+        },
+        "3": {
+          "name": "Maximilian Wagner",
+          "location": "Hamburg",
+          "text": "Rented a tent for our trip. The quality was fantastic and the process was smooth."
+        },
+        "4": {
+          "name": "Sophie Becker",
+          "location": "Frankfurt",
+          "text": "Excellent support team and seamless booking. Will definitely use it again."
+        }
+      }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "titleLine1": "The Marketplace",
+      "titleLine2": "for",
+      "titleHighlight": "Renting Anything Nearby",
+      "description": "Borvi is a peer-to-peer rental marketplace that connects people who need equipment with people who already own it. From tools and outdoor gear to everyday essentials, you can rent what you need, earn from what you own, and make better use of resources together."
+    },
+    "features": {
+      "trusted": {
+        "title": "Trusted",
+        "desc": "Community"
+      },
+      "nearby": {
+        "title": "Rent ",
+        "desc": "Nearby"
+      },
+      "affordable": {
+        "title": "Affordable ",
+        "desc": "Access"
+      },
+      "safe": {
+        "title": "Safe & Flexible ",
+        "desc": "Rentals"
+      }
+    },
+    "story": {
+      "badge": "Our Story",
+      "titleLine1": "Built Around a Simple Idea:",
+      "titleHighlight": "Renting Can Be Smarter Than Buying",
+      "paragraph1": "Borvi was created around a simple belief — many of the things we need are expensive to buy and often used only once in a while. Instead of everyone purchasing the same tools, equipment, or outdoor gear, why not make them accessible to others when they're not being used?",
+      "paragraph2": "Our platform connects people who need something with people who already own it. By making sharing and renting easy, Borvi helps communities save money, access equipment when they need it, and get more value from the things they already have.",
+      "paragraph3": "We're building a trusted marketplace where renting becomes a natural alternative to buying — reducing waste, making resources go further, and creating benefits for both owners and renters."
+    },
+    "storyHighlights": {
+      "community": {
+        "title": "Community Driven",
+        "desc": "People helping people access what they need"
+      },
+      "save": {
+        "title": "Save More",
+        "desc": "Avoid unnecessary purchases"
+      },
+      "resources": {
+        "title": "Use Resources Better",
+        "desc": "Share items that would otherwise sit unused"
+      }
+    },
+    "stats": {
+      "community": {
+        "metric": "Community",
+        "label": "Trusted Network",
+        "desc": "Connect with verified renters and owners"
+      },
+      "discover": {
+        "metric": "Discover",
+        "label": "Rent Nearby",
+        "desc": "Find items available in your local area"
+      },
+      "save": {
+        "metric": "Save",
+        "label": "Affordable Access",
+        "desc": "Get what you need without buying"
+      },
+      "secure": {
+        "metric": "Secure",
+        "label": "Safe Rentals",
+        "desc": "Reliable and flexible rental experiences"
+      }
+    },
+    "APP_SECTION": {
+      "TITLE": "Rent Anytime, Anywhere",
+      "DESCRIPTION": "Download our app and explore 1500+ equipment at your fingertips."
+    }
+  },
+
+  "HOW_IT_WORKS": {
+    "HEADER": {
+      "BADGE": "How It Works",
+      "DESCRIPTION": "We've simplified the rental process so you can get the equipment you need quickly and hassle-free.",
+      "TITLE_PART1": "Renting Made Simple",
+      "TITLE_PART2": "in Just",
+      "TITLE_HIGHLIGHT": "4 Easy Steps"
+    },
+
+    "STEPS": {
+      "SECTION_TITLE": "How It Works",
+      "ITEMS": {
+        "STEP1": {
+          "TITLE": "Browse Equipment",
+          "DESC": "Explore our wide range of high-quality equipment across multiple categories."
+        },
+        "STEP2": {
+          "TITLE": "Download Our App",
+          "DESC": "Download the Borvi app from Play Store or App Store to get started."
+        },
+        "STEP3": {
+          "TITLE": "Book Through the App",
+          "DESC": "Choose your equipment, select the date & time, and confirm your booking."
+        },
+        "STEP4": {
+          "TITLE": "Connect & Arrange Rentals",
+          "DESC": "Browse available items, connect with owners, and arrange pickup or delivery in a way that works for both of you."
+        }
+      }
+    },
+    "FEATURES": {
+      "ROW": {
+        "SEARCH": {
+          "TITLE": "Easy Discovery",
+          "INFO": "Browse and find items available nearby."
+        },
+        "SHIELD": {
+          "TITLE": "Trusted Connections",
+          "INFO": "Connect with verified renters and owners."
+        },
+        "CALENDAR": {
+          "TITLE": "Flexible Arrangements",
+          "INFO": "Coordinate rental periods that suit both parties."
+        },
+        "USERS": {
+          "TITLE": "Community Driven",
+          "INFO": "Built around people helping people access what they need."
+        }
+      }
+    },
+    "APP_BENEFITS": {
+      "HEADING": {
+        "TITLE_PART1": "Why Use",
+        "TITLE_HIGHLIGHT": "Our App?",
+        "DESCRIPTION": "Everything you need, right at your fingertips."
+      },
+
+      "BROWSE": {
+        "TITLE": "Easy Browsing",
+        "INFO": "Find the right equipment quickly and easily."
+      },
+      "AVAILABILITY": {
+        "TITLE": "Real-time Availability",
+        "INFO": "Check availability in real-time before booking."
+      },
+      "BOOKINGS": {
+        "TITLE": "Manage Bookings",
+        "INFO": "Track your bookings and history in one place."
+      },
+      "OFFERS": {
+        "TITLE": "Exclusive Offers",
+        "INFO": "Get access to app-only deals and discounts."
+      }
+    },
+    "CTA": {
+      "TITLE": "Ready to Get Started?",
+      "DESCRIPTION": "Download the Borvi app and rent anything you need, anytime"
+    }
+  },
+
+  "CONTACT": {
+    "HERO": {
+      "BADGE": "Contact Us",
+      "DESCRIPTION": "Discover how Borvi connects people to rent, share, and access items within their local community.",
+      "TITLE_PART1": "Learn More About",
+      "TITLE_HIGHLIGHT": "Borvi"
+    },
+
+    "FEATURES": {
+      "TRUSTED": {
+        "TITLE": "Trusted & Reliable",
+        "DESCRIPTION": "Your satisfaction is our priority."
+      },
+      "RESPONSES": {
+        "TITLE": "Quick Responses",
+        "DESCRIPTION": "Get fast and helpful answers."
+      },
+      "SECURE": {
+        "TITLE": "Safe & Secure",
+        "DESCRIPTION": "We protect your information and privacy."
+      }
+    },
+
+    "FORM": {
+      "TITLE": "Send Us a Message",
+      "DESCRIPTION": "Fill out the form and we'll get back to you shortly.",
+
+      "FULL_NAME": "Full Name",
+      "EMAIL": "Email Address",
+      "PHONE": "Phone Number",
+      "SUBJECT": "Select Subject",
+      "MESSAGE": "Your Message",
+
+      "SUBJECTS": {
+        "RENTAL": "Rental Question",
+        "ACCOUNT": "Account & Listing Support",
+        "SUPPORT": "Technical Support",
+        "OTHER": "Other"
+      },
+
+      "BUTTON": "Send Message"
+    },
+    "CARDS": {
+      "TITLE_PART1": "Get",
+      "TITLE_HIGHLIGHT": "Touch",
+      "SUBTITLE": "Reach out to us through any of these channels.",
+
+      "PHONE": {
+        "LABEL": "Phone",
+        "SUBTEXT": "Call us anytime"
+      },
+
+      "EMAIL": {
+        "LABEL": "Email",
+        "SUBTEXT": "Send us an email"
+      },
+
+      "ADDRESS": {
+        "LABEL": "Address",
+        "SUBTEXT": "Visit our location"
+      },
+
+      "HOURS": {
+        "LABEL": "Business Hours",
+        "SUBTEXT": "We're here to help"
+      }
+    },
+    "SUPPORT": {
+      "HELP": {
+        "TITLE": "Need Immediate Help?",
+        "DESCRIPTION": "Our support team is available 24/7 to assist you.",
+        "BUTTON": "Chat with Support"
+      },
+      "EQUIPMENT": {
+        "TITLE": "Looking for Equipment?",
+        "DESCRIPTION": "Browse our wide range of equipment and rent with ease.",
+        "BUTTON": "Explore Equipment"
+      }
+    }
+  },
+  "auth": {
+    "layout": {
+      "title": "Become a",
+      "titleHighlight": "Borvi Vendor",
+      "subtitle": "Rent out your equipment professionally – from registration to product approval, all in one place.",
+      "highlight1": "Profile & business details in minutes",
+      "highlight2": "Secure verification before approval",
+      "highlight3": "List products and track earnings"
+    },
+    "login": {
+      "title": "Vendor Sign In",
+      "subtitle": "Sign in to manage your vendor account and onboarding.",
+      "google": "Sign in with Google",
+      "divider": "or with email",
+      "email": "Email address",
+      "emailPlaceholder": "name@company.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "remember": "Keep me signed in",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Register as vendor",
+      "demoHint": "Demo: vendor@borvi.demo / Vendor123!",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "errorGoogle": "Google sign-in failed.",
+      "errorFailed": "Sign-in failed.",
+      "errorInvalid": "Invalid email or password.",
+      "errorExists": "This email is already registered."
+    },
+    "signup": {
+      "title": "Register as Vendor",
+      "subtitle": "Create your account and start the professional onboarding journey.",
+      "google": "Sign up with Google",
+      "divider": "or with email",
+      "name": "Full name",
+      "namePlaceholder": "John Smith",
+      "email": "Email address",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 8 characters",
+      "passwordHint": "Use upper and lower case letters and numbers",
+      "confirmPassword": "Confirm password",
+      "terms": "I accept the",
+      "termsLink": "Terms of Service",
+      "privacyLink": "Privacy Policy",
+      "termsAnd": "and",
+      "submit": "Create Account",
+      "hasAccount": "Already registered?",
+      "loginLink": "Sign In",
+      "mismatch": "Passwords do not match",
+      "errorGeneric": "Something went wrong.",
+      "errorGoogle": "Google registration failed."
+    }
+  },
+  "validation": {
+    "required": "{{field}} is required",
+    "email": "Please enter a valid email",
+    "minLength": "At least {{min}} characters",
+    "minValue": "Minimum value: {{min}}",
+    "invalid": "Invalid input"
+  },
+  "vendor": {
+    "portal": "Vendor Portal",
+    "logout": "Sign Out",
+    "addProduct": "Add Product",
+    "step": "Step",
+    "nav": {
+      "dashboard": "Dashboard",
+      "profile": "Profile",
+      "business": "Business",
+      "verification": "Verification",
+      "approval": "Approval",
+      "products": "Products"
+    },
+    "onboarding": {
+      "profile": "Profile",
+      "business": "Business",
+      "verification": "Verification",
+      "approval": "Approval"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Welcome back, {{name}} – see your progress at a glance.",
+      "progress": "Progress",
+      "progressSub": "complete",
+      "productsTotal": "Products",
+      "productsTotalSub": "total",
+      "productsLive": "Live",
+      "productsLiveSub": "published",
+      "nextStep": "Next Step",
+      "ctaStart": "Get Started",
+      "approvedTitle": "Account approved",
+      "approvedDesc": "List and manage your rental products.",
+      "approvedLink": "Go to my products →",
+      "actionProduct": "Add product",
+      "actionProductDesc": "List your first piece of equipment.",
+      "actionApproval": "Approval status",
+      "actionApprovalDesc": "We are currently reviewing your application. This usually takes 24-48 hours.",
+      "actionFix": "Update Application",
+      "actionFixDesc": "Your application requires updates. Please review the reason and resubmit.",
+      "menuProducts": "My Products",
+      "actionVerification": "Verification",
+      "actionVerificationDesc": "Upload your documents.",
+      "actionBusiness": "Business",
+      "actionBusinessDesc": "Complete your company details.",
+      "actionProfile": "Complete profile",
+      "actionProfileDesc": "Start with your contact details."
+    },
+    "profile": {
+      "title": "Personal Profile",
+      "subtitle": "Your contact and address details for renters and the Borvi team.",
+      "stepLabel": "Profile",
+      "sectionPersonal": "Personal details",
+      "firstName": "First name",
+      "firstNamePh": "John",
+      "lastName": "Last name",
+      "lastNamePh": "Smith",
+      "phone": "Phone number",
+      "phonePh": "+49 170 1234567",
+      "phoneHint": "For booking and pickup inquiries",
+      "sectionAddress": "Address",
+      "street": "Street & house number",
+      "streetPh": "123 Main Street",
+      "postalCode": "Postal code",
+      "postalCodePh": "10115",
+      "city": "City",
+      "cityPh": "Berlin",
+      "country": "Country",
+      "sectionAbout": "About you",
+      "bio": "Short bio",
+      "bioPh": "Tell renters briefly about yourself and your equipment...",
+      "bioHint": "Optional – shown on your vendor profile",
+      "save": "Save & continue",
+      "saved": "Profile saved successfully",
+      "next": "Continue to business"
+    },
+    "business": {
+      "title": "Business Details",
+      "subtitle": "Company information required for verification and payouts.",
+      "stepLabel": "Business",
+      "sectionCompany": "Company data",
+      "businessName": "Company name",
+      "businessNamePh": "Smith Rentals GmbH",
+      "legalForm": "Legal form",
+      "taxId": "Tax ID",
+      "taxIdPh": "Optional",
+      "vatId": "VAT ID",
+      "vatIdPh": "DE123456789",
+      "sectionContact": "Contact",
+      "businessEmail": "Business email",
+      "businessPhone": "Business phone",
+      "website": "Website",
+      "websitePh": "https://your-company.com",
+      "sectionOffer": "Offer & location",
+      "categories": "Categories",
+      "categoriesError": "Please select at least one category",
+      "description": "Company description",
+      "descriptionPh": "Describe your offer, experience, and service...",
+      "descriptionHint": "At least 30 characters",
+      "pickupAddress": "Pickup address",
+      "delivery": "Offer delivery to renter address",
+      "save": "Save business",
+      "saved": "Business details saved",
+      "next": "Continue to verification",
+      "legalEinzel": "Sole proprietorship",
+      "legalGmbH": "GmbH",
+      "legalUG": "UG (limited liability)",
+      "legalGbR": "GbR",
+      "legalFreelance": "Freelancer"
+    },
+    "verification": {
+      "title": "Verification",
+      "subtitle": "Upload required documents – your data is transmitted securely.",
+      "stepLabel": "Documents",
+      "submit": "Submit for review",
+      "upload": "Upload",
+      "replace": "Replace",
+      "fileHint": "PDF, JPG or PNG",
+      "docsMissing": "Please upload all required documents."
+    },
+    "approval": {
+      "title": "Approval Status",
+      "subtitle": "The Borvi team is reviewing your documents. You will be notified by email.",
+      "stepLabel": "Approval",
+      "approvedTitle": "Account approved",
+      "approvedDesc": "Congratulations! You can now list products and receive rentals.",
+      "approvedCta": "Add first product",
+      "rejectedTitle": "Application rejected",
+      "rejectedDesc": "Please review your documents and contact support.",
+      "rejectedCta": "Re-upload documents",
+      "pendingTitle": "Review in progress",
+      "pendingDesc": "Your documents are being reviewed. This usually takes {{days}} business days.",
+      "demoTitle": "Demo (JSON mode)",
+      "demoDesc": "Simulate admin approval until the API is connected.",
+      "simulateApprove": "Simulate approval",
+      "simulateReject": "Simulate rejection"
+    },
+    "products": {
+      "title": "My Products",
+      "subtitle": "Manage your rental listings – edit, publish, or archive.",
+      "new": "New product",
+      "emptyTitle": "No products yet",
+      "emptyDesc": "Add your first rental product with images and pricing.",
+      "emptyCta": "Add product",
+      "statusLive": "Live",
+      "statusDraft": "Draft",
+      "perDay": "/day",
+      "deposit": "Deposit",
+      "deleteConfirm": "Really delete this product?"
+    },
+    "productForm": {
+      "title": "Add Product",
+      "subtitle": "Detailed listings increase bookings and renter trust.",
+      "sectionDetails": "Product details",
+      "productTitle": "Product title",
+      "productTitlePh": "e.g. Professional Bosch drill",
+      "category": "Category",
+      "categoryPlaceholder": "Select category",
+      "condition": "Condition",
+      "description": "Description",
+      "descriptionPh": "Accessories, usage notes...",
+      "descriptionHint": "At least 20 characters",
+      "sectionPricing": "Pricing & availability",
+      "dailyPrice": "Daily price (€)",
+      "weeklyPrice": "Weekly price (€)",
+      "weeklyHint": "Optional – discount for longer rentals",
+      "deposit": "Deposit (€)",
+      "quantity": "Quantity available",
+      "status": "Publication status",
+      "statusDraft": "Draft",
+      "statusPublished": "Publish",
+      "sectionImages": "Images",
+      "imagesUpload": "Upload images",
+      "imagesHint": "JPG, PNG – multiple files allowed",
+      "save": "Save product",
+      "cancel": "Cancel"
+    },
+    "categories": {
+      "tools": "Tools & Construction",
+      "cleaning": "Cleaning Equipment",
+      "garden": "Garden & Outdoor",
+      "camping": "Camping & Sports",
+      "electronics": "Electronics & Events",
+      "vehicles": "Vehicles & Trailers"
+    },
+    "documents": {
+      "idFront": "ID card (front)",
+      "idBack": "ID card (back)",
+      "tradeLicense": "Trade registration / commercial register",
+      "bankProof": "Bank details (statement)"
+    },
+    "conditions": {
+      "new": "New",
+      "likeNew": "Like new",
+      "excellent": "Excellent",
+      "good": "Good",
+      "used": "Used"
+    }
+  }
+}

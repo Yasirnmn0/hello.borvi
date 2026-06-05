@@ -1,0 +1,47 @@
+<app-vendor-page-shell [title]="'vendor.productForm.title' | translate" [subtitle]="'vendor.productForm.subtitle' | translate" maxWidth="lg">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">{{ 'vendor.productForm.sectionDetails' | translate }}</h3>
+      <app-vendor-field formControlName="title" [label]="'vendor.productForm.productTitle' | translate" icon="package" [placeholder]="'vendor.productForm.productTitlePh' | translate" [animationDelay]="0" />
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="categoryId" [label]="'vendor.productForm.category' | translate" type="select" [placeholder]="'vendor.productForm.categoryPlaceholder' | translate" [options]="categoryOptions" [animationDelay]="60" />
+        <app-vendor-field formControlName="condition" [label]="'vendor.productForm.condition' | translate" type="select" [options]="conditionOptions" [animationDelay]="120" />
+      </div>
+      <app-vendor-field formControlName="description" [label]="'vendor.productForm.description' | translate" type="textarea" class="mt-4 block" [placeholder]="'vendor.productForm.descriptionPh' | translate" [hint]="'vendor.productForm.descriptionHint' | translate" [animationDelay]="180" />
+    </section>
+
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">{{ 'vendor.productForm.sectionPricing' | translate }}</h3>
+      <div class="vp-form-grid vp-form-grid--2">
+        <app-vendor-field formControlName="dailyPrice" [label]="'vendor.productForm.dailyPrice' | translate" type="number" icon="euro" [min]="1" [animationDelay]="240" />
+        <app-vendor-field formControlName="weeklyPrice" [label]="'vendor.productForm.weeklyPrice' | translate" type="number" icon="euro" [hint]="'vendor.productForm.weeklyHint' | translate" [animationDelay]="300" />
+      </div>
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="deposit" [label]="'vendor.productForm.deposit' | translate" type="number" icon="euro" [min]="0" [animationDelay]="360" />
+        <app-vendor-field formControlName="quantity" [label]="'vendor.productForm.quantity' | translate" type="number" [min]="1" [animationDelay]="420" />
+      </div>
+      <app-vendor-field formControlName="status" [label]="'vendor.productForm.status' | translate" type="select" [options]="statusOptions" class="mt-4 block" [animationDelay]="480" />
+    </section>
+
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">{{ 'vendor.productForm.sectionImages' | translate }}</h3>
+      <label class="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[#ccebdd] bg-gradient-to-b from-[#f0fdf4]/80 to-white p-10 cursor-pointer transition-all duration-300 hover:border-[#0d7a52] hover:shadow-lg hover:shadow-[#0d7a52]/10 group" appFadeIn [delay]="520">
+        <div class="h-14 w-14 rounded-2xl bg-[#ecfdf3] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+          <svg lucideImage class="text-[#0d7a52]" [size]="28"></svg>
+        </div>
+        <span class="text-sm font-bold text-[#0d7a52]">{{ 'vendor.productForm.imagesUpload' | translate }}</span>
+        <span class="text-xs text-gray-500 mt-1">{{ 'vendor.productForm.imagesHint' | translate }}</span>
+        <input type="file" multiple accept="image/*" class="hidden" (change)="onImages($event)" />
+      </label>
+      @if (imageNames.length) {
+        <ul class="mt-3 flex flex-wrap gap-2" appFadeIn>
+          @for (name of imageNames; track name) {
+            <li class="text-xs font-medium bg-[#ecfdf3] text-[#0d7a52] px-3 py-1 rounded-full">{{ name }}</li>
+          }
+        </ul>
+      }
+    </section>
+
+    <app-vendor-form-actions [submitLabel]="'vendor.productForm.save' | translate" [secondaryLabel]="'vendor.productForm.cancel' | translate" secondaryRoute="/vendor/products" [loading]="saving()" />
+  </form>
+</app-vendor-page-shell>

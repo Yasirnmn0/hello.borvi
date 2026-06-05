@@ -1,0 +1,71 @@
+<section class="py-26 bg-[#f6f6f6] relative overflow-hidden">
+  <app-container>
+    <div appFadeIn class="flex flex-col items-center text-center mb-14">
+      <app-section-heading>
+        {{ "home.testimonials.title" | translate }}
+      </app-section-heading>
+      <div class="mt-3 flex w-12 h-1.5 rounded-full overflow-hidden">
+        <div class="bg-[#111827] w-1/3"></div>
+        <div class="bg-[#0c7a4b] w-2/3"></div>
+        <div class="bg-[#111827] w-1/3"></div>
+      </div>
+    </div>
+
+    <div class="relative w-full px-4 sm:px-8">
+      <button
+        type="button"
+        (click)="prevSlide()"
+        class="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-30 w-11 h-11 bg-white border rounded-full shadow-md hover:bg-gray-50 active:scale-95"
+        aria-label="Previous"
+      >
+        <svg lucideChevronLeft class="w-5 h-5 mx-auto" [size]="20"></svg>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        @for (t of visibleTestimonials(); track t.key + startIndex()) {
+          <div
+            appFadeIn
+            class="relative bg-white border rounded-[24px] p-7 pt-10 shadow-sm flex flex-col justify-between min-h-[220px] hover:-translate-y-1.5 transition-transform"
+          >
+            <span class="absolute top-5 left-6 text-[#0c7a4b] text-[36px]"
+              >“</span
+            >
+            <div class="space-y-4">
+              <p class="text-[14.5px] text-gray-600 pl-3">
+                {{ "home.testimonials.items." + t.key + ".text" | translate }}
+              </p>
+              <div class="flex pl-3 text-[#0c7a4b]">
+                @for (star of [0, 1, 2, 3, 4]; track star) {
+                  <svg
+                    lucideStar
+                    class="w-4 h-4 fill-current"
+                    [size]="16"
+                  ></svg>
+                }
+              </div>
+            </div>
+            <div class="mt-6 flex justify-between items-end pl-3">
+              <div>
+                <h4 class="text-[16px] font-bold text-[#111827]">
+                  {{ "home.testimonials.items." + t.key + ".name" | translate }}
+                </h4>
+                {{
+                  "home.testimonials.items." + t.key + ".location" | translate
+                }}
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <button
+        type="button"
+        (click)="nextSlide()"
+        class="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-30 w-11 h-11 bg-white border rounded-full shadow-md hover:bg-gray-50 active:scale-95"
+        aria-label="Next"
+      >
+        <svg lucideChevronRight class="w-5 h-5 mx-auto" [size]="20"></svg>
+      </button>
+    </div>
+  </app-container>
+</section>

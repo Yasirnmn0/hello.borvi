@@ -1,0 +1,140 @@
+<section id="Categories" class="w-full py-20 bg-[#f9fafb] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="text-center">
+      <app-section-heading
+        size="md"
+        [subtitle]="'home.categories.subtitle' | translate"
+      >
+        {{ "home.categories.title" | translate }}
+        <span class="text-[#0c7a4b]">{{
+          "home.categories.titleHighlight" | translate
+        }}</span>
+      </app-section-heading>
+
+      <div
+        class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6"
+      >
+        <div class="relative w-full max-w-md group">
+          <div
+            class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-[#0c7a4b] transition-colors"
+          >
+            <svg lucideSearch [size]="20"></svg>
+          </div>
+          <input
+            type="text"
+            [placeholder]="'home.categories.searchPlaceholder' | translate"
+            [value]="searchQuery()"
+            (input)="searchQuery.set($any($event.target).value)"
+            class="w-full h-14 pl-12 pr-6 bg-white border border-gray-200 rounded-2xl shadow-sm outline-none focus:border-[#0c7a4b] focus:ring-4 focus:ring-[#0c7a4b]/5 transition-all text-gray-900 placeholder:text-gray-400"
+          />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          @for (cat of categoryFilters; track cat.id) {
+            <button
+              type="button"
+              (click)="activeFilter.set(cat.id)"
+              [class]="
+                'px-5 py-3 rounded-xl text-sm font-bold transition-all flex items-center justify-center ' +
+                (activeFilter() === cat.id
+                  ? 'bg-[#0c7a4b] text-white shadow-lg shadow-[#0c7a4b]/20'
+                  : 'bg-white text-gray-600 border border-gray-100 hover:border-[#0c7a4b] hover:text-[#0c7a4b]')
+              "
+            >
+              <div class="flex items-center gap-2">
+                @switch (cat.id) {
+                  @case ("all") {
+                    <svg lucideGrid3X3 class="w-4 h-4"></svg>
+                  }
+                  @case ("tools") {
+                    <svg lucideHammer class="w-4 h-4"></svg>
+                  }
+                  @case ("household") {
+                    <svg lucideHouse class="w-4 h-4"></svg>
+                  }
+                  @case ("moving") {
+                    <svg lucideTruck class="w-4 h-4"></svg>
+                  }
+                  @case ("garden") {
+                    <svg lucideTrees class="w-4 h-4"></svg>
+                  }
+                }
+
+                <span>{{ cat.labelKey | translate }}</span>
+              </div>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-8 min-h-[400px]">
+    @if (rows().length > 0) {
+      @for (rowItems of rows(); track $index; let rowIndex = $index) {
+        <div class="relative w-full">
+          <div class="overflow-x-auto sm:overflow-visible px-4 -mx-4">
+            <div
+              [class]="
+                'flex gap-6 whitespace-nowrap ' +
+                (rowIndex % 2 === 0
+                  ? 'borvi-scroll-left'
+                  : 'borvi-scroll-right')
+              "
+            >
+              @for (dup of [0, 1, 2, 3]; track dup) {
+                @for (item of rowItems; track item.id) {
+                  <div
+                    role="button"
+                    tabindex="0"
+                    (click)="scrollToAppDownload()"
+                    (keyup.enter)="scrollToAppDownload()"
+                    class="flex-shrink-0 w-64 h-80 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 p-6 flex flex-col group cursor-pointer border border-gray-100"
+                  >
+                    <div class="relative w-full h-48 mb-6 overflow-hidden">
+                      <app-image
+                        [src]="item.image"
+                        [alt]="itemTitle(item.id)"
+                        [width]="256"
+                        [height]="192"
+                        className="object-contain group-hover:scale-110 transition-transform duration-500 p-2"
+                      />
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                      <div class="flex flex-col truncate pr-2">
+                        <h3
+                          class="text-sm font-semibold text-gray-900 group-hover:text-[#0c7a4b] transition-colors truncate"
+                        >
+                          {{ itemTitle(item.id) }}
+                        </h3>
+                        <span
+                          class="text-[10px] text-gray-400 uppercase tracking-wider font-bold"
+                        >
+                          {{ itemCategory(item.id) }}
+                        </span>
+                      </div>
+                      <div
+                        class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-[#0c7a4b] group-hover:border-[#0c7a4b] group-hover:text-white"
+                      >
+                        <svg lucideArrowRight [size]="16"></svg>
+                      </div>
+                    </div>
+                  </div>
+                }
+              }
+            </div>
+          </div>
+        </div>
+      }
+    } @else {
+      <div
+        class="flex flex-col items-center justify-center py-20 text-gray-400"
+      >
+        <svg lucideSearch [size]="48" class="mb-4 opacity-20"></svg>
+        <p class="text-lg font-medium">
+          {{ "home.categories.empty" | translate }}
+        </p>
+      </div>
+    }
+  </div>
+</section>

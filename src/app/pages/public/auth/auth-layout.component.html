@@ -1,0 +1,45 @@
+<div class="min-h-screen flex flex-col bg-[#f6f6f6]">
+  <header class="bg-[#032d22] py-4">
+    <app-container>
+      <div class="flex items-center justify-between">
+        <a routerLink="/" class="inline-flex items-center gap-3">
+          <app-image src="/images/logo.svg" alt="Borvi" [width]="180" [height]="48" className="object-contain h-10 w-auto" />
+        </a>
+        <app-language-selector />
+      </div>
+    </app-container>
+  </header>
+
+  <div class="flex-1 flex items-stretch">
+    <div class="hidden lg:flex lg:w-[45%] xl:w-[42%] bg-[#032d22] text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="grid grid-cols-8 gap-3 p-12">
+          @for (dot of dots; track dot) {
+            <div class="h-2 w-2 rounded-full bg-[#1ea672]"></div>
+          }
+        </div>
+      </div>
+      <div appFadeIn class="relative z-10 flex flex-col justify-center px-12 xl:px-16 py-16">
+        <h1 class="text-3xl xl:text-4xl font-extrabold leading-tight tracking-tight">
+          {{ 'auth.layout.title' | translate }}
+          <span class="text-[#1ea672]">{{ 'auth.layout.titleHighlight' | translate }}</span>
+        </h1>
+        <p class="mt-4 text-white/80 text-lg leading-relaxed max-w-md">{{ 'auth.layout.subtitle' | translate }}</p>
+        <ul class="mt-8 space-y-4">
+          @for (key of highlightKeys; track key) {
+            <li class="flex items-start gap-3">
+              <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#0c7a4b] text-xs font-bold">✓</span>
+              <span class="text-white/90">{{ key | translate }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex-1 flex items-center justify-center px-4 py-10 sm:px-8">
+      <div appFadeIn class="w-full max-w-md">
+        <router-outlet />
+      </div>
+    </div>
+  </div>
+</div>

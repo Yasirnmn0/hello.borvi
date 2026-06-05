@@ -1,0 +1,14 @@
+<div class="report-date-picker">
+  <label class="report-date-picker__label">
+    {{ label }}
+    @if (isRequired) {
+      <span class="report-date-picker__required">*</span>
+    }
+  </label>
+  <kendo-datepicker
+    class="report-date-picker__control"
+    [formControl]="dateControl"
+    [placeholder]="placeholder"
+    [format]="format">
+  </kendo-datepicker>
+</div>

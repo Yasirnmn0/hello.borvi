@@ -1,0 +1,80 @@
+@use "../../../../assets/scss/abstracts/mixins" as *;
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: var(--sidebar-expanded) !important;
+  right: 0;
+  height: 64px;
+  background: #F0E0FFFF;
+  z-index: 100; // lowered so modals appear on top
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  transition: all 0.3s ease;
+
+  @include respond(laptop) {
+    left: var(--sidebar-laptop-expanded) !important;
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+  @include respond(tablet) {
+    left: 5.5rem;
+    //top: 0.8rem;
+    width: 81%;
+    height: 56px;
+    padding: 0 1rem;
+  }
+
+  @include respond(mobile) {
+    left: 5rem;
+    //top: 0.8rem;
+    width: 76%;
+    height: 52px;
+    padding: 0 0.75rem;
+  }
+
+  // Handle collapsed state
+  :host-context(body.sidebar-collapsed) & {
+    left: var(--sidebar-collapsed) !important;
+    
+    @include respond(laptop) {
+      left: var(--sidebar-laptop-collapsed) !important;
+    }
+  }
+
+  .navbar-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+
+    .page-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #171A1FFF;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+
+      @include respond(desktop) {
+        font-size: 1.375rem;
+      }
+
+      @include respond(laptop) {
+        font-size: 1.25rem;
+      }
+
+      @include respond(tablet) {
+        font-size: 1.125rem;
+      }
+
+      @include respond(mobile) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

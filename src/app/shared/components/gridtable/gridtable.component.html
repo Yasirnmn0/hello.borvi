@@ -1,0 +1,65 @@
+<kendo-grid 
+  [data]="gridData" 
+  [sortable]="true" 
+  [pageSize]="pageSize" 
+  [skip]="skip" 
+  (pageChange)="pageChange($event)"
+  class="custom-grid">
+
+  <!-- Dynamically generate columns -->
+  <ng-container *ngFor="let column of gridColumns">
+    <kendo-grid-column 
+      [field]="column.field"
+      [title]="column.title"
+      [width]="column.width">
+      <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+        <div [class]="isStatusColumn(column.field) ? getStatusClass(dataItem[column.field]) : ''">
+          {{ dataItem[column.field] }}
+        </div>
+      </ng-template>
+    </kendo-grid-column>
+  </ng-container>
+
+  <!-- Actions column with conditional buttons/checkboxes -->
+  <kendo-grid-column title="Actions" [width]="120">
+    <ng-template kendoGridHeaderTemplate>
+      <div class="actions-header bold-heading">Actions</div>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <!-- Show checkboxes when no actions are specified -->
+      <div *ngIf="actions.length === 0 && showCheckboxes" class="checkbox-container">
+        <input 
+          type="checkbox" 
+          [checked]="isSelected(dataItem)"
+          (click)="$event.stopPropagation()"
+          (change)="onCheckboxChange(dataItem, $event)"
+          class="row-checkbox"
+        />
+      </div>
+
+      <!-- Show action buttons when actions are specified -->
+      <div *ngIf="actions.length > 0" class="action-buttons-row">
+        <!-- Edit Button as Mini FAB -->
+        <button *ngIf="actions.includes('edit')" 
+                mat-mini-fab 
+                color="primary" 
+                class="mini-fab-btn edit-btn"
+                (click)="onEdit(dataItem)" 
+                title="Edit">
+          <img src="assets/images/edit.svg" alt="Edit" class="action-icon">
+        </button>
+        
+        <!-- Delete Button as Mini FAB -->
+        <button *ngIf="actions.includes('delete')" 
+                mat-mini-fab 
+                color="warn" 
+                class="mini-fab-btn delete-btn"
+                (click)="onDelete(dataItem)" 
+                title="Delete">
+          <img src="assets/images/delete.svg" alt="Delete" class="action-icon"> 
+        </button>
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+
+</kendo-grid>

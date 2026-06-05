@@ -1,0 +1,804 @@
+{
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "delete": "Löschen",
+    "required": "Pflichtfeld",
+    "optional": "Optional",
+    "loading": "Wird geladen…",
+    "demo": "Demo",
+    "or": "oder",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "howItWorks": "So funktioniert's",
+    "contact": "Kontakt",
+    "vendorLogin": "Anbieter-Login",
+    "becomeVendor": "Anbieter werden",
+    "downloadApp": "App herunterladen",
+    "downloadAppRent": "App herunterladen",
+    "toWebsite": "Zur Website"
+  },
+  "footer": {
+    "tagline": "Entdecken Sie eine lokale Community zum Mieten und Teilen von Gegenständen – nachhaltig, flexibel und vertrauenswürdig.",
+    "quickLinks": "Schnellzugriff",
+    "categories": "Kategorien",
+    "contact": "Kontakt",
+    "hours": "Mo–Sa · 08:00–20:00 Uhr",
+    "copyright": "© 2026 Borvi. Alle Rechte vorbehalten.",
+    "privacytitle": "Datenschutz",
+    "termstitle": "AGB",
+    "impressum": "Impressum",
+    "catTools": "Elektrowerkzeuge",
+    "catCleaning": "Reinigungsgeräte",
+    "catGarden": "Gartenpflege",
+    "catCamping": "Camping & Outdoor",
+    "catSports": "Fahrräder & Sport",
+    "catConstruction": "Baugeräte",
+    "faq": "FAQ",
+    "help": "Hilfe",
+    "LEGAL": {
+      "IMPRESSUM": {
+        "TITLE": "Impressum",
+        "SUBTITLE": "Angaben gemäß § 5 TMG",
+        "OPERATOR": "Betreiber",
+        "ADDRESS": "Adresse",
+        "CONTACT": "Kontakt",
+        "RESPONSIBLE": "Verantwortlich für den Inhalt"
+      }
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "subtitle": "Erfahren Sie, wie Borvi Ihre personenbezogenen Daten gemäß den Anforderungen der DSGVO erhebt, verarbeitet und schützt.",
+
+      "contact": {
+        "title": "Datenschutzkontakt",
+        "description": "Bei Fragen zum Datenschutz kontaktieren Sie uns gerne."
+      },
+
+      "sections": {
+        "controller": {
+          "title": "Verantwortlicher",
+          "content": "Verantwortlicher für die Datenverarbeitung ist Emad Mamadoah Amin Barsom (siehe Impressum)."
+        },
+        "data": {
+          "title": "Verarbeitete Daten",
+          "content": "Wir verarbeiten Name, E-Mail-Adresse, Telefonnummer, Anschrift, Profilbild, Kommunikationsdaten, Protokolldaten sowie Transaktionsdaten."
+        },
+        "payment": {
+          "title": "Zahlungsabwicklung",
+          "content": "Zahlungen werden über Stripe abgewickelt. Zahlungsdaten werden direkt von Stripe verarbeitet."
+        },
+        "storage": {
+          "title": "Hosting & Speicherung",
+          "content": "Das Hosting erfolgt in Deutschland. Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist."
+        },
+        "rights": {
+          "title": "Ihre Rechte",
+          "content": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Borvi verwendet technisch notwendige Cookies für Login, Sicherheit und den Betrieb der Plattform."
+        }
+      }
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "subtitle": "Regeln und Verantwortlichkeiten für die Nutzung der Borvi-Plattform.",
+
+      "contact": {
+        "title": "Fragen zu unseren AGB?",
+        "description": "Kontaktieren Sie uns, wenn Sie Fragen zu den Nutzungsbedingungen haben."
+      },
+
+      "sections": {
+        "platform": {
+          "title": "Plattformrolle",
+          "content": "Borvi ist eine technische Vermittlungsplattform für Vermietungen zwischen Privatpersonen. Mietverträge werden direkt zwischen Anbieter und Mieter geschlossen."
+        },
+        "registration": {
+          "title": "Registrierung & Identitätsprüfung",
+          "content": "Nutzer müssen sich registrieren und volljährig sein. Borvi kann eine Identitätsprüfung verlangen."
+        },
+        "payment": {
+          "title": "Zahlungsabwicklung",
+          "content": "Zahlungen werden über Stripe abgewickelt. Borvi speichert keine vollständigen Kreditkartendaten."
+        },
+        "disputes": {
+          "title": "Zahlungsstreitigkeiten & Rückbuchungen",
+          "content": "Borvi haftet nicht für Zahlungsstreitigkeiten oder Rückbuchungen zwischen Nutzern."
+        },
+        "refund": {
+          "title": "Stornierung & Rückerstattung",
+          "content": "Stornierungsbedingungen werden direkt zwischen Anbieter und Mieter vereinbart. Borvi garantiert keine Rückerstattungen."
+        },
+        "liability": {
+          "title": "Haftung & Vertragsverhältnis",
+          "content": "Borvi ist keine Vertragspartei. Nutzer sind selbst für die Nutzung, den Zustand und die Rückgabe der Mietgegenstände verantwortlich."
+        }
+      }
+    },
+    "FAQ": {
+      "BADGE": "FAQ",
+      "TITLE": "Häufig gestellte",
+      "TITLE_HIGHLIGHT": "Fragen",
+      "DESCRIPTION": "Finden Sie Antworten zu Mieten, Zahlungen, Buchungen und der Nutzung von Borvi.",
+
+      "CONTACT_TITLE": "Frage nicht gefunden?",
+      "CONTACT_DESC": "Unser Team hilft Ihnen gerne weiter.",
+      "CONTACT_BUTTON": "Kontakt aufnehmen",
+
+      "ITEM1": {
+        "QUESTION": "Was ist Borvi?",
+        "ANSWER": "Borvi ist eine Plattform, auf der Nutzer Produkte von anderen Privatpersonen mieten können. Borvi stellt lediglich die technische Plattform bereit. Der Mietvertrag wird direkt zwischen Anbieter und Mieter geschlossen."
+      },
+
+      "ITEM2": {
+        "QUESTION": "Wer ist mein Vertragspartner bei einer Miete?",
+        "ANSWER": "Der Mietvertrag wird direkt zwischen Anbieter und Mieter geschlossen. Borvi ist keine Vertragspartei."
+      },
+
+      "ITEM3": {
+        "QUESTION": "Wie funktioniert die Zahlung?",
+        "ANSWER": "Zahlungen werden sicher über Stripe abgewickelt. Borvi speichert keine vollständigen Kartendaten."
+      },
+
+      "ITEM4": {
+        "QUESTION": "Kann ich eine Buchung stornieren?",
+        "ANSWER": "Die Stornierungsbedingungen werden zwischen Anbieter und Mieter vereinbart und können je nach Angebot variieren."
+      },
+
+      "ITEM5": {
+        "QUESTION": "Gibt es eine Kaution oder Versicherung über Borvi?",
+        "ANSWER": "Nein. Borvi bietet derzeit weder eine Versicherung noch eine Kautionsabwicklung an."
+      },
+
+      "ITEM6": {
+        "QUESTION": "Warum muss ich mich registrieren?",
+        "ANSWER": "Die Registrierung hilft dabei, eine vertrauenswürdige Community aufzubauen und ermöglicht sichere Kommunikation sowie Buchungen."
+      },
+
+      "ITEM7": {
+        "QUESTION": "Wie kann ich Borvi kontaktieren?",
+        "ANSWER": "Sie können uns jederzeit unter hello@borvi.de kontaktieren."
+      }
+    },
+    "HELP": {
+      "BADGE": "Hilfezentrum",
+      "TITLE_PART1": "Wie können wir",
+      "TITLE_HIGHLIGHT": "Ihnen helfen?",
+      "DESCRIPTION": "Benötigen Sie Unterstützung bei Ihrem Konto, Buchungen, Zahlungen oder Inseraten? Unser Team hilft Ihnen gerne weiter.",
+
+      "EMAIL": {
+        "TITLE": "E-Mail schreiben",
+        "DESCRIPTION": "Kontaktieren Sie unser Support-Team direkt und wir melden uns schnellstmöglich bei Ihnen."
+      },
+
+      "FAQ": {
+        "TITLE": "FAQ durchsuchen",
+        "DESCRIPTION": "Finden Sie Antworten auf die häufigsten Fragen rund um Borvi.",
+        "BUTTON": "FAQ öffnen"
+      },
+
+      "BOTTOM": {
+        "TITLE": "Benötigen Sie weitere Hilfe?",
+        "DESCRIPTION": "Falls Sie die gesuchte Antwort nicht finden, unterstützt Sie unser Team gerne persönlich."
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Miete Ausrüstung einfach –",
+      "titleLine2": "jederzeit und",
+      "titleHighlight": "überall.",
+      "description": "Werkzeuge, Reinigungsmaschinen, Campingausrüstung, Fahrräder und mehr...",
+      "startVendor": "Als Anbieter starten",
+      "browseCategories": "Kategorien",
+      "feature1Title": "Verifizierte",
+      "feature1Sub": "Nutzer",
+
+      "feature2Title": "Faire",
+      "feature2Sub": "Preise",
+
+      "feature3Title": "Einfaches",
+      "feature3Sub": "Mieten",
+
+      "feature4Title": "Lokaler",
+      "feature4Sub": "Zugang"
+    },
+    "vendorCta": {
+      "rentTitle": "Ausrüstung vermieten?",
+      "rentDesc": "Registrieren Sie sich als Anbieter auf Borvi – Profil, Verifizierung und Produktlisting in einem professionellen Portal.",
+      "rentBtn": "Als Anbieter registrieren",
+      "rentLogin": "Bereits Anbieter? Anmelden",
+      "downloadTitle": "Etwas mieten?",
+      "downloadDesc": "Laden Sie die Borvi-App herunter, durchsuchen Sie Kategorien und buchen Sie Ausrüstung in wenigen Minuten.",
+      "downloadBtn": "App herunterladen"
+    },
+    "appDownload": {
+      "title": "Unsere App macht das Mieten",
+      "titleHighlight": "schneller",
+      "titleEnd": "& einfacher",
+      "subtitle": "Suchen, buchen & verwalten Sie Ihre Mieten jederzeit und überall.",
+      "scanPrefix": "Scannen zum",
+      "scanApp": "App",
+      "scanSuffix": "Download"
+    },
+    "categories": {
+      "title": "Ausrüstungskategorien",
+      "titleHighlight": "Durchsuchen",
+      "subtitle": "Finden Sie die richtige Ausrüstung für Ihre Bedürfnisse",
+      "searchPlaceholder": "Ausrüstung suchen...",
+      "filters": {
+        "all": "Alle",
+        "tools": "Werkzeuge",
+        "household": "Haushalt",
+        "moving": "Umzug",
+        "garden": "Garten"
+      },
+      "empty": "Keine Ausrüstung entspricht Ihrer Suche"
+    },
+    "catItems": {
+      "drill": { "title": "Elektrowerkzeuge", "category": "Werkzeuge" },
+      "cleaner": { "title": "Reinigungsgeräte", "category": "Haushalt" },
+      "lawn": { "title": "Gartenpflege", "category": "Garten" },
+      "tent": { "title": "Camping & Outdoor", "category": "Garten" },
+      "bike": { "title": "Fahrräder & Sport", "category": "Transport" },
+      "ladder": { "title": "Bauwerkzeuge", "category": "Werkzeuge" },
+      "speaker": { "title": "Audio-Ausrüstung", "category": "Haushalt" },
+      "camera": { "title": "Fotografie", "category": "Haushalt" },
+      "party": { "title": "Partybedarf", "category": "Haushalt" },
+      "mixer": { "title": "Küchengeräte", "category": "Haushalt" },
+      "printer": { "title": "Bürogeräte", "category": "Haushalt" },
+      "generator": { "title": "Generatoren", "category": "Werkzeuge" },
+      "security": { "title": "Haussicherheit", "category": "Haushalt" },
+      "fitness": { "title": "Fitnessgeräte", "category": "Transport" },
+      "lighting": { "title": "Event-Beleuchtung", "category": "Haushalt" },
+      "handtools": { "title": "Handwerkzeuge", "category": "Werkzeuge" },
+      "outdoor": { "title": "Outdoor-Spiele", "category": "Garten" },
+      "airpurifier": { "title": "Luftreiniger", "category": "Haushalt" }
+    },
+    "preview": {
+      "title": "So",
+      "titleHighlight": "funktioniert's"
+    },
+    "steps": {
+      "step1Title": "Artikel finden",
+      "step1Desc": "Durchsuchen Sie lokale Angebote in Ihrer Nähe.",
+      "step2Title": "App herunterladen",
+      "step2Desc": "Laden Sie die Borvi-App herunter und erstellen Sie ein Konto.",
+      "step3Title": "In der App buchen",
+      "step3Desc": "Anfrage senden, Details klären & Buchung bestätigen.",
+      "step4Title": "Kontakt aufnehmen & mieten",
+      "step4Desc": "Artikel finden, mit Anbietern verbinden und die Miete vereinbaren."
+    },
+    "stats": {
+      "community": "Vertrauenswürdige Community",
+      "selection": "Vielfältige Auswahl",
+      "rentals": "Lokale Vermietungen",
+      "secure": "Sicher & Einfach"
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+
+      "items": {
+        "1": {
+          "name": "Lukas Müller",
+          "location": "Berlin",
+          "text": "Tolle Erfahrung! Die Ausrüstung war in ausgezeichnetem Zustand und die Lieferung war sehr pünktlich."
+        },
+        "2": {
+          "name": "Hannah Schmidt",
+          "location": "München",
+          "text": "Sehr erschwinglich und die App ist so einfach zu bedienen. Sehr empfehlenswert!"
+        },
+        "3": {
+          "name": "Maximilian Wagner",
+          "location": "Hamburg",
+          "text": "Habe ein Zelt für unseren Ausflug gemietet. Die Qualität war fantastisch und der Prozess war reibungslos."
+        },
+        "4": {
+          "name": "Sophie Becker",
+          "location": "Frankfurt",
+          "text": "Hervorragendes Support-Team und nahtlose Buchung. Werde es definitiv wieder nutzen."
+        }
+      }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "badge": "Über Uns",
+      "titleLine1": "Der Marktplatz",
+      "titleLine2": "für",
+      "titleHighlight": "alles, was man in der Nähe mieten kann",
+      "description": "Borvi ist ein Peer-to-Peer-Mietmarktplatz, der Menschen, die Ausrüstung benötigen, mit Menschen verbindet, die diese bereits besitzen. Von Werkzeugen und Outdoor-Ausrüstung bis hin zu Alltagsgegenständen können Sie mieten, was Sie brauchen, mit Ihrem Eigentum Geld verdienen und Ressourcen gemeinsam besser nutzen."
+    },
+    "features": {
+      "trusted": {
+        "title": "Vertrauenswürdige",
+        "desc": "Community"
+      },
+      "nearby": {
+        "title": "In Ihrer",
+        "desc": "Nähe mieten"
+      },
+      "affordable": {
+        "title": "Erschwinglicher ",
+        "desc": "Zugang"
+      },
+      "safe": {
+        "title": "Sicher & Flexibel ",
+        "desc": "Mieten"
+      }
+    },
+    "story": {
+      "badge": "Unsere Geschichte",
+      "titleLine1": "Auf einer einfachen Idee aufgebaut:",
+      "titleHighlight": "Mieten kann klüger sein als Kaufen",
+      "paragraph1": "Borvi entstand aus einer einfachen Überzeugung: Viele Dinge, die wir benötigen, sind teuer in der Anschaffung und werden oft nur gelegentlich genutzt. Anstatt dass jeder dieselben Werkzeuge, Geräte oder Outdoor-Ausrüstungen kauft, können sie anderen zur Verfügung gestellt werden, wenn sie gerade nicht genutzt werden.",
+      "paragraph2": "Unsere Plattform verbindet Menschen, die etwas benötigen, mit Menschen, die es bereits besitzen. Indem wir Teilen und Mieten einfach machen, hilft Borvi Gemeinschaften dabei, Geld zu sparen, leichter Zugang zu Ausrüstung zu erhalten und vorhandene Ressourcen besser zu nutzen.",
+      "paragraph3": "Wir bauen einen vertrauenswürdigen Marktplatz auf, auf dem Mieten zu einer natürlichen Alternative zum Kaufen wird – Abfall reduziert, Ressourcen effizienter genutzt und Vorteile für Eigentümer und Mieter geschaffen werden."
+    },
+    "storyHighlights": {
+      "community": {
+        "title": "Von der Gemeinschaft getragen",
+        "desc": "Menschen helfen Menschen, Zugang zu dem zu erhalten, was sie brauchen"
+      },
+      "save": {
+        "title": "Mehr sparen",
+        "desc": "Vermeiden Sie unnötige Anschaffungen"
+      },
+      "resources": {
+        "title": "Ressourcen besser nutzen",
+        "desc": "Teilen Sie Gegenstände, die sonst ungenutzt bleiben würden"
+      }
+    },
+    "stats": {
+      "community": {
+        "metric": "Community",
+        "label": "Vertrauenswürdiges Netzwerk",
+        "desc": "Verbinden Sie sich mit verifizierten Mietern und Eigentümern"
+      },
+      "discover": {
+        "metric": "Entdecken",
+        "label": "In Ihrer Nähe mieten",
+        "desc": "Finden Sie verfügbare Artikel in Ihrer Umgebung"
+      },
+      "save": {
+        "metric": "Sparen",
+        "label": "Erschwinglicher Zugang",
+        "desc": "Nutzen Sie, was Sie brauchen, ohne es kaufen zu müssen"
+      },
+      "secure": {
+        "metric": "Sicher",
+        "label": "Sichere Vermietungen",
+        "desc": "Zuverlässige und flexible Mieterlebnisse"
+      }
+    },
+    "APP_SECTION": {
+      "TITLE": "Jederzeit und überall mieten",
+      "DESCRIPTION": "Laden Sie unsere App herunter und entdecken Sie über 1500 Geräte auf Knopfdruck."
+    }
+  },
+
+  "HOW_IT_WORKS": {
+    "HEADER": {
+      "BADGE": "So funktioniert es",
+      "DESCRIPTION": "Wir haben den Mietprozess vereinfacht, damit Sie schnell und unkompliziert die benötigte Ausrüstung erhalten.",
+      "TITLE_PART1": "Mieten leicht gemacht",
+      "TITLE_PART2": "in nur",
+      "TITLE_HIGHLIGHT": "4 einfachen Schritten"
+    },
+
+    "STEPS": {
+      "SECTION_TITLE": "So funktioniert es",
+      "ITEMS": {
+        "STEP1": {
+          "TITLE": "Ausrüstung durchsuchen",
+          "DESC": "Entdecken Sie unsere große Auswahl an hochwertiger Ausrüstung in verschiedenen Kategorien."
+        },
+        "STEP2": {
+          "TITLE": "Unsere App herunterladen",
+          "DESC": "Laden Sie die Borvi-App aus dem Play Store oder App Store herunter, um zu starten."
+        },
+        "STEP3": {
+          "TITLE": "Über die App buchen",
+          "DESC": "Wählen Sie Ihre Ausrüstung, Datum und Uhrzeit und bestätigen Sie Ihre Buchung."
+        },
+        "STEP4": {
+          "TITLE": "Verbinden & Vermietung organisieren",
+          "DESC": "Durchsuchen Sie verfügbare Artikel, verbinden Sie sich mit Besitzern und organisieren Sie Abholung oder Lieferung."
+        }
+      }
+    },
+    "FEATURES": {
+      "ROW": {
+        "SEARCH": {
+          "TITLE": "Einfache Suche",
+          "INFO": "Durchsuchen und finden Sie verfügbare Artikel in Ihrer Nähe."
+        },
+        "SHIELD": {
+          "TITLE": "Vertrauenswürdige Verbindungen",
+          "INFO": "Verbinden Sie sich mit geprüften Mietern und Besitzern."
+        },
+        "CALENDAR": {
+          "TITLE": "Flexible Absprachen",
+          "INFO": "Koordinieren Sie Mietzeiten, die für beide Seiten passen."
+        },
+        "USERS": {
+          "TITLE": "Gemeinschaftsorientiert",
+          "INFO": "Auf Menschen aufgebaut, die anderen helfen, das zu bekommen, was sie brauchen."
+        }
+      }
+    },
+    "APP_BENEFITS": {
+      "HEADING": {
+        "TITLE_PART1": "Warum",
+        "TITLE_HIGHLIGHT": "unsere App nutzen?",
+        "DESCRIPTION": "Alles, was Sie brauchen, direkt zur Hand."
+      },
+      "BROWSE": {
+        "TITLE": "Einfache Suche",
+        "INFO": "Finden Sie schnell und einfach die richtige Ausrüstung."
+      },
+      "AVAILABILITY": {
+        "TITLE": "Echtzeit-Verfügbarkeit",
+        "INFO": "Prüfen Sie die Verfügbarkeit in Echtzeit vor der Buchung."
+      },
+      "BOOKINGS": {
+        "TITLE": "Buchungen verwalten",
+        "INFO": "Verfolgen Sie Ihre Buchungen und Historie an einem Ort."
+      },
+      "OFFERS": {
+        "TITLE": "Exklusive Angebote",
+        "INFO": "Erhalten Sie Zugang zu App-only Deals und Rabatten."
+      }
+    },
+    "CTA": {
+      "TITLE": "Bereit loszulegen?",
+      "DESCRIPTION": "Laden Sie die Borvi-App herunter und mieten Sie jederzeit alles, was Sie brauchen"
+    }
+  },
+  "CONTACT": {
+    "HERO": {
+      "BADGE": "Kontakt",
+      "DESCRIPTION": "Erfahren Sie, wie Borvi Menschen dabei unterstützt, Gegenstände in ihrer lokalen Gemeinschaft zu mieten, zu teilen und darauf zuzugreifen.",
+      "TITLE_PART1": "Erfahren Sie mehr über",
+      "TITLE_HIGHLIGHT": "Borvi"
+    },
+
+    "FEATURES": {
+      "TRUSTED": {
+        "TITLE": "Vertrauenswürdig & Zuverlässig",
+        "DESCRIPTION": "Ihre Zufriedenheit hat für uns höchste Priorität."
+      },
+      "RESPONSES": {
+        "TITLE": "Schnelle Antworten",
+        "DESCRIPTION": "Erhalten Sie schnelle und hilfreiche Antworten."
+      },
+      "SECURE": {
+        "TITLE": "Sicher & Geschützt",
+        "DESCRIPTION": "Wir schützen Ihre Daten und Privatsphäre."
+      }
+    },
+
+    "FORM": {
+      "TITLE": "Senden Sie uns eine Nachricht",
+      "DESCRIPTION": "Füllen Sie das Formular aus und wir melden uns in Kürze bei Ihnen.",
+
+      "FULL_NAME": "Vollständiger Name",
+      "EMAIL": "E-Mail-Adresse",
+      "PHONE": "Telefonnummer",
+      "SUBJECT": "Betreff auswählen",
+      "MESSAGE": "Ihre Nachricht",
+
+      "SUBJECTS": {
+        "RENTAL": "Frage zur Vermietung",
+        "ACCOUNT": "Konto- & Inseratsupport",
+        "SUPPORT": "Technischer Support",
+        "OTHER": "Sonstiges"
+      },
+      "BUTTON": "Nachricht senden"
+    },
+    "CARDS": {
+      "TITLE_PART1": "Kontakt",
+      "TITLE_HIGHLIGHT": "aufnehmen",
+      "SUBTITLE": "Kontaktieren Sie uns über einen dieser Kanäle.",
+
+      "PHONE": {
+        "LABEL": "Telefon",
+        "SUBTEXT": "Rufen Sie uns jederzeit an"
+      },
+
+      "EMAIL": {
+        "LABEL": "E-Mail",
+        "SUBTEXT": "Senden Sie uns eine E-Mail"
+      },
+
+      "ADDRESS": {
+        "LABEL": "Adresse",
+        "SUBTEXT": "Besuchen Sie unseren Standort"
+      },
+
+      "HOURS": {
+        "LABEL": "Geschäftszeiten",
+        "SUBTEXT": "Wir sind für Sie da"
+      }
+    },
+    "SUPPORT": {
+      "HELP": {
+        "TITLE": "Benötigen Sie sofortige Hilfe?",
+        "DESCRIPTION": "Unser Support-Team steht Ihnen rund um die Uhr zur Verfügung.",
+        "BUTTON": "Mit dem Support chatten"
+      },
+      "EQUIPMENT": {
+        "TITLE": "Suchen Sie Ausrüstung?",
+        "DESCRIPTION": "Durchsuchen Sie unser großes Angebot an Ausrüstung und mieten Sie ganz einfach.",
+        "BUTTON": "Ausrüstung entdecken"
+      }
+    }
+  },
+  "auth": {
+    "layout": {
+      "title": "Werden Sie",
+      "titleHighlight": "Borvi-Anbieter",
+      "subtitle": "Vermieten Sie Ihre Ausrüstung professionell – von der Registrierung bis zur Produktfreigabe, alles an einem Ort.",
+      "highlight1": "Profil & Unternehmensdaten in wenigen Minuten",
+      "highlight2": "Sichere Verifizierung vor der Freigabe",
+      "highlight3": "Produkte listen und Verdienst verfolgen"
+    },
+    "login": {
+      "title": "Anbieter-Anmeldung",
+      "subtitle": "Melden Sie sich an, um Ihr Anbieter-Konto und Onboarding zu verwalten.",
+      "google": "Mit Google anmelden",
+      "divider": "oder mit E-Mail",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "name@firma.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "••••••••",
+      "remember": "Angemeldet bleiben",
+      "submit": "Anmelden",
+      "noAccount": "Noch kein Konto?",
+      "signupLink": "Als Anbieter registrieren",
+      "demoHint": "Demo: vendor@borvi.demo / Vendor123!",
+      "errorGeneric": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
+      "errorGoogle": "Google-Anmeldung fehlgeschlagen.",
+      "errorFailed": "Anmeldung fehlgeschlagen.",
+      "errorInvalid": "Ungültige E-Mail oder Passwort.",
+      "errorExists": "Diese E-Mail ist bereits registriert."
+    },
+    "signup": {
+      "title": "Als Anbieter registrieren",
+      "subtitle": "Erstellen Sie Ihr Konto und starten Sie die professionelle Onboarding-Reise.",
+      "google": "Mit Google registrieren",
+      "divider": "oder mit E-Mail",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "passwordPlaceholder": "Mind. 8 Zeichen",
+      "passwordHint": "Verwenden Sie Groß- und Kleinbuchstaben sowie Zahlen",
+      "confirmPassword": "Passwort bestätigen",
+      "terms": "Ich akzeptiere die",
+      "termsLink": "AGB",
+      "privacyLink": "Datenschutzerklärung",
+      "termsAnd": "und",
+      "submit": "Konto erstellen",
+      "hasAccount": "Bereits registriert?",
+      "loginLink": "Anmelden",
+      "mismatch": "Passwörter stimmen nicht überein",
+      "errorGeneric": "Ein Fehler ist aufgetreten.",
+      "errorGoogle": "Google-Registrierung fehlgeschlagen.",
+      "errorFailed": "Registrierung fehlgeschlagen."
+    }
+  },
+  "validation": {
+    "required": "{{field}} ist erforderlich",
+    "email": "Bitte geben Sie eine gültige E-Mail ein",
+    "minLength": "Mindestens {{min}} Zeichen",
+    "minValue": "Mindestwert: {{min}}",
+    "invalid": "Ungültige Eingabe"
+  },
+  "vendor": {
+    "portal": "Anbieter-Portal",
+    "logout": "Abmelden",
+    "addProduct": "Produkt hinzufügen",
+    "step": "Schritt",
+    "nav": {
+      "dashboard": "Dashboard",
+      "profile": "Profil",
+      "business": "Unternehmen",
+      "verification": "Verifizierung",
+      "approval": "Freigabe",
+      "products": "Produkte"
+    },
+    "onboarding": {
+      "profile": "Profil",
+      "business": "Unternehmen",
+      "verification": "Verifizierung",
+      "approval": "Freigabe"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Willkommen zurück, {{name}} – hier sehen Sie Ihren Fortschritt auf einen Blick.",
+      "progress": "Fortschritt",
+      "progressSub": "abgeschlossen",
+      "productsTotal": "Produkte",
+      "productsTotalSub": "gesamt",
+      "productsLive": "Live",
+      "productsLiveSub": "veröffentlicht",
+      "nextStep": "Nächster Schritt",
+      "ctaStart": "Jetzt starten",
+      "approvedTitle": "Konto freigegeben",
+      "approvedDesc": "Listen und verwalten Sie Ihre Mietprodukte.",
+      "approvedLink": "Zu meinen Produkten →",
+      "actionProduct": "Produkt hinzufügen",
+      "actionProductDesc": "Listen Sie Ihre erste Ausrüstung.",
+      "actionApproval": "Freigabe-Status",
+      "actionApprovalDesc": "Ihr Antrag wird geprüft.",
+      "actionVerification": "Verifizierung",
+      "actionVerificationDesc": "Laden Sie Ihre Dokumente hoch.",
+      "actionBusiness": "Unternehmen",
+      "actionBusinessDesc": "Ergänzen Sie Ihre Firmendaten.",
+      "actionProfile": "Profil vervollständigen",
+      "actionProfileDesc": "Starten Sie mit Ihren Kontaktdaten."
+    },
+    "profile": {
+      "title": "Persönliches Profil",
+      "subtitle": "Ihre Kontakt- und Adressdaten für die Kommunikation mit Mietern und dem Borvi-Team.",
+      "stepLabel": "Profil",
+      "sectionPersonal": "Persönliche Angaben",
+      "firstName": "Vorname",
+      "firstNamePh": "Max",
+      "lastName": "Nachname",
+      "lastNamePh": "Mustermann",
+      "phone": "Telefonnummer",
+      "phonePh": "+49 170 1234567",
+      "phoneHint": "Für Rückfragen zu Buchungen und Abholung",
+      "sectionAddress": "Adresse",
+      "street": "Straße & Hausnummer",
+      "streetPh": "Musterstraße 12",
+      "postalCode": "PLZ",
+      "postalCodePh": "10115",
+      "city": "Stadt",
+      "cityPh": "Berlin",
+      "country": "Land",
+      "sectionAbout": "Über Sie",
+      "bio": "Kurzbeschreibung",
+      "bioPh": "Erzählen Sie Mietern kurz etwas über sich und Ihre Ausrüstung...",
+      "bioHint": "Optional – erscheint in Ihrem Anbieterprofil",
+      "save": "Speichern & weiter",
+      "saved": "Profil erfolgreich gespeichert",
+      "next": "Weiter zu Unternehmen"
+    },
+    "business": {
+      "title": "Unternehmensdaten",
+      "subtitle": "Angaben zu Ihrer Firma – erforderlich für Verifizierung und Auszahlungen.",
+      "stepLabel": "Unternehmen",
+      "sectionCompany": "Firmendaten",
+      "businessName": "Firmenname",
+      "businessNamePh": "Mustermann Vermietung GmbH",
+      "legalForm": "Rechtsform",
+      "taxId": "Steuernummer",
+      "taxIdPh": "Optional",
+      "vatId": "USt-IdNr.",
+      "vatIdPh": "DE123456789",
+      "sectionContact": "Kontakt",
+      "businessEmail": "Geschäfts-E-Mail",
+      "businessPhone": "Geschäftstelefon",
+      "website": "Website",
+      "websitePh": "https://ihre-firma.de",
+      "sectionOffer": "Angebot & Standort",
+      "categories": "Kategorien",
+      "categoriesError": "Bitte wählen Sie mindestens eine Kategorie",
+      "description": "Unternehmensbeschreibung",
+      "descriptionPh": "Beschreiben Sie Ihr Angebot, Erfahrung und Service...",
+      "descriptionHint": "Mindestens 30 Zeichen",
+      "pickupAddress": "Abholadresse",
+      "delivery": "Lieferung an Mietadresse anbieten",
+      "save": "Unternehmen speichern",
+      "saved": "Unternehmensdaten gespeichert",
+      "next": "Weiter zur Verifizierung",
+      "legalEinzel": "Einzelunternehmen",
+      "legalGmbH": "GmbH",
+      "legalUG": "UG (haftungsbeschränkt)",
+      "legalGbR": "GbR",
+      "legalFreelance": "Freiberufler"
+    },
+    "verification": {
+      "title": "Verifizierung",
+      "subtitle": "Laden Sie die erforderlichen Dokumente hoch – Ihre Daten werden sicher und verschlüsselt übertragen.",
+      "stepLabel": "Dokumente",
+      "submit": "Zur Prüfung einreichen",
+      "upload": "Hochladen",
+      "replace": "Ersetzen",
+      "fileHint": "PDF, JPG oder PNG",
+      "docsMissing": "Bitte laden Sie alle erforderlichen Dokumente hoch."
+    },
+    "approval": {
+      "title": "Freigabe-Status",
+      "subtitle": "Das Borvi-Team prüft Ihre Unterlagen. Sie werden per E-Mail benachrichtigt.",
+      "stepLabel": "Freigabe",
+      "approvedTitle": "Konto freigegeben",
+      "approvedDesc": "Herzlichen Glückwunsch! Sie können jetzt Produkte listen und Vermietungen erhalten.",
+      "approvedCta": "Erstes Produkt anlegen",
+      "rejectedTitle": "Antrag abgelehnt",
+      "rejectedDesc": "Bitte prüfen Sie Ihre Dokumente und kontaktieren Sie den Support.",
+      "rejectedCta": "Dokumente erneut hochladen",
+      "pendingTitle": "Prüfung läuft",
+      "pendingDesc": "Ihre Unterlagen werden geprüft. In der Regel dauert dies {{days}} Werktage.",
+      "demoTitle": "Demo (JSON-Modus)",
+      "demoDesc": "Simulieren Sie die Admin-Freigabe, bis die API angebunden ist.",
+      "simulateApprove": "Freigabe simulieren",
+      "simulateReject": "Ablehnung simulieren"
+    },
+    "products": {
+      "title": "Meine Produkte",
+      "subtitle": "Verwalten Sie Ihre Mietangebote – bearbeiten, veröffentlichen oder archivieren.",
+      "new": "Neues Produkt",
+      "emptyTitle": "Noch keine Produkte",
+      "emptyDesc": "Legen Sie Ihr erstes Mietprodukt mit Bildern und Preisen an.",
+      "emptyCta": "Produkt hinzufügen",
+      "statusLive": "Live",
+      "statusDraft": "Entwurf",
+      "perDay": "/Tag",
+      "deposit": "Kaution",
+      "deleteConfirm": "Produkt wirklich löschen?"
+    },
+    "productForm": {
+      "title": "Produkt hinzufügen",
+      "subtitle": "Detaillierte Angaben erhöhen Buchungsrate und Vertrauen bei Mietern.",
+      "sectionDetails": "Produktdetails",
+      "productTitle": "Produkttitel",
+      "productTitlePh": "z.B. Professionelle Bohrmaschine Bosch",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie wählen",
+      "condition": "Zustand",
+      "description": "Beschreibung",
+      "descriptionPh": "Ausstattung, Zubehör, Hinweise zur Nutzung...",
+      "descriptionHint": "Mindestens 20 Zeichen",
+      "sectionPricing": "Preise & Verfügbarkeit",
+      "dailyPrice": "Tagespreis (€)",
+      "weeklyPrice": "Wochenpreis (€)",
+      "weeklyHint": "Optional – Rabatt für längere Miete",
+      "deposit": "Kaution (€)",
+      "quantity": "Anzahl verfügbar",
+      "status": "Veröffentlichungsstatus",
+      "statusDraft": "Entwurf",
+      "statusPublished": "Veröffentlichen",
+      "sectionImages": "Bilder",
+      "imagesUpload": "Bilder hochladen",
+      "imagesHint": "JPG, PNG – mehrere Dateien möglich",
+      "save": "Produkt speichern",
+      "cancel": "Abbrechen"
+    },
+    "categories": {
+      "tools": "Werkzeuge & Bau",
+      "cleaning": "Reinigungsgeräte",
+      "garden": "Garten & Outdoor",
+      "camping": "Camping & Sport",
+      "electronics": "Elektronik & Events",
+      "vehicles": "Fahrzeuge & Anhänger"
+    },
+    "documents": {
+      "idFront": "Ausweis (Vorderseite)",
+      "idBack": "Ausweis (Rückseite)",
+      "tradeLicense": "Gewerbeanmeldung / Handelsregister",
+      "bankProof": "Bankverbindung (Kontoauszug)"
+    },
+    "conditions": {
+      "new": "Neu",
+      "likeNew": "Wie neu",
+      "excellent": "Exzellent",
+      "good": "Gut",
+      "used": "Gebraucht"
+    }
+  }
+}

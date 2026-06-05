@@ -1,0 +1,41 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <mat-select
+    [formControl]="selectControl"
+    [multiple]="multiSelect"
+    [panelClass]="panelClass"
+    (selectionChange)="onValueChange($event)">
+    @if (multiSelect) {
+      <mat-select-trigger>
+        <span class="multi-select-trigger" [class.is-placeholder]="!hasMultiSelection">
+          {{ multiSelectTriggerLabel }}
+        </span>
+      </mat-select-trigger>
+    }
+    @if (placeholder && !multiSelect) {
+      <mat-option [value]="''">{{ placeholder }}</mat-option>
+    }
+    <!-- Non-Grouped Options -->
+    @if (!groupBy) {
+    @for (option of options; track option[optionValue]) {
+    <mat-option [value]="option[optionValue]">
+
+      {{ option[optionViewValue] }}
+
+    </mat-option>
+    }
+    }
+  </mat-select>
+
+  <!-- Error Messages -->
+  @if (selectControl.hasError('required')) {
+  <mat-error>
+    {{ label }} is required.
+  </mat-error>
+  }
+
+  <!-- Hint Message -->
+  @if (hint) {
+  <mat-hint>{{ hint }}</mat-hint>
+  }
+</mat-form-field>

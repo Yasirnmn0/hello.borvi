@@ -1,0 +1,166 @@
+<section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <div class="lg:col-span-4 space-y-8 lg:pr-4">
+      <div class="space-y-3">
+        <span
+          appFadeIn
+          class="inline-flex items-center rounded-md bg-[#0c7a4b]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#0c7a4b]"
+        >
+          {{ "CONTACT.HERO.BADGE" | translate }}
+        </span>
+        <app-hero-text
+          size="md"
+          [description]="'CONTACT.HERO.DESCRIPTION' | translate"
+        >
+          <span heroTitle>
+            {{ "CONTACT.HERO.TITLE_PART1" | translate }}
+            <span class="text-[#1ea672]">
+              {{ "CONTACT.HERO.TITLE_HIGHLIGHT" | translate }}
+            </span>
+            <!-- <br />
+            Lassen Sie uns sprechen! -->
+          </span>
+        </app-hero-text>
+      </div>
+
+      <div class="space-y-5 pt-2">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#e7f2ec] text-[#0c7a4b] flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              lucideHandshake
+              class="w-5 h-5 stroke-[1.75]"
+              [size]="20"
+            ></svg>
+          </div>
+          <div class="space-y-0.5">
+            <h3 class="text-sm font-bold text-slate-900 tracking-tight">
+              {{ "CONTACT.FEATURES.TRUSTED.TITLE" | translate }}
+            </h3>
+            <p class="text-[11px] text-neutral-500 font-normal">
+              {{ "CONTACT.FEATURES.TRUSTED.DESCRIPTION" | translate }}
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#e7f2ec] text-[#0c7a4b] flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg lucideZap class="w-5 h-5 stroke-[1.75]" [size]="20"></svg>
+          </div>
+          <div class="space-y-0.5">
+            <h3 class="text-sm font-bold text-slate-900 tracking-tight">
+              {{ "CONTACT.FEATURES.RESPONSES.TITLE" | translate }}
+            </h3>
+            <p class="text-[11px] text-neutral-500 font-normal">
+              {{ "CONTACT.FEATURES.RESPONSES.DESCRIPTION" | translate }}
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#e7f2ec] text-[#0c7a4b] flex items-center justify-center shrink-0 mt-0.5"
+          >
+            <svg
+              lucideShieldCheck
+              class="w-5 h-5 stroke-[1.75]"
+              [size]="20"
+            ></svg>
+          </div>
+          <div class="space-y-0.5">
+            <h3 class="text-sm font-bold text-slate-900 tracking-tight">
+              {{ "CONTACT.FEATURES.SECURE.TITLE" | translate }}
+            </h3>
+            <p class="text-[11px] text-neutral-500 font-normal">
+              {{ "CONTACT.FEATURES.SECURE.DESCRIPTION" | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="lg:col-span-4 bg-white rounded-3xl border border-neutral-100 p-6 shadow-sm shadow-neutral-100/50"
+    >
+      <div class="space-y-1 mb-6">
+        <h2 class="text-lg font-black text-[#032f19] tracking-tight">
+          {{ "CONTACT.FORM.TITLE" | translate }}
+        </h2>
+        <p class="text-[11px] text-neutral-400 font-medium">
+          {{ "CONTACT.FORM.DESCRIPTION" | translate }}
+        </p>
+      </div>
+
+      <form class="space-y-4">
+        <input
+          type="text"
+          [placeholder]="'CONTACT.FORM.FULL_NAME' | translate"
+          required
+          name="fullName"
+          class="w-full text-xs font-normal border border-neutral-200 rounded-xl px-4 py-3 bg-neutral-50/30 placeholder-neutral-400 focus:outline-none focus:border-[#0c7a4b] focus:bg-white transition-all"
+        />
+        <input
+          type="email"
+          [placeholder]="'CONTACT.FORM.EMAIL' | translate"
+          required
+          name="emailAddress"
+          class="w-full text-xs font-normal border border-neutral-200 rounded-xl px-4 py-3 bg-neutral-50/30 placeholder-neutral-400 focus:outline-none focus:border-[#0c7a4b] focus:bg-white transition-all"
+        />
+        <input
+          type="tel"
+          [placeholder]="'CONTACT.FORM.PHONE' | translate"
+          name="phoneNumber"
+          class="w-full text-xs font-normal border border-neutral-200 rounded-xl px-4 py-3 bg-neutral-50/30 placeholder-neutral-400 focus:outline-none focus:border-[#0c7a4b] focus:bg-white transition-all"
+        />
+        <select
+          required
+          name="subject"
+          class="w-full text-xs font-normal border border-neutral-200 rounded-xl px-4 py-3 bg-neutral-50/30 text-neutral-500 focus:outline-none focus:border-[#0c7a4b] focus:bg-white transition-all"
+        >
+          <option value="" disabled selected hidden>
+            {{ "CONTACT.FORM.SUBJECT" | translate }}
+          </option>
+          <option value="rental">
+            {{ "CONTACT.FORM.SUBJECTS.RENTAL" | translate }}
+          </option>
+          <option value="pricing">
+            {{ "CONTACT.FORM.SUBJECTS.ACCOUNT" | translate }}
+          </option>
+          <option value="support">
+            {{ "CONTACT.FORM.SUBJECTS.SUPPORT" | translate }}
+          </option>
+          <option value="other">
+            {{ "CONTACT.FORM.SUBJECTS.OTHER" | translate }}
+          </option>
+        </select>
+        <textarea
+          [placeholder]="'CONTACT.FORM.MESSAGE' | translate"
+          rows="4"
+          required
+          name="message"
+          class="w-full text-xs font-normal border border-neutral-200 rounded-xl px-4 py-3 bg-neutral-50/30 placeholder-neutral-400 focus:outline-none focus:border-[#0c7a4b] focus:bg-white transition-all resize-none"
+        ></textarea>
+
+        <button
+          type="button"
+          class="w-full text-xs font-bold text-white bg-[#0c7a4b] hover:bg-[#0a663e] py-3.5 rounded-xl flex items-center justify-center gap-2 transition-colors duration-200 active:scale-[0.99]"
+        >
+          {{ "CONTACT.FORM.BUTTON" | translate }}
+        </button>
+      </form>
+    </div>
+
+    <div
+      class="lg:col-span-4 relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-md"
+    >
+      <app-image
+        src="/images/Borvi-3.png"
+        alt="Borvi professional rental equipment lineup display depot center"
+        [fill]="true"
+        [priority]="true"
+        className="object-cover"
+      />
+    </div>
+  </div>
+</section>

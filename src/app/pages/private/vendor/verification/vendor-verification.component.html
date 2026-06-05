@@ -1,0 +1,41 @@
+<app-vendor-page-shell
+  [title]="'vendor.verification.title' | translate"
+  [subtitle]="'vendor.verification.subtitle' | translate"
+  [step]="3"
+  stepLabel="Verification Documents"
+>
+  <app-onboarding-stepper vpStepper [activeStepId]="'VerificationSubmitted'" />
+
+  <div class="space-y-4">
+    @for (type of documentTypes; track type.id) {
+      <app-vendor-file-upload
+        [label]="type.labelKey | translate"
+        [fileName]="uploadedDocs().has(type.id) ? 'Document Uploaded' : ''"
+        (fileSelected)="onFileSelected(type.id, $event)"
+      />
+    }
+  </div>
+
+  @if (error()) {
+    <p class="text-red-500 text-sm mt-4">{{ error() }}</p>
+  }
+
+  @if (!isReadOnly()) {
+    <div class="mt-8 flex justify-end">
+      <button
+        (click)="onSubmit()"
+        [disabled]="saving()"
+        class="vp-btn vp-btn--primary"
+      >
+        @if (saving()) {
+          <svg lucideLoader2 class="vp-btn__spin" [size]="18"></svg>
+        }
+        Submit for Approval
+      </button>
+    </div>
+  } @else {
+    <div class="mt-8 flex justify-end">
+      <a routerLink="/vendor/dashboard" class="vp-btn vp-btn--secondary">Back to Dashboard</a>
+    </div>
+  }
+</app-vendor-page-shell>

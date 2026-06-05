@@ -1,0 +1,124 @@
+<div class="min-h-screen bg-[#f6f6f6] flex">
+  <aside
+    [class]="
+      'fixed lg:static inset-y-0 left-0 z-40 w-64 bg-[#032d22] text-white flex flex-col transition-transform duration-300 ' +
+      (sidebarOpen() ? 'translate-x-0' : '-translate-x-full lg:translate-x-0')
+    "
+  >
+    <div class="p-5 border-b border-white/10">
+      <a routerLink="/" class="block">
+        <app-image
+          src="/images/logo.svg"
+          alt="Borvi"
+          [width]="160"
+          [height]="40"
+          className="h-9 w-auto object-contain"
+        />
+      </a>
+      <p class="mt-2 text-xs text-white/60 font-medium uppercase tracking-wider">
+        {{ 'vendor.portal' | translate }}
+      </p>
+    </div>
+
+    <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+      @for (item of visibleNav(); track item.labelKey) {
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="bg-[#0c7a4b] text-white"
+          [routerLinkActiveOptions]="{ exact: item.route === '/vendor/dashboard' }"
+          (click)="sidebarOpen.set(false)"
+          class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+        >
+          @switch (item.icon) {
+            @case ('dashboard') {
+              <svg lucideLayoutDashboard [size]="18"></svg>
+            }
+            @case ('user') {
+              <svg lucideUser [size]="18"></svg>
+            }
+            @case ('building') {
+              <svg lucideBuilding2 [size]="18"></svg>
+            }
+            @case ('shield') {
+              <svg lucideShieldCheck [size]="18"></svg>
+            }
+            @case ('clock') {
+              <svg lucideClock [size]="18"></svg>
+            }
+            @case ('package') {
+              <svg lucidePackage [size]="18"></svg>
+            }
+          }
+          {{ item.label }}
+        </a>
+      }
+
+      @if (isApproved()) {
+        <a
+          routerLink="/vendor/products/new"
+          class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#1ea672] px-3 py-2.5 text-sm font-bold hover:bg-[#11945c] transition-colors"
+        >
+          <svg lucidePlus [size]="18"></svg>
+          {{ 'vendor.addProduct' | translate }}
+        </a>
+      }
+    </nav>
+
+    <div class="p-4 border-t border-white/10">
+      <div class="mb-3 px-2">
+        <p class="text-sm font-semibold truncate">{{ session?.displayName }}</p>
+        <p class="text-xs text-white/50 truncate">{{ session?.email }}</p>
+      </div>
+      <button
+        type="button"
+        (click)="logout()"
+        class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white"
+      >
+        <svg lucideLogOut [size]="18"></svg>
+        {{ 'vendor.logout' | translate }}
+      </button>
+    </div>
+  </aside>
+
+  @if (sidebarOpen()) {
+    <div
+      class="fixed inset-0 z-30 bg-black/40 lg:hidden"
+      (click)="sidebarOpen.set(false)"
+    ></div>
+  }
+
+  <div class="flex-1 flex flex-col min-w-0">
+    <header
+      class="sticky top-0 z-20 bg-white border-b border-[#e5e7eb] px-4 sm:px-6 h-16 flex items-center justify-between"
+    >
+      <button
+        type="button"
+        class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+        (click)="toggleSidebar()"
+        aria-label="Menü"
+      >
+        <svg lucideMenu [size]="22"></svg>
+      </button>
+      <div class="flex-1 lg:flex-none"></div>
+      <app-language-selector-vendor class="mr-4 hidden sm:block" />
+      
+      <a routerLink="/vendor/profile" class="flex items-center gap-3 p-1 rounded-full hover:bg-gray-100 transition-colors">
+        @if (user()?.profilePictureUrl) {
+          <img [src]="user().profilePictureUrl" class="h-9 w-9 rounded-full object-cover border border-gray-200" alt="Profile">
+        } @else {
+          <div class="h-9 w-9 rounded-full bg-[#0d7a52] flex items-center justify-center text-white text-xs font-bold">
+            {{ (user()?.fullLegalName?.[0] || user()?.email?.[0] || 'V').toUpperCase() }}
+          </div>
+        }
+        <div class="hidden md:block text-left">
+          <p class="text-xs font-bold text-gray-900 leading-none">{{ user()?.fullLegalName || 'Vendor' }}</p>
+          <p class="text-[10px] text-gray-500 mt-0.5">{{ user()?.onboardingStatus }}</p>
+        </div>
+      </a>
+    </header>
+
+    <main class="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto vp-portal-bg">
+      <router-outlet />
+    </main>
+  </div>
+</div>

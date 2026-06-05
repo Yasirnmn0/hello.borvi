@@ -1,0 +1,108 @@
+<section class="w-full bg-[#f6f6f6] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-16">
+    <div class="grid lg:grid-cols-2 items-center gap-12">
+      <div
+        appFadeIn
+        class="order-1 lg:order-2 flex justify-center lg:justify-end relative"
+      >
+        <div class="absolute top-0 grid grid-cols-6 gap-2 opacity-30">
+          @for (
+            dot of [
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+              19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+              35,
+            ];
+            track dot
+          ) {
+            <div class="h-1.5 w-1.5 bg-[#0c7a4b] rounded-full"></div>
+          }
+        </div>
+        <div class="borvi-float">
+          <app-image
+            src="/images/Hero/Equipment.png"
+            alt="Equipment"
+            [width]="800"
+            [height]="800"
+            [priority]="true"
+            className="object-contain w-[260px] sm:w-[340px] md:w-[460px] lg:w-[580px]"
+          />
+        </div>
+      </div>
+
+      <div
+        class="order-2 lg:order-1 w-full max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
+      >
+        <app-hero-text
+          size="lg"
+          align="center"
+          alignLg="left"
+          [description]="'home.hero.description' | translate"
+        >
+          <span heroTitle>
+            {{ "home.hero.titleLine1" | translate }}
+            <br class="hidden sm:block" />
+            {{ "home.hero.titleLine2" | translate }}
+            <span class="text-[#1ea672]">{{
+              "home.hero.titleHighlight" | translate
+            }}</span>
+          </span>
+        </app-hero-text>
+
+        <div
+          appFadeIn
+          [delay]="300"
+          class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 mt-6"
+        >
+          <button
+            type="button"
+            (click)="scrollToAppDownload()"
+            class="bg-[#0d7a52] hover:bg-[#0b6845] text-white px-5 py-3 rounded-lg flex items-center justify-center gap-2 text-sm font-medium w-full sm:w-auto transition-colors"
+          >
+            <svg lucideDownload [size]="18"></svg>
+            {{ "nav.downloadAppRent" | translate }}
+          </button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+          @for (item of heroFeatures; track item.titleKey) {
+            <div
+              appFadeIn
+              class="flex items-center gap-3 text-left hover:-translate-y-1 transition-transform"
+            >
+              @switch (item.icon) {
+                @case ("shield-check") {
+                  <svg
+                    lucideShieldCheck
+                    class="text-[#0d7a52]"
+                    [size]="36"
+                  ></svg>
+                }
+                @case ("badge-dollar-sign") {
+                  <svg
+                    lucideBadgeDollarSign
+                    class="text-[#0d7a52]"
+                    [size]="36"
+                  ></svg>
+                }
+                @case ("handshake") {
+                  <svg lucideHandshake class="text-[#0d7a52]" [size]="36"></svg>
+                }
+                @case ("map-pin") {
+                  <svg lucideMapPin class="text-[#0d7a52]" [size]="36"></svg>
+                }
+              }
+              <div>
+                <p class="text-sm font-semibold text-[#111827]">
+                  {{ item.titleKey | translate }}
+                </p>
+                <p class="text-xs text-gray-500">
+                  {{ item.subtitleKey | translate }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

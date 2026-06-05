@@ -1,0 +1,98 @@
+<app-vendor-page-shell
+  [title]="'vendor.dashboard.title' | translate"
+  [subtitle]="'vendor.dashboard.subtitle' | translate: { name: displayName() }"
+  maxWidth="xl"
+>
+  <app-onboarding-stepper vpStepper [activeStepId]="status()" />
+
+  @if (isRejected()) {
+    <div class="mb-8 p-6 bg-red-50 rounded-2xl border border-red-200" appFadeIn>
+      <div class="flex items-start gap-4">
+        <div class="h-10 w-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 shrink-0">
+          <svg lucideClock [size]="20"></svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-red-900">Application Update Required</h2>
+          <p class="text-sm text-red-700 mt-1">Reason: {{ rejectionReason() }}</p>
+          <button routerLink="/vendor/profile" class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
+            Fix and Resubmit
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+
+  @if (user$(); as user) {
+    <div class="mb-8 p-6 bg-[#f0fdf4] rounded-2xl border border-[#ccebdd]" appFadeIn>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          @if (user.profilePictureUrl) {
+            <img [src]="user.profilePictureUrl" class="h-16 w-16 rounded-full object-cover border-2 border-white shadow-sm" alt="Profile">
+          } @else {
+            <div class="h-16 w-16 rounded-full bg-[#0d7a52] flex items-center justify-center text-white text-xl font-bold">
+              {{ user.email[0].toUpperCase() }}
+            </div>
+          }
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-xl font-bold text-[#111827]">Welcome back, {{ user.fullLegalName || 'Vendor' }}!</h2>
+              @if (isApproved()) {
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wider">
+                  <svg lucideShieldCheck [size]="12"></svg> Verified
+                </span>
+              }
+            </div>
+            <p class="text-sm text-gray-500">{{ user.email }} • {{ user.phoneNumber || 'No phone added' }}</p>
+          </div>
+        </div>
+        <div class="hidden sm:block">
+          <button routerLink="/vendor/profile" class="p-2 text-gray-400 hover:text-[#0d7a52] transition-colors" title="Edit Profile">
+            <svg lucideUser [size]="24"></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+
+  @if (stats$ | async; as stats) {
+    <div class="grid sm:grid-cols-3 gap-4 mb-8">
+      @for (card of statCards(stats); track card.labelKey) {
+        <div class="vp-stat-card" appFadeIn [delay]="200 + $index * 60">
+          <p class="vp-stat-card__label">{{ card.labelKey | translate }}</p>
+          <p class="vp-stat-card__value">{{ card.value }}</p>
+          <p class="vp-stat-card__sub">{{ card.subKey | translate }}</p>
+        </div>
+      }
+    </div>
+  }
+
+  @if (nextAction(); as action) {
+    <div class="vp-next-action" appFadeIn [delay]="450">
+      <div class="vp-next-action__content">
+        <h3 class="vp-next-action__title">{{ action.labelKey | translate }}</h3>
+        <p class="vp-next-action__desc">{{ action.descKey | translate }}</p>
+      </div>
+      <a [routerLink]="action.route" class="vp-btn vp-btn--primary">
+        {{ action.labelKey | translate }}
+        <svg lucideArrowRight [size]="18"></svg>
+      </a>
+    </div>
+  }
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <a routerLink="/vendor/products" class="vp-menu-item" appFadeIn [delay]="550">
+      <div class="vp-menu-item__icon"><svg lucidePackage [size]="24"></svg></div>
+      <div class="vp-menu-item__content">
+        <h4 class="vp-menu-item__title">{{ 'vendor.dashboard.menuProducts' | translate }}</h4>
+        <p class="vp-menu-item__desc">{{ 'vendor.dashboard.menuProductsDesc' | translate }}</p>
+      </div>
+    </a>
+    <a routerLink="/vendor/business" class="vp-menu-item" appFadeIn [delay]="600">
+      <div class="vp-menu-item__icon"><svg lucideStore [size]="24"></svg></div>
+      <div class="vp-menu-item__content">
+        <h4 class="vp-menu-item__title">Business Info</h4>
+        <p class="vp-menu-item__desc">Manage your business details and settings.</p>
+      </div>
+    </a>
+  </div>
+</app-vendor-page-shell>

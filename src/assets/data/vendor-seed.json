@@ -1,0 +1,26 @@
+{
+  "categories": [
+    { "id": "tools", "label": "Werkzeuge & Bau", "icon": "wrench" },
+    { "id": "cleaning", "label": "Reinigungsgeräte", "icon": "sparkles" },
+    { "id": "garden", "label": "Garten & Outdoor", "icon": "tree" },
+    { "id": "camping", "label": "Camping & Sport", "icon": "tent" },
+    { "id": "electronics", "label": "Elektronik & Events", "icon": "cpu" },
+    { "id": "vehicles", "label": "Fahrzeuge & Anhänger", "icon": "truck" }
+  ],
+  "documentTypes": [
+    { "id": "id_front", "label": "Ausweis (Vorderseite)", "required": true },
+    { "id": "id_back", "label": "Ausweis (Rückseite)", "required": true },
+    { "id": "trade_license", "label": "Gewerbeanmeldung / Handelsregister", "required": false },
+    { "id": "bank_proof", "label": "Bankverbindung (Kontoauszug)", "required": true }
+  ],
+  "conditions": ["Neu", "Wie neu", "Exzellent", "Gut", "Gebraucht"],
+  "approvalEtaDays": 2,
+  "demoAccounts": [
+    {
+      "email": "vendor@borvi.demo",
+      "password": "Vendor123!",
+      "displayName": "Demo Anbieter",
+      "onboardingStatus": "approved"
+    }
+  ]
+}

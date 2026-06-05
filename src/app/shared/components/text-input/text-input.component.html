@@ -1,0 +1,53 @@
+<mat-form-field appearance="fill" class="custom-form-field">
+  <mat-label>{{ label }}</mat-label>
+
+  <input
+    matInput
+    [formControl]="selectControl"
+    [placeholder]="placeholder"
+    [type]="inputType"
+    (input)="onInput($event)"
+    [attr.autocomplete]="autocomplete || null"
+    [attr.name]="inputName || null"
+    />
+
+  <!-- Password Toggle -->
+  @if (type === 'password') {
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="togglePasswordVisibility()"
+      aria-label="Toggle password visibility"
+      type="button"
+      >
+      <mat-icon class="app-text xxlarge">
+      {{ isPasswordVisible ? "visibility" : "visibility_off" }}
+    </mat-icon>
+    </button>
+  }
+
+  <!-- Clear Button -->
+  @if (value && type !== 'password') {
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="clearInput()"
+      aria-label="Clear input"
+      type="button"
+      >
+      <mat-icon class="warn xlarge bold">close</mat-icon>
+    </button>
+  }
+
+  <!-- Error Message -->
+  @if (selectControl.hasError('required') && selectControl.touched) {
+    <mat-error>
+      {{ errorMessage || label + ' is required.' }}
+    </mat-error>
+  }
+
+  <!-- Hint -->
+  @if (hint) {
+    <mat-hint>{{ hint }}</mat-hint>
+  }
+</mat-form-field>

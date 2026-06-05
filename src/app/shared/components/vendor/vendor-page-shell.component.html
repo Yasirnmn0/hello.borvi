@@ -1,0 +1,26 @@
+<div [class]="'vp-shell vp-shell--' + maxWidth">
+  <header class="vp-header" appFadeIn [y]="20" [duration]="550">
+    @if (step > 0) {
+      <span class="vp-step-badge">
+        <span class="vp-step-badge__pulse"></span>
+        {{ 'vendor.step' | translate }} {{ step }}
+        @if (stepLabel) {
+          <span class="vp-step-badge__label">· {{ stepLabel }}</span>
+        }
+      </span>
+    }
+    <h1 class="vp-title">{{ title }}</h1>
+    @if (subtitle) {
+      <p class="vp-subtitle">{{ subtitle }}</p>
+    }
+  </header>
+
+  <div class="mb-6">
+    <ng-content select="[vpStepper]" />
+  </div>
+
+  <div class="vp-card" appFadeIn [delay]="140" [y]="24" [duration]="600">
+    <div class="vp-card__shine" aria-hidden="true"></div>
+    <ng-content />
+  </div>
+</div>

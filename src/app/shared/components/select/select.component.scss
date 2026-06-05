@@ -1,0 +1,55 @@
+/* Target the Angular Material input field */
+.mat-mdc-form-field {
+  width: 100%;
+}
+/* Optional: For better specificity, include more specific class selectors */
+.mat-mdc-form-field.mat-mdc-form-field-type-mat-input {
+  width: 100%;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
+
+.multi-select-trigger.is-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+:host.report-select-host {
+  display: block;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d6dfea;
+  border-radius: 10px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+
+  ::ng-deep .mat-mdc-form-field {
+    width: 100%;
+  }
+
+  ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    height: 56px;
+    align-items: center;
+  }
+
+  ::ng-deep .mdc-text-field--outlined .mdc-notched-outline {
+    height: 56px;
+  }
+
+  ::ng-deep .mat-mdc-form-field-infix {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  ::ng-deep .mat-mdc-select-trigger {
+    min-height: 24px;
+  }
+}

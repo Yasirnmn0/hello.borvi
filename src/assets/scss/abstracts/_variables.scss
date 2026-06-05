@@ -1,0 +1,169 @@
+// colors
+$primary-color: #6200ea; // Updated to match Sidebar Icon Color
+$secondary-color: #4500E2; // Updated to Sidebar Accent
+$success-color: #10b981;
+$warn-color: #ef4444;
+$default-color: #1f2937;
+$white-color: #ffffff;
+$grey-color: #f5f5f5;
+$black-color: #000000;
+$background-color: #f0e0ff8f; // User requested background color
+$box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); // Modern soft shadow
+$header: #111827;
+$para: #374151;
+$border: #e5e7eb; // Neutral border color
+$disabled: #dcdcdc;
+$blue: #2563eb;
+$gray-light: #f3f4f6;
+$gray-medium: #6b7280;
+$gray-dark: #374151;
+$upload-border: $primary-color; 
+$upload-bg-hover: #f5f3ff; // Light purple tint
+$image-count-color: #6b7280;
+$remove-btn-bg: rgba(239, 68, 68, 0.9);
+$delete-color: #dc3545;
+$delete-hover: #c82333;
+$table-header-bg: #f3f4f6; // Neutral table header
+$table-even-bg: #ffffff;
+$table-hover-bg: #f9fafb;
+
+// Sidebar dimensions
+$sidebar-expanded: 14rem; // Reduced from 16rem
+$sidebar-collapsed: 5rem; 
+$sidebar-laptop-expanded: 12rem; // Reduced from 14.5rem
+$sidebar-laptop-collapsed: 4.5rem; 
+$sidebar-tablet: 5rem;
+$sidebar-mobile: 4rem;
+
+// Purple color palette
+$purple-primary: #6625FFFF;
+$purple-dark: rgb(72, 22, 189);
+$purple-accent: #4500E2FF;
+$purple-light: #C5ACFFFF;
+$purple-background: #F4F0FFF5;
+
+// font sizes
+$xsmall-font: 10px;
+$small-font: 12px;
+$default-font: 14px;
+$medium-font: 16px;
+$large-font: 18px;
+$xlarge-font: 20px;
+$xxlarge-font: 24px;
+$xxxlarge-font: 2.5rem;
+
+
+// spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+$spacing-xxxl: 4rem;
+
+// border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1310px;
+$breakpoint-xldesktop: 1450px;
+$breakpoint-xlscreen: 1610px;
+$breakpoint-xxlscreen: 2000px;
+
+
+$common-colors: (
+    primary: $primary-color,
+    success: $success-color,
+    secondary: $secondary-color,
+    default: $default-color,
+    grey1: $grey-color,
+    warn: $warn-color,
+    light: $white-color,
+    dark: $black-color,
+    purple-primary: $purple-primary,
+    purple-dark: $purple-dark,
+    purple-accent: $purple-accent,
+    purple-light: $purple-light,
+    purple-background: $purple-background
+);
+
+$common-fonts: (
+  xsmall: $xsmall-font,
+  small: $small-font,
+  medium: $medium-font,
+  large: $large-font,
+  xlarge: $xlarge-font,
+  xxlarge: $xxlarge-font,
+);
+
+// Dashboard / UI
+$scrollbar-thumb: #e5e7eb;
+$scrollbar-thumb-hover: #c5acff;
+$card-border: #f1f5f9;
+$slate-400: #94a3b8;
+$slate-500: #64748b;
+$slate-600: #475569;
+$slate-700: #334155;
+$slate-800: #1e293b;
+$slate-900: #0f172a;
+$slate-200: #e2e8f0;
+$slate-300: #cbd5e1;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+
+// Dashboard semantic palette
+$dash-green: #22c55e;
+$dash-green-dark: #16a34a;
+$dash-emerald: #059669;
+$dash-emerald-dark: #166534;
+$dash-emerald-bg: #ecfdf3;
+$dash-orange: #f97316;
+$dash-orange-light: #fb923c;
+$dash-amber: #f59e0b;
+$dash-amber-light: #fbbf24;
+$dash-yellow: #eab308;
+$dash-violet: #7c3aed;
+$dash-violet-dark: #6d28d9;
+$dash-purple-bright: #6625ff;
+$dash-purple-soft: #8b5cf6;
+$dash-purple-pale: #a78bfa;
+$dash-purple-bg: #f5f3ff;
+$dash-purple-border: #e9d5ff;
+$dash-purple-tint: #ede9fe;
+$dash-blue: #3b82f6;
+$dash-blue-dark: #2563eb;
+$dash-blue-darker: #1d4ed8;
+$dash-blue-light: #60a5fa;
+$dash-blue-bg: #eff6ff;
+$dash-blue-border: #dbeafe;
+$dash-pink: #ec4899;
+$dash-cyan: #06b6d4;
+$dash-cyan-light: #22d3ee;
+$dash-lime: #84cc16;
+$dash-lime-light: #a3e635;
+$dash-teal: #0d9488;
+$dash-slate-bar: #4b5563;
+$dash-peak-green: #7cb342;
+$dash-link: #6b46ff;
+$dash-link-hover: #5a32e6;
+$dash-gradient-purple-start: #667eea;
+$dash-gradient-purple-end: #764ba2;
+$dash-grid-border: #e9ecef;
+$dash-grid-hover: #f8f9fa;
+$dash-grid-alt: #fafbfc;
+$dash-grid-muted: #6c757d;
+$dash-surface-muted: #f8fafc;
+$dash-border-muted: #f3f4f6;
+$dash-shadow-xs: rgba(15, 23, 42, 0.06);
+$dash-shadow-sm: rgba(15, 23, 42, 0.1);
+$dash-overlay: rgba(0, 0, 0, 0.5);
+$dash-font-ui: Inter, Roboto, "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+$dash-conversion-high: #2e7d32;
+$dash-conversion-medium: #f57c00;
+$dash-conversion-low-bg: #fef2f2;

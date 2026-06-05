@@ -1,0 +1,34 @@
+<app-vendor-page-shell
+  [title]="'vendor.business.title' | translate"
+  [subtitle]="'vendor.business.subtitle' | translate"
+  [step]="2"
+  stepLabel="Business Information"
+>
+  <app-onboarding-stepper vpStepper activeStepId="BusinessInfoSubmitted" />
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">Business Details</h3>
+      <app-vendor-field formControlName="businessName" label="Business Name" icon="store" placeholder="Enter your business name" [animationDelay]="0" />
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="businessType" label="Business Type" icon="user" placeholder="e.g. Retail, Service, etc." [animationDelay]="60" />
+        <app-vendor-field formControlName="businessRegistrationNumber" label="Registration Number" icon="file-text" placeholder="Tax ID or Reg #" [animationDelay]="120" />
+      </div>
+      <app-vendor-field formControlName="businessAddress" label="Business Address" icon="map" placeholder="Full business address" [animationDelay]="180" class="mt-4 block" />
+    </section>
+
+    @if (!isReadOnly()) {
+      <app-vendor-form-actions
+        [submitLabel]="'vendor.business.save' | translate"
+        [secondaryLabel]="'vendor.business.next' | translate"
+        secondaryRoute="/vendor/verification"
+        [loading]="saving()"
+        [successMessage]="saved() ? ('vendor.business.saved' | translate) : ''"
+      />
+    } @else {
+      <div class="mt-8 flex justify-end">
+        <a routerLink="/vendor/dashboard" class="vp-btn vp-btn--secondary">Back to Dashboard</a>
+      </div>
+    }
+  </form>
+</app-vendor-page-shell>

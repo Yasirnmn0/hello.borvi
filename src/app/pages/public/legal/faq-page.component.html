@@ -1,0 +1,121 @@
+<section class="bg-[#f6f6f6] min-h-screen py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <div
+        class="inline-flex items-center gap-2 bg-[#0c7a4b]/10 text-[#0c7a4b] px-4 py-2 rounded-full text-sm font-semibold"
+      >
+        <svg lucideCircleHelp class="w-4 h-4"></svg>
+        {{ "footer.FAQ.BADGE" | translate }}
+      </div>
+
+      <h1 class="mt-6 text-4xl md:text-5xl font-black text-slate-900">
+        {{ "footer.FAQ.TITLE" | translate }}
+        <span class="text-[#0c7a4b]">
+          {{ "footer.FAQ.TITLE_HIGHLIGHT" | translate }}
+        </span>
+      </h1>
+
+      <p class="mt-4 text-slate-500 max-w-2xl mx-auto">
+        {{ "footer.FAQ.DESCRIPTION" | translate }}
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      @for (faq of faqs; track faq.question; let i = $index) {
+        <div
+          class="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all overflow-hidden"
+        >
+          <button
+            (click)="toggle(i)"
+            class="w-full flex items-center justify-between gap-4 p-6 text-left"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#0c7a4b]/10 flex items-center justify-center shrink-0"
+              >
+                @switch (faq.icon) {
+                  @case ("package") {
+                    <svg lucidePackage class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+
+                  @case ("users") {
+                    <svg lucideUsers class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+
+                  @case ("credit-card") {
+                    <svg lucideCreditCard class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+
+                  @case ("calendar") {
+                    <svg
+                      lucideCalendarDays
+                      class="w-5 h-5 text-[#0c7a4b]"
+                    ></svg>
+                  }
+
+                  @case ("shield") {
+                    <svg lucideShieldCheck class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+
+                  @case ("user-plus") {
+                    <svg lucideUserPlus class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+
+                  @case ("mail") {
+                    <svg lucideMail class="w-5 h-5 text-[#0c7a4b]"></svg>
+                  }
+                }
+              </div>
+
+              <span class="font-semibold text-slate-900">
+                {{ faq.question | translate }}
+              </span>
+            </div>
+
+            <svg
+              lucideChevronDown
+              class="w-5 h-5 text-slate-400 transition-transform"
+              [class.rotate-180]="openIndex() === i"
+            ></svg>
+          </button>
+
+          @if (openIndex() === i) {
+            <div
+              class="px-6 pb-6 pl-[88px] border-t border-slate-100 text-slate-600 leading-relaxed"
+            >
+              <div class="pt-4">
+                {{ faq.answer | translate }}
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <div
+      class="mt-16 bg-gradient-to-r from-[#032d22] to-[#0c7a4b] rounded-3xl p-10 text-center text-white shadow-xl"
+    >
+      <div
+        class="w-16 h-16 mx-auto rounded-full bg-white/10 flex items-center justify-center"
+      >
+        <svg lucideMail class="w-8 h-8"></svg>
+      </div>
+
+      <h3 class="mt-5 text-3xl font-bold">
+        {{ "footer.FAQ.CONTACT_TITLE" | translate }}
+      </h3>
+
+      <p class="mt-3 text-white/80 max-w-lg mx-auto">
+        {{ "footer.FAQ.CONTACT_DESC" | translate }}
+      </p>
+
+      <a
+        href="mailto:hello@borvi.de"
+        class="mt-8 inline-flex items-center gap-2 bg-white text-[#0c7a4b] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
+      >
+        <svg lucideMail class="w-4 h-4"></svg>
+        hello&#64;borvi.de
+      </a>
+    </div>
+  </div>
+</section>

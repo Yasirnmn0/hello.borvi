@@ -1,0 +1,50 @@
+<app-vendor-page-shell
+  [title]="'vendor.profile.title' | translate"
+  [subtitle]="'vendor.profile.subtitle' | translate"
+  [step]="1"
+  [stepLabel]="'vendor.profile.stepLabel' | translate"
+>
+  <app-onboarding-stepper vpStepper activeStepId="profile" />
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">{{ 'vendor.profile.sectionPersonal' | translate }}</h3>
+      <app-vendor-field formControlName="fullLegalName" label="Full Legal Name" icon="user" placeholder="Enter your full legal name" [animationDelay]="0" />
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="phoneNumber" label="Phone Number" type="tel" icon="phone" placeholder="+49 123 4567890" [animationDelay]="60" />
+        <app-vendor-field formControlName="dateOfBirth" label="Date of Birth" type="date" [animationDelay]="120" />
+      </div>
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="gender" label="Gender" icon="user" placeholder="e.g. Male, Female, Other" [animationDelay]="180" />
+      </div>
+    </section>
+
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">{{ 'vendor.profile.sectionAddress' | translate }}</h3>
+      <app-vendor-field formControlName="address" [label]="'vendor.profile.street' | translate" icon="map" [placeholder]="'vendor.profile.streetPh' | translate" [animationDelay]="240" />
+      <div class="vp-form-grid vp-form-grid--2 mt-4">
+        <app-vendor-field formControlName="postalCode" [label]="'vendor.profile.postalCode' | translate" [placeholder]="'vendor.profile.postalCodePh' | translate" [animationDelay]="300" />
+        <app-vendor-field formControlName="city" [label]="'vendor.profile.city' | translate" [placeholder]="'vendor.profile.cityPh' | translate" [animationDelay]="360" />
+      </div>
+    </section>
+
+    <section class="vp-form-section">
+      <h3 class="vp-form-section__title">Profile Picture</h3>
+      <app-vendor-field formControlName="profilePictureUrl" label="Profile Picture URL" icon="image" placeholder="https://example.com/photo.jpg" [animationDelay]="420" />
+    </section>
+
+    @if (!isReadOnly()) {
+      <app-vendor-form-actions
+        [submitLabel]="'vendor.profile.save' | translate"
+        [secondaryLabel]="'vendor.profile.next' | translate"
+        secondaryRoute="/vendor/dashboard"
+        [loading]="saving()"
+        [successMessage]="saved() ? ('vendor.profile.saved' | translate) : ''"
+      />
+    } @else {
+      <div class="mt-8 flex justify-end">
+        <a routerLink="/vendor/dashboard" class="vp-btn vp-btn--secondary">Back to Dashboard</a>
+      </div>
+    }
+  </form>
+</app-vendor-page-shell>

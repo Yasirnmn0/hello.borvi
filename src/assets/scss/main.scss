@@ -1,0 +1,869 @@
+/* You can add global styles to this file, and also import other style files */
+@use "sass:math";
+@use "abstracts/animations"; // Import global animations
+@use "abstracts/variables" as *; // Import variables
+@use "abstracts/mixins" as *; // Import mixins
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif; // Professional dashboard font
+  background-color: #f0e0ff8f; // Set global background color explicitly
+  color: $default-color;
+
+  // Main scrollbar: same style as Peak Hours card (thin, light grey thumb, purple hover)
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+}
+
+// WebKit main scrollbar – 4px to match dashboard (Peak Hours, grid)
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button {
+  display: none;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #c5acff;
+}
+
+/* Shared scrollbar utilities (dashboard, grids) – keeps component style budget down */
+.scrollbar-thin-h,
+.scrollbar-thin-v,
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+  -ms-overflow-style: auto;
+}
+.scrollbar-thin-h::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin-v::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scrollbar-thin-h::-webkit-scrollbar-track,
+.scrollbar-thin-v::-webkit-scrollbar-track,
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin-h::-webkit-scrollbar-thumb,
+.scrollbar-thin-v::-webkit-scrollbar-thumb,
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+.scrollbar-thin-h::-webkit-scrollbar-thumb:hover,
+.scrollbar-thin-v::-webkit-scrollbar-thumb:hover,
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #c5acff;
+}
+
+/* Dashboard Kendo grid scrollbars (keep component budget under 40kB) */
+.admin-dashboard .k-grid-content,
+.admin-dashboard .k-grid-header-wrap {
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+}
+.admin-dashboard .k-grid-content::-webkit-scrollbar,
+.admin-dashboard .k-grid-header-wrap::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.admin-dashboard .k-grid-content::-webkit-scrollbar-track,
+.admin-dashboard .k-grid-header-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+.admin-dashboard .k-grid-content::-webkit-scrollbar-thumb,
+.admin-dashboard .k-grid-header-wrap::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+.admin-dashboard .k-grid-content::-webkit-scrollbar-thumb:hover,
+.admin-dashboard .k-grid-header-wrap::-webkit-scrollbar-thumb:hover {
+  background: #c5acff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo", sans-serif; // Consistent heading font
+  margin-top: 0;
+}
+
+/* Define CSS variables for sidebar dimensions using SCSS variables */
+:root {
+  --sidebar-expanded: #{$sidebar-expanded};
+  --sidebar-collapsed: #{$sidebar-collapsed};
+  --sidebar-laptop-expanded: #{$sidebar-laptop-expanded};
+  --sidebar-laptop-collapsed: #{$sidebar-laptop-collapsed};
+  --transition-time: 0.3s;
+}
+
+/* ================================
+   GLOBAL SIDEBAR STATE HANDLING
+   ================================ */
+
+/* Wrapper of navbar + content */
+.layout-container {
+  margin-left: var(--sidebar-expanded);
+  transition: margin-left var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
+  background-color: transparent; // Removed background color
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  // Apply page entry animation
+  animation: fadeIn 0.5s ease-out;
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-expanded);
+  }
+}
+
+// Add global page transition class
+.page-content-transition {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* COLLAPSED SIDEBAR */
+body.sidebar-collapsed .layout-container {
+  margin-left: var(--sidebar-collapsed) !important;
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-collapsed) !important;
+  }
+}
+
+/* MOBILE SIDEBAR */
+@media (max-width: 768px) {
+  .layout-container {
+    margin-left: 0 !important;
+  }
+}
+
+/* Role screen styles moved to role.component.scss */
+
+/* Association screen styles moved to component SCSS */
+
+/* User screen styles moved to user.component.scss */
+
+/* main content wrapper - ensure it doesn't overlap with sidebar */
+.main-content-wrapper {
+  width: 100% !important;
+  padding: 1rem; // Reduced padding
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tablet) {
+    padding: 0.75rem;
+  }
+}
+
+/* EXPANDED SIDEBAR */
+body.sidebar-expanded {
+  .navbar {
+    left: calc(var(--sidebar-expanded) - 0.5rem) !important;
+    width: calc(97% - var(--sidebar-expanded)) !important;
+
+    @include respond(laptop) {
+      left: calc(var(--sidebar-laptop-expanded) - 0.5rem) !important;
+      width: calc(97% - var(--sidebar-laptop-expanded)) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body.sidebar-collapsed .navbar,
+  body.sidebar-expanded .navbar {
+    left: 5.9rem !important;
+    width: calc(97% - 6rem) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.sidebar-collapsed .navbar,
+  body.sidebar-expanded .navbar {
+    left: 5rem !important;
+    width: calc(97% - 5rem) !important;
+  }
+}
+
+/* -----------------------------------------------------------------
+   Make collapse animated, but expansion instant:
+   - We keep transitions inside `body.sidebar-collapsed` (you already have them)
+   - We explicitly disable transitions when expanded so "expand" is instant
+------------------------------------------------------------------*/
+
+/* 1) Elements that animate on collapse */
+$animate-targets: (
+  ".layout-container",
+  ".main-content-wrapper",
+  ".navbar",
+  ".admin-dashboard",
+  ".dashboard-container",
+  ".left-section",
+  ".dashboard-header" // removed per-screen selector; expansion scoped at component level
+);
+
+/* 2) Disable transitions when expanded (instant expand) */
+body.sidebar-expanded {
+  @each $sel in $animate-targets {
+    #{$sel} {
+      /* Make expansion instant */
+      transition: none !important;
+      /* Also ensure width/left/margin-left changes are immediate */
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+    }
+  }
+
+  /* Make sure layout container sits at expanded width without anim */
+  .layout-container {
+    transition: none !important;
+  }
+}
+
+/* Center comparison calendar popup over the modal (above comparison backdrop z-index 10050) */
+.k-animation-container:has(.comp-cal-popup) {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  z-index: 10060 !important;
+}
+
+/* Admin dashboard comparison modal (moved from component to meet style budget) */
+.admin-dashboard {
+  .comparison-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10050;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .comparison-modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 720px;
+    max-width: 96vw;
+    min-height: 360px;
+    max-height: calc(100vh - 4rem);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    .modal-header {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px 10px;
+      gap: 10px;
+      .header-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: #f0ecff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        .header-icon-svg {
+          font-size: 18px;
+          color: #7c3aed;
+        }
+      }
+      .modal-title {
+        flex: 1;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1e293b;
+      }
+      .close-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #94a3b8;
+        padding: 2px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s;
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+        &:hover {
+          background: #f1f5f9;
+          color: #64748b;
+        }
+      }
+    }
+    .modal-tabs-wrapper {
+      padding: 0 20px 10px;
+      .tabs-container {
+        display: flex;
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 3px;
+        gap: 3px;
+        .tab {
+          flex: 1;
+          padding: 8px 14px;
+          border: none;
+          border-radius: 6px;
+          font-size: 0.8125rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          background: transparent;
+          color: #64748b;
+          &.active {
+            background: #7c3aed;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+          }
+          &:not(.active):hover {
+            color: #475569;
+            background: #e2e8f0;
+          }
+        }
+      }
+    }
+    .modal-content.comparison-modal-content {
+      padding: 0 20px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .card-section {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 14px 16px;
+        .section-header {
+          margin-bottom: 10px;
+          display: flex;
+          align-items: baseline;
+          gap: 6px;
+          flex-wrap: wrap;
+          .section-title {
+            margin: 0;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #1e293b;
+          }
+          .section-helper {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 400;
+          }
+        }
+        .form-stack {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          .form-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #475569;
+          }
+        }
+        .input-group ::ng-deep {
+          kendo-datetimepicker,
+          kendo-dropdownlist {
+            width: 100%;
+            .k-input-inner {
+              padding: 7px 10px;
+              font-size: 0.8125rem;
+              color: #1e293b;
+            }
+            .k-input-button,
+            .k-select {
+              color: #94a3b8;
+            }
+            &.k-picker,
+            &.k-input {
+              border-radius: 8px;
+              border: 1px solid #e2e8f0;
+              background: #fff;
+              transition: border-color 0.15s;
+              &:hover {
+                border-color: #cbd5e1;
+              }
+              &.k-focus,
+              &:focus-within {
+                border-color: #7c3aed;
+                box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px 14px;
+      .btn {
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: all 0.15s;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #64748b;
+        &:hover {
+          background: #f1f5f9;
+          color: #475569;
+        }
+      }
+      .btn-primary {
+        background: #7c3aed;
+        color: #fff;
+        &:hover {
+          background: #6d28d9;
+          box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+      }
+    }
+    .event-actions {
+      display: flex;
+      justify-content: center;
+      padding: 4px 0;
+      .btn-apply-filter {
+        padding: 7px 20px;
+        border-radius: 8px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid #7c3aed;
+        background: #f5f3ff;
+        color: #7c3aed;
+        transition: all 0.15s;
+        &:hover:not(:disabled) {
+          background: #ede9fe;
+        }
+        &:disabled {
+          opacity: 0.45;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .event-dates-display {
+      background: #f8fafc;
+      .date-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 0;
+        .date-label {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: #64748b;
+          min-width: 38px;
+        }
+        .date-value {
+          font-size: 0.8125rem;
+          font-weight: 500;
+          color: #1e293b;
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 6px;
+          padding: 5px 10px;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Peak Management screen (global – keeps lazy chunk small) */
+.peak-management-wrapper {
+  padding: $spacing-xl;
+  background-color: $purple-background;
+  min-height: 100vh;
+  margin-left: var(--sidebar-expanded, $sidebar-expanded);
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-expanded, $sidebar-laptop-expanded);
+  }
+  @include respond(mobile) {
+    margin-left: 0;
+    padding: $spacing-md;
+  }
+}
+body.sidebar-collapsed .peak-management-wrapper {
+  margin-left: var(--sidebar-collapsed, $sidebar-collapsed);
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-collapsed, $sidebar-laptop-collapsed);
+  }
+}
+.peak-management-wrapper {
+  .page-header {
+    margin-bottom: $spacing-xl;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    @include respond(mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+    .header-content h2,
+    .header-content .bold-heading {
+      margin: 0;
+      font-size: $xxlarge-font;
+      font-weight: 700;
+      color: $purple-dark;
+      font-family: Inter, sans-serif;
+    }
+    .header-content p {
+      margin: 0.25rem 0 0;
+      color: $gray-medium;
+      font-size: $default-font;
+    }
+    .header-controls .shop-select-field {
+      min-width: 240px;
+      @include respond(mobile) {
+        width: 100%;
+      }
+    }
+    .shop-code {
+      font-size: $small-font;
+      color: $gray-medium;
+    }
+  }
+
+  .config-panel {
+    background: $white-color;
+    border-radius: $border-radius-lg;
+    padding: $spacing-xl;
+    box-shadow: $box-shadow;
+    min-height: 400px;
+  }
+
+  .level-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .view-main {
+    flex: 1;
+    min-width: 280px;
+  }
+  .view-sidebar {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: flex-end;
+    gap: 12px;
+    @include respond(tablet) {
+      flex: 1 1 100%;
+    }
+  }
+
+  .form-group {
+    margin-bottom: $spacing-xl;
+  }
+  .form-label {
+    display: block;
+    font-size: $default-font;
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+    color: $header;
+  }
+  .form-label-mb {
+    margin-bottom: $spacing-xs;
+  }
+  .form-label-inline {
+    margin: 0;
+  }
+  .form-input {
+    width: 100%;
+    height: 40px;
+    padding: $spacing-xs 12px;
+    border: 1px solid $border;
+    border-radius: $border-radius-md;
+    font-size: $default-font;
+    box-sizing: border-box;
+  }
+  .input-small {
+    width: 80px;
+  }
+  .form-helper {
+    font-size: $small-font;
+    color: $gray-medium;
+    margin-top: 4px;
+  }
+
+  .config-table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      text-align: left;
+      padding: $spacing-xs 0;
+      font-size: $small-font;
+      color: $gray-medium;
+      font-weight: 500;
+    }
+    td {
+      padding: $spacing-xs 0;
+      vertical-align: middle;
+    }
+    .th-center {
+      text-align: center;
+    }
+    .td-center {
+      text-align: center;
+    }
+  }
+
+  .text-sm {
+    font-size: $default-font;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+
+  .preview-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    box-shadow: 0 0 0 1px $border;
+  }
+  .preview-dot-super {
+    background: #16a34a;
+  }
+  .preview-dot-peak {
+    background: #7cb342;
+  }
+  .preview-dot-medium {
+    background: #eab308;
+  }
+
+  .btn-save {
+    width: 100%;
+  }
+
+  .no-shops-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-xxl;
+    color: $gray-medium;
+    mat-icon {
+      font-size: 4rem;
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+.import-sales {
+  padding: $spacing-xl;
+  background-color: $purple-background;
+  min-height: 100vh;
+
+  margin-left: var(--sidebar-expanded, --sidebar-expanded);
+  width: calc(100% - var(--sidebar-expanded, --sidebar-expanded));
+  transition:
+    margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-sizing: border-box;
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-expanded, --sidebar-expanded);
+    width: calc(100% - var(--sidebar-laptop-expanded));
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @include respond(mobile) {
+    margin-left: 0;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    padding: $spacing-md;
+  }
+
+  .page-header {
+    margin-bottom: $spacing-xl;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    @include respond(mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+    .header-content h2,
+    .header-content .bold-heading {
+      margin: 0;
+      font-size: $xxlarge-font;
+      font-weight: 700;
+      color: $purple-dark;
+      font-family: Inter, sans-serif;
+    }
+    .header-content p {
+      margin: 0.25rem 0 0;
+      color: $gray-medium;
+      font-size: $default-font;
+    }
+    .header-controls .shop-select-field {
+      min-width: 240px;
+      @include respond(mobile) {
+        width: 100%;
+      }
+    }
+    .shop-code {
+      font-size: $small-font;
+      color: $gray-medium;
+    }
+  }
+
+  .k-grid .k-grid-header .k-column-title {
+    font-weight: 700;
+  }
+
+  .k-upload-selected {
+    display: none !important;
+  }
+  .k-upload-actions {
+    display: none !important;
+  }
+}
+
+body.sidebar-collapsed .import-sales {
+  margin-left: var(--sidebar-collapsed, $sidebar-collapsed);
+  width: calc(100% - var(--sidebar-collapsed, --sidebar-collapsed));
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-collapsed, $sidebar-laptop-collapsed);
+  }
+}
+
+.compare-sales {
+  padding: $spacing-xl;
+  min-height: 100vh;
+
+  margin-left: var(--sidebar-expanded, --sidebar-expanded);
+  width: calc(100% - var(--sidebar-expanded, --sidebar-expanded));
+  transition:
+    margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-sizing: border-box;
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-expanded, --sidebar-expanded);
+    width: calc(100% - var(--sidebar-laptop-expanded));
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @include respond(mobile) {
+    margin-left: 0;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    padding: $spacing-md;
+  }
+
+  .table-header {
+    margin-bottom: math.div($spacing-xl, 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    @include respond(mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+    .header-content h2,
+    .header-content .bold-heading {
+      margin: 0;
+      font-size: $xxlarge-font;
+      font-weight: 700;
+      color: $purple-dark;
+      font-family: Inter, sans-serif;
+    }
+    .header-content p {
+      margin: 0.25rem 0 0;
+      color: $gray-medium;
+      font-size: $default-font;
+    }
+    .header-controls .shop-select-field {
+      min-width: 240px;
+      @include respond(mobile) {
+        width: 100%;
+      }
+    }
+    .shop-code {
+      font-size: $small-font;
+      color: $gray-medium;
+    }
+  }
+
+  .k-grid .k-grid-header .k-column-title {
+    font-weight: 700;
+  }
+}
+
+body.sidebar-collapsed .compare-sales {
+  margin-left: var(--sidebar-collapsed, $sidebar-collapsed);
+  width: calc(100% - var(--sidebar-collapsed, --sidebar-collapsed));
+
+  @include respond(laptop) {
+    margin-left: var(--sidebar-laptop-collapsed, $sidebar-laptop-collapsed);
+  }
+}
+
+.camera-report-wrapper {
+  .k-grid-header {
+    display: none;
+  }
+}

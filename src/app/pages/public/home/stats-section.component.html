@@ -1,0 +1,67 @@
+<section class="py-0 bg-[#f6f6f6] overflow-hidden">
+  <app-container>
+    <div
+      appFadeIn
+      class="bg-white shadow-md border border-slate-100 rounded-[24px] px-8 py-8 md:py-10"
+    >
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 items-center"
+      >
+        @for (
+          stat of stats;
+          track stat.label;
+          let i = $index;
+          let last = $last
+        ) {
+          <div
+            appFadeIn
+            [delay]="i * 80"
+            [class]="
+              'flex items-center gap-4 w-full justify-start sm:justify-center lg:justify-start lg:px-6 hover:-translate-y-1.5 transition-transform ' +
+              (!last ? 'lg:border-r lg:border-slate-200/80' : '')
+            "
+          >
+            <div
+              class="flex items-center justify-center w-14 h-14 rounded-full bg-[#054a29] text-white shrink-0 shadow-inner"
+            >
+              @switch (stat.icon) {
+                @case ("users") {
+                  <svg lucideUsers class="w-6 h-6 stroke-[2]" [size]="24"></svg>
+                }
+                @case ("package") {
+                  <svg
+                    lucidePackage
+                    class="w-6 h-6 stroke-[2]"
+                    [size]="24"
+                  ></svg>
+                }
+                @case ("layout-grid") {
+                  <svg
+                    lucideLayoutGrid
+                    class="w-6 h-6 stroke-[2]"
+                    [size]="24"
+                  ></svg>
+                }
+                @case ("star") {
+                  <svg lucideStar class="w-6 h-6 stroke-[2]" [size]="24"></svg>
+                }
+              }
+            </div>
+            <div class="flex flex-col text-left font-sans">
+              <h3
+                class="text-[24px] font-bold text-[#111827] tracking-tight leading-none"
+              >
+                {{ stat.value }}
+              </h3>
+              <p
+                class="text-[14px] text-gray-500 font-medium mt-1 leading-tight"
+              >
+                {{ stat.label | translate }}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </app-container>
+</section>

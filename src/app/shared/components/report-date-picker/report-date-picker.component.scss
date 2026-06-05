@@ -1,0 +1,98 @@
+.report-date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.25;
+  }
+
+  &__required {
+    color: #dc2626;
+    margin-left: 2px;
+  }
+}
+
+// Kendo DatePicker template: <kendo-dateinput> + <button.k-input-button> as siblings on the host.
+// Host must be flex row — display:block stacks the calendar icon below the date.
+:host ::ng-deep kendo-datepicker.report-date-picker__control {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 4px;
+  min-height: 44px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border: 1px solid #d6dfea;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  kendo-dateinput {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto !important;
+    max-width: none;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  kendo-dateinput .k-input {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  kendo-dateinput .k-input-inner {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 !important;
+    font-size: 0.875rem;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  > button.k-input-button {
+    flex: 0 0 32px;
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-self: center;
+    order: 2;
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  > button.k-input-button .k-button-icon,
+  > button.k-input-button .k-icon,
+  > button.k-input-button .k-svg-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

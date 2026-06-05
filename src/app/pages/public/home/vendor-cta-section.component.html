@@ -1,0 +1,27 @@
+<section class="py-12 bg-white">
+  <app-container>
+    <div appFadeIn class="grid md:grid-cols-2 gap-6 rounded-[28px] overflow-hidden border border-[#e5e7eb] shadow-sm">
+      <div class="p-8 sm:p-10 bg-[#032d22] text-white">
+        <svg lucideStore class="text-[#1ea672] mb-4" [size]="36"></svg>
+        <h3 class="text-2xl font-extrabold text-white">{{ 'home.vendorCta.rentTitle' | translate }}</h3>
+        <p class="mt-3 text-white/75 text-sm leading-relaxed">{{ 'home.vendorCta.rentDesc' | translate }}</p>
+        <button type="button" (click)="navigateToSignup()" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-white text-[#0c7a4b] px-6 py-3 text-sm font-bold hover:bg-[#f8faf7] transition-colors">
+          {{ 'home.vendorCta.rentBtn' | translate }}
+          <svg lucideArrowRight [size]="18"></svg>
+        </button>
+        <button type="button" (click)="navigateToLogin()" class="mt-3 block text-sm text-white underline text-left">
+          {{ 'home.vendorCta.rentLogin' | translate }}
+        </button>
+      </div>
+      <div class="p-8 sm:p-10 bg-[#f6f6f6] flex flex-col justify-center">
+        <svg lucideDownload class="text-[#0d7a52] mb-4" [size]="36"></svg>
+        <h3 class="text-2xl font-extrabold text-[#111827]">{{ 'home.vendorCta.downloadTitle' | translate }}</h3>
+        <p class="mt-3 text-gray-500 text-sm leading-relaxed">{{ 'home.vendorCta.downloadDesc' | translate }}</p>
+        <button type="button" (click)="scrollToAppDownload()" class="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-[#0d7a52] text-[#0d7a52] px-6 py-3 text-sm font-bold hover:bg-[#f0fdf4] transition-colors w-fit">
+          {{ 'home.vendorCta.downloadBtn' | translate }}
+          <svg lucideArrowRight [size]="18"></svg>
+        </button>
+      </div>
+    </div>
+  </app-container>
+</section>

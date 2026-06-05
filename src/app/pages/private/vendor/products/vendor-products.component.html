@@ -1,0 +1,48 @@
+<app-vendor-page-shell [title]="'vendor.products.title' | translate" [subtitle]="'vendor.products.subtitle' | translate" maxWidth="xl">
+  <div class="flex justify-end mb-6" appFadeIn [y]="12">
+    <a routerLink="/vendor/products/new" class="vp-btn vp-btn--primary">
+      <svg lucidePlus [size]="18"></svg>
+      {{ 'vendor.products.new' | translate }}
+    </a>
+  </div>
+
+  @if (!products.length) {
+    <div class="rounded-2xl border-2 border-dashed border-[#ccebdd] bg-gradient-to-b from-[#f0fdf4]/50 to-white p-16 text-center" appFadeIn>
+      <div class="mx-auto h-16 w-16 rounded-2xl bg-[#ecfdf3] flex items-center justify-center mb-4">
+        <svg lucidePackage class="text-[#0d7a52]" [size]="32"></svg>
+      </div>
+      <p class="font-bold text-[#111827] text-lg">{{ 'vendor.products.emptyTitle' | translate }}</p>
+      <p class="mt-2 text-sm text-gray-500 max-w-sm mx-auto">{{ 'vendor.products.emptyDesc' | translate }}</p>
+      <a routerLink="/vendor/products/new" class="vp-btn vp-btn--primary inline-flex mt-8">{{ 'vendor.products.emptyCta' | translate }}</a>
+    </div>
+  } @else {
+    <div class="grid gap-4">
+      @for (p of products; track p.id; let i = $index) {
+        <article class="group rounded-2xl bg-white border border-[#e5e7eb] p-5 flex flex-col sm:flex-row sm:items-center gap-4 transition-all duration-300 hover:border-[#0d7a52]/30 hover:shadow-lg hover:shadow-[#0d7a52]/8 hover:-translate-y-0.5" appFadeIn [delay]="i * 60" [y]="12">
+          <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-[#ecfdf3] to-[#d1fae5] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+            <svg lucidePackage class="text-[#0d7a52]" [size]="28"></svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="font-bold text-[#111827] truncate">{{ p.title }}</h3>
+              <span [class]="'text-xs font-bold px-2.5 py-0.5 rounded-full ' + (p.status === 'published' ? 'bg-[#ecfdf3] text-[#0d7a52]' : 'bg-gray-100 text-gray-600')">
+                {{ p.status === 'published' ? ('vendor.products.statusLive' | translate) : ('vendor.products.statusDraft' | translate) }}
+              </span>
+            </div>
+            <p class="text-sm text-gray-500 mt-1 line-clamp-1">{{ p.description }}</p>
+            <p class="text-xs text-gray-400 mt-2">{{ categoryLabel(p.categoryId) }} · {{ conditionLabel(p.condition) }} · {{ p.createdAt | date: 'dd.MM.yyyy' }}</p>
+          </div>
+          <div class="text-right shrink-0">
+            <p class="text-xl font-extrabold text-[#0d7a52]">
+              {{ p.dailyPrice | currency: 'EUR' : 'symbol' : '1.0-0' }}<span class="text-xs font-medium text-gray-500">{{ 'vendor.products.perDay' | translate }}</span>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">{{ 'vendor.products.deposit' | translate }} {{ p.deposit | currency: 'EUR' }}</p>
+          </div>
+          <button type="button" (click)="remove(p.id)" class="p-2.5 rounded-xl text-red-500 hover:bg-red-50 border border-transparent hover:border-red-100 transition-colors shrink-0" aria-label="Delete">
+            <svg lucideTrash2 [size]="18"></svg>
+          </button>
+        </article>
+      }
+    </div>
+  }
+</app-vendor-page-shell>

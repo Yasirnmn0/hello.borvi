@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "http://94.130.221.226:8081", 
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookieDomainRewrite": "localhost"  
+  }
+}

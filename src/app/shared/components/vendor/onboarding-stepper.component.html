@@ -1,0 +1,28 @@
+<nav class="vp-stepper" aria-label="Onboarding Progress" appFadeIn [y]="12" [duration]="500">
+  <div class="vp-stepper__track" aria-hidden="true">
+    <div class="vp-stepper__fill" [style.width.%]="overallProgress()"></div>
+  </div>
+  <ol class="vp-stepper__list">
+    @for (step of steps; track step.id; let i = $index) {
+      <li class="vp-stepper__item">
+        <div
+          [class]="'vp-stepper__circle ' + getCircleClass(step.id)"
+          [attr.aria-current]="isCurrent(step.id) ? 'step' : null"
+        >
+          @if (isComplete(step.id)) {
+            <svg lucideCheck [size]="16"></svg>
+          } @else {
+            {{ i + 1 }}
+          }
+        </div>
+        <span
+          [class]="
+            'vp-stepper__label ' + (isCurrent(step.id) || isComplete(step.id) ? 'vp-stepper__label--active' : '')
+          "
+        >
+          {{ step.label }}
+        </span>
+      </li>
+    }
+  </ol>
+</nav>

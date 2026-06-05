@@ -1,0 +1,118 @@
+<header class="sticky top-0 z-50 bg-[#032d22]">
+  <app-container>
+    <div class="flex h-20 items-center justify-between">
+      <a routerLink="/" class="flex items-center gap-3">
+        <app-image
+          src="/images/logo.svg"
+          alt="Borvi Logo"
+          [width]="220"
+          [height]="220"
+          className="object-contain"
+        />
+      </a>
+
+      <nav class="hidden lg:flex gap-6">
+        @for (item of navItems; track item.titleKey) {
+          <a
+            [routerLink]="item.href"
+            routerLinkActive="text-[#1ea672] after:w-full"
+            [routerLinkActiveOptions]="{ exact: item.href === '/' }"
+            class="relative inline-block text-sm font-semibold tracking-wide transition-colors duration-300 text-white hover:text-[#1ea672] after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-0 after:bg-[#1ea672] after:transition-all after:duration-300 hover:after:w-full"
+          >
+            {{ item.titleKey | translate }}
+          </a>
+        }
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <app-language-selector />
+
+        <a
+          routerLink="/login"
+          class="hidden text-sm font-semibold text-white/90 hover:text-[#1ea672] lg:inline-flex items-center px-2"
+        >
+          {{ 'nav.vendorLogin' | translate }}
+        </a>
+
+        <a
+          routerLink="/signup"
+          class="hidden h-11 rounded-xl border border-[#1ea672] px-4 text-sm font-bold text-[#1ea672] hover:bg-[#1ea672]/10 lg:inline-flex items-center"
+        >
+          {{ 'nav.becomeVendor' | translate }}
+        </a>
+
+        <a
+          routerLink="/"
+          fragment="AppDownload"
+          class="hidden h-11 rounded-xl bg-[#0c7a4b] px-5 text-sm font-bold text-white hover:bg-[#11945c] lg:inline-flex items-center"
+        >
+          <svg lucideDownload class="mr-2 h-4 w-4" [size]="16"></svg>
+          {{ 'nav.downloadApp' | translate }}
+        </a>
+
+        <button
+          type="button"
+          (click)="open.set(true)"
+          class="text-white hover:bg-white/10 lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md"
+          aria-label="Open menu"
+        >
+          <svg lucideMenu class="h-6 w-6"></svg>
+        </button>
+
+        <div
+          [class]="
+            'fixed inset-0 z-[999] bg-[#032d22] flex flex-col items-center justify-center px-6 transition-all duration-300 ' +
+            (open() ? 'opacity-100 visible' : 'opacity-0 invisible')
+          "
+        >
+          <button
+            type="button"
+            (click)="closeMenu()"
+            class="absolute top-6 right-6 text-white text-2xl"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+
+          <div class="flex flex-col items-center gap-8">
+            @for (item of navItems; track item.titleKey) {
+              <a
+                [routerLink]="item.href"
+                routerLinkActive="text-[#1ea672]"
+                [routerLinkActiveOptions]="{ exact: item.href === '/' }"
+                (click)="closeMenu()"
+                class="text-2xl font-bold tracking-wide transition text-white hover:text-[#1ea672]"
+              >
+                {{ item.titleKey | translate }}
+              </a>
+            }
+          </div>
+
+          <a
+            routerLink="/signup"
+            (click)="closeMenu()"
+            class="mt-8 h-12 px-8 rounded-xl border border-[#1ea672] inline-flex items-center text-[#1ea672] text-sm font-bold"
+          >
+            {{ 'nav.becomeVendor' | translate }}
+          </a>
+          <a
+            routerLink="/login"
+            (click)="closeMenu()"
+            class="mt-3 text-lg font-semibold text-white/80 hover:text-[#1ea672]"
+          >
+            {{ 'nav.vendorLogin' | translate }}
+          </a>
+          <a
+            routerLink="/"
+            fragment="AppDownload"
+            (click)="closeMenu()"
+            class="mt-6 h-12 px-8 rounded-xl bg-[#0c7a4b] hover:bg-[#11945c] inline-flex items-center text-white text-sm font-bold"
+          >
+            <svg lucideDownload class="mr-2 h-4 w-4" [size]="16"></svg>
+            {{ 'nav.downloadAppRent' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </app-container>
+</header>

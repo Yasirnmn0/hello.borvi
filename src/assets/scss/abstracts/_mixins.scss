@@ -1,0 +1,68 @@
+@use 'variables' as *;
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  }
+  @else if $breakpoint == laptop {
+    @media (max-width: $breakpoint-laptop) { @content; }
+  }
+  @else if $breakpoint == desktop {
+    @media (max-width: $breakpoint-desktop) { @content; }
+  }
+  @else if $breakpoint == xldesktop {
+    @media (max-width: $breakpoint-xldesktop) { @content; }
+  }
+  @else if $breakpoint == xlscreen {
+    @media (max-width: $breakpoint-xlscreen) { @content; }
+  }
+  @else if $breakpoint == xxlscreen {
+    @media (max-width: $breakpoint-xxlscreen) { @content; }
+  }
+}
+
+// Shared thin scrollbar (dashboard, grids, etc.)
+@mixin scrollbar-thin($dir: both) {
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-thumb transparent;
+  -ms-overflow-style: auto;
+  &::-webkit-scrollbar {
+    @if $dir == horizontal { height: 4px; }
+    @else if $dir == vertical { width: 4px; }
+    @else { width: 4px; height: 4px; }
+  }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: $scrollbar-thumb; border-radius: 4px; }
+  &::-webkit-scrollbar-thumb:hover { background: $scrollbar-thumb-hover; }
+}
+
+// Dashboard filter chips (header shop / date / compare)
+@mixin dashboard-filter-chip($height: 30px) {
+  border-radius: $border-radius-lg;
+  border: 1px solid $border;
+  background: $white-color;
+  color: $header;
+  min-height: $height;
+  box-shadow: 0 1px 2px $dash-shadow-xs;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover:not(.disabled) {
+    background: $table-hover-bg;
+    border-color: $gray-300;
+    box-shadow: 0 2px 6px $dash-shadow-sm;
+    transform: translateY(-0.25px);
+  }
+}
+
+@mixin dashboard-card-surface {
+  background: $white-color;
+  border-radius: $border-radius-lg;
+  border: 1px solid $card-border;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+@mixin dashboard-font-ui {
+  font-family: $dash-font-ui;
+}
