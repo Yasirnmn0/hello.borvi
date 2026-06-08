@@ -5,6 +5,7 @@ import { HeroSectionComponent } from './hero-section.component';
 import { HowItWorksPreviewComponent } from './how-it-works-preview.component';
 import { StatsSectionComponent } from './stats-section.component';
 import { TestimonialsSectionComponent } from './testimonials-section.component';
+import { ProviderSectionComponent } from './provider-section.component';
 
 @Component({
   selector: 'app-home-page',
@@ -16,11 +17,13 @@ import { TestimonialsSectionComponent } from './testimonials-section.component';
     AppDownloadSectionComponent,
     StatsSectionComponent,
     TestimonialsSectionComponent,
+    ProviderSectionComponent,
   ],
   template: `
     <app-hero-section />
     <app-categories-section />
     <app-how-it-works-preview />
+    <app-provider-section />
     <app-app-download-section />
     <app-stats-section />
     <app-testimonials-section />

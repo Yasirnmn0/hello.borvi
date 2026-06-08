@@ -1,44 +1,97 @@
-<section class="py-16 md:py-20 bg-[#f6f6f6] overflow-hidden">
-  <app-container>
-    <div class="max-w-4xl mx-auto">
-      <div appFadeIn class="bg-white shadow-md rounded-2xl p-6 md:p-8">
-        <h2 class="text-xl md:text-2xl font-bold text-center mb-10">
-          {{ 'home.preview.title' | translate }}
-          <span class="text-[#1ea672]">{{ 'home.preview.titleHighlight' | translate }}</span>
-        </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 relative">
-          @for (step of steps; track step.titleKey; let index = $index) {
+<section class="py-16 md:py-20 lg:py-20 bg-[#f6f6f6] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      appFadeIn
+      class="bg-white rounded-[32px] shadow-md p-6 md:p-10 lg:p-14"
+    >
+      <!-- Heading -->
+      <div class="max-w-3xl mx-auto text-center">
+        <app-section-heading size="md">
+          {{ "home.preview.title" | translate }}
+          <span class="text-[#0c7a4b]">
+            {{ "home.preview.titleHighlight" | translate }}
+          </span>
+        </app-section-heading>
+
+        <p class="text-gray-500 text-base md:text-xl">
+          {{ "home.preview.subtitle" | translate }}
+        </p>
+      </div>
+      <!-- First Row -->
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 lg:gap-6"
+      >
+        @for (step of steps.slice(0, 4); track step.titleKey; let i = $index) {
+          <div class="text-center">
             <div
-              appFadeIn
-              [delay]="index * 100"
-              class="flex flex-col items-center text-center hover:-translate-y-1.5 transition-transform"
+              class="w-22 h-22 mx-auto rounded-full bg-[#f7f7f7] flex items-center justify-center shadow-sm"
             >
-              <div
-                class="w-14 h-14 md:w-16 md:h-16 bg-[#f1f5f3] rounded-full shadow flex items-center justify-center overflow-hidden"
-              >
-                <app-image
-                  [src]="step.image"
-                  [alt]="step.titleKey | translate"
-                  [width]="40"
-                  [height]="40"
-                  className="object-contain"
-                />
-              </div>
-              <div
-                class="w-6 h-6 mt-2 rounded-full bg-[#0F3D2E] text-white text-xs flex items-center justify-center"
-              >
-                {{ index + 1 }}
-              </div>
-              <h4 class="mt-3 text-xs md:text-sm font-semibold text-[#1b1b1b]">
-                {{ step.titleKey | translate }}
-              </h4>
-              <p class="text-[11px] md:text-xs text-gray-500 mt-1 max-w-[120px]">
-                {{ step.descKey | translate }}
-              </p>
+              <app-image
+                [src]="step.image"
+                [alt]="step.titleKey | translate"
+                [width]="70"
+                [height]="70"
+                className="object-contain"
+              />
             </div>
-          }
-        </div>
+
+            <div
+              class="w-6 h-6 mx-auto mt-4 mb-3 rounded-full bg-[#0c3b2e] text-white flex items-center justify-center font-semibold"
+            >
+              <span class="text-[10px]">
+                {{ i + 1 }}
+              </span>
+            </div>
+
+            <h3 class="mt-4 text-sm font-bold">
+              {{ step.titleKey | translate }}
+            </h3>
+
+            <p class="mt-1 text-[12px] text-gray-500 leading-relaxed">
+              {{ step.descKey | translate }}
+            </p>
+          </div>
+        }
+      </div>
+
+      <!-- Second Row -->
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-14 max-w-4xl mx-auto"
+      >
+        @for (step of steps.slice(4, 7); track step.titleKey; let i = $index) {
+          <div class="text-center">
+            <div
+              class="w-22 h-22 mx-auto rounded-full bg-[#f7f7f7] flex items-center justify-center shadow-sm"
+            >
+              <app-image
+                [src]="step.image"
+                [alt]="step.titleKey | translate"
+                [width]="70"
+                [height]="70"
+                className="object-contain"
+              />
+            </div>
+
+            <div
+              class="w-6 h-6 mb-3 mx-auto mt-4 rounded-full bg-[#0c3b2e] text-white flex items-center justify-center"
+            >
+              <span class="text-[10px]">
+                {{ i + 5 }}
+              </span>
+            </div>
+
+            <h3 class="mt-4 text-sm font-bold">
+              {{ step.titleKey | translate }}
+            </h3>
+
+            <p class="mt-1 text-[12px] text-gray-500 leading-relaxed">
+              {{ step.descKey | translate }}
+            </p>
+          </div>
+        }
       </div>
     </div>
-  </app-container>
+  </div>
 </section>

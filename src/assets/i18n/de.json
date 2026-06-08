@@ -194,23 +194,27 @@
   },
   "home": {
     "hero": {
-      "titleLine1": "Miete Ausrüstung einfach –",
-      "titleLine2": "jederzeit und",
-      "titleHighlight": "überall.",
-      "description": "Werkzeuge, Reinigungsmaschinen, Campingausrüstung, Fahrräder und mehr...",
+      "titleLine1": "Was du brauchst,",
+      "titleLine2": "hat vielleicht jemand",
+      "titleHighlight": "in deiner Nähe.",
+      "description": "Borvi verbindet Menschen, die etwas brauchen, mit Menschen, die es bereits besitzen – einfach, lokal und vertrauenswürdig.",
+      "exploreNow": "Jetzt entdecken",
+      "becomeProvider": "Anbieter werden",
+
       "startVendor": "Als Anbieter starten",
       "browseCategories": "Kategorien",
-      "feature1Title": "Verifizierte",
-      "feature1Sub": "Nutzer",
 
-      "feature2Title": "Faire",
-      "feature2Sub": "Preise",
+      "feature1Title": "Verifizierte Nutzer",
+      "feature1Sub": "Sichere und vertrauenswürdige Community.",
 
-      "feature3Title": "Einfaches",
-      "feature3Sub": "Mieten",
+      "feature2Title": "Faire Preise",
+      "feature2Sub": "Transparente und faire Preise für alle.",
 
-      "feature4Title": "Lokaler",
-      "feature4Sub": "Zugang"
+      "feature3Title": "Einfaches Mieten",
+      "feature3Sub": "Schnell, einfach und unkompliziert mieten.",
+
+      "feature4Title": "Lokaler Zugang",
+      "feature4Sub": "Finde Dinge direkt in deiner Nähe."
     },
     "vendorCta": {
       "rentTitle": "Ausrüstung vermieten?",
@@ -231,16 +235,20 @@
       "scanSuffix": "Download"
     },
     "categories": {
-      "title": "Ausrüstungskategorien",
-      "titleHighlight": "Durchsuchen",
-      "subtitle": "Finden Sie die richtige Ausrüstung für Ihre Bedürfnisse",
-      "searchPlaceholder": "Ausrüstung suchen...",
+      "title": "Alles in deiner Nähe ",
+      "titleHighlight": "An einem Ort.",
+      "subtitleLine1": "Finde Werkzeuge, Haushaltsartikel, Campingausrüstung, Elektronik",
+      "subtitleLine2": "und vieles mehr von Menschen in deiner Umgebung.",
+
+      "searchPlaceholder": "Wonach suchst du?",
       "filters": {
         "all": "Alle",
         "tools": "Werkzeuge",
         "household": "Haushalt",
         "moving": "Umzug",
-        "garden": "Garten"
+        "garden": "Garten",
+        "camping": "Camping",
+        "electronics": "Elektronik"
       },
       "empty": "Keine Ausrüstung entspricht Ihrer Suche"
     },
@@ -265,18 +273,53 @@
       "airpurifier": { "title": "Luftreiniger", "category": "Haushalt" }
     },
     "preview": {
-      "title": "So",
-      "titleHighlight": "funktioniert's"
+      "title": "So einfach",
+      "titleHighlight": "funktioniert Borvi",
+      "subtitle": "In wenigen Schritten zur gewünschten Miete."
     },
+
     "steps": {
-      "step1Title": "Artikel finden",
-      "step1Desc": "Durchsuchen Sie lokale Angebote in Ihrer Nähe.",
-      "step2Title": "App herunterladen",
-      "step2Desc": "Laden Sie die Borvi-App herunter und erstellen Sie ein Konto.",
-      "step3Title": "In der App buchen",
-      "step3Desc": "Anfrage senden, Details klären & Buchung bestätigen.",
-      "step4Title": "Kontakt aufnehmen & mieten",
-      "step4Desc": "Artikel finden, mit Anbietern verbinden und die Miete vereinbaren."
+      "step1Title": "Entdecken",
+      "step1Desc": "Durchsuche Angebote in deiner Nähe und finde, was du brauchst.",
+
+      "step2Title": "Registrieren",
+      "step2Desc": "Lade die Borvi-App herunter und erstelle dein Konto.",
+
+      "step3Title": "Anfrage senden",
+      "step3Desc": "Wähle einen Artikel aus und sende eine Anfrage.",
+
+      "step4Title": "Details klären",
+      "step4Desc": "Sprich mit dem Anbieter und vereinbare die Miete.",
+
+      "step5Title": "Miete bestätigen",
+      "step5Desc": "Bestätige die Buchung und vereinbare die Übergabe.",
+
+      "step6Title": "Artikel nutzen",
+      "step6Desc": "Nutze den Artikel für den vereinbarten Zeitraum.",
+
+      "step7Title": "Zurückgeben & bewerten",
+      "step7Desc": "Gib den Artikel zurück und hinterlasse eine Bewertung."
+    },
+
+    "providers": {
+      "badge": "Für Anbieter",
+      "title": "Warum mit",
+      "titleHighlight": " Borvi vermieten?",
+      "subtitle": "Teile, was du nicht ständig nutzt – und profitiere davon.",
+
+      "benefit1Title": "Zusätzliches Einkommen",
+      "benefit1Desc": "Verdiene Geld mit Dingen, die du bereits besitzt und nicht regelmäßig nutzt.",
+
+      "benefit2Title": "Menschen in deiner Nähe erreichen",
+      "benefit2Desc": "Verbinde dich mit vertrauenswürdigen Menschen in deiner lokalen Gemeinschaft.",
+
+      "benefit3Title": "Unnötiges sinnvoll nutzen",
+      "benefit3Desc": "Gib ungenutzten Gegenständen ein zweites Leben und reduziere Verschwendung.",
+
+      "benefit4Title": "Lokale Gemeinschaft stärken",
+      "benefit4Desc": "Trage zu einer stärkeren und nachhaltigeren Nachbarschaft bei.",
+
+      "cta": "Anbieter werden"
     },
     "stats": {
       "community": "Vertrauenswürdige Community",
@@ -315,8 +358,8 @@
   "about": {
     "hero": {
       "badge": "Über Uns",
-      "titleLine1": "Der Marktplatz",
-      "titleLine2": "für",
+      "titleLine1": "Der Marktplatz für",
+      "titleLine2": "",
       "titleHighlight": "alles, was man in der Nähe mieten kann",
       "description": "Borvi ist ein Peer-to-Peer-Mietmarktplatz, der Menschen, die Ausrüstung benötigen, mit Menschen verbindet, die diese bereits besitzen. Von Werkzeugen und Outdoor-Ausrüstung bis hin zu Alltagsgegenständen können Sie mieten, was Sie brauchen, mit Ihrem Eigentum Geld verdienen und Ressourcen gemeinsam besser nutzen."
     },
@@ -338,6 +381,29 @@
         "desc": "Mieten"
       }
     },
+    "image": {
+      "title": "Borvi verbindet",
+      "subtitle": "Menschen in ihrer lokalen Gemeinschaft",
+
+      "ownerTitle": "Eigentümer",
+      "ownerDesc": "Teile Dinge,<br>die du nicht nutzt.",
+
+      "renterTitle": "Mieter",
+      "renterDesc": "Finde, was du<br>in deiner Nähe <br>brauchst.",
+
+      "communityTitle": "Gemeinschaft",
+      "communityDesc": "Mieten, teilen<br>und lokal verbinden.",
+
+      "providerBadge": "Anbieter",
+      "renterBadge": "Mieter",
+
+      "feature1": "Einfaches Mieten",
+      "feature2": "Vertrauenswürdige Anbieter",
+      "feature3": "Lokale Gemeinschaft",
+
+      "bottomFeature1": "Große Auswahl <br> an Artikeln für <br> jeden Bedarf",
+      "bottomFeature2": "Lokale Vermietungen <br> von vertrauenswürdigen <br> Menschen"
+    },
     "story": {
       "badge": "Unsere Geschichte",
       "titleLine1": "Auf einer einfachen Idee aufgebaut:",
@@ -348,16 +414,16 @@
     },
     "storyHighlights": {
       "community": {
-        "title": "Von der Gemeinschaft getragen",
-        "desc": "Menschen helfen Menschen, Zugang zu dem zu erhalten, was sie brauchen"
+        "title": "Von der Gemeinschaft ",
+        "desc": "getragen"
       },
       "save": {
-        "title": "Mehr sparen",
-        "desc": "Vermeiden Sie unnötige Anschaffungen"
+        "title": "Mehr ",
+        "desc": "sparen"
       },
       "resources": {
-        "title": "Ressourcen besser nutzen",
-        "desc": "Teilen Sie Gegenstände, die sonst ungenutzt bleiben würden"
+        "title": "Ressourcen besser ",
+        "desc": "nutzen"
       }
     },
     "stats": {

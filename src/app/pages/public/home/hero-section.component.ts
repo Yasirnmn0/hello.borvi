@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {
   LucideBadgeDollarSign,
-  LucideDownload,
   LucideHandshake,
   LucideMapPin,
   LucideShieldCheck,
+  LucideSearch,
+  LucideUser,
 } from '@lucide/angular';
 import { heroFeatures } from '../../../shared/constants/homedata';
 import { AppImageComponent } from '../../../shared/components/borvi/app-image.component';
@@ -20,12 +21,12 @@ import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
     FadeInDirective,
     HeroTextComponent,
     TranslatePipe,
-    LucideDownload,
+
     LucideShieldCheck,
     LucideBadgeDollarSign,
-
+    LucideSearch,
+    LucideUser,
     LucideHandshake,
-
     LucideMapPin,
   ],
   templateUrl: './hero-section.component.html',

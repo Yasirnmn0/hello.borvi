@@ -51,15 +51,24 @@
         <div
           appFadeIn
           [delay]="300"
-          class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 mt-6"
+          class="flex flex-col md:flex-row gap-3 mt-8"
         >
           <button
             type="button"
-            (click)="scrollToAppDownload()"
-            class="bg-[#0d7a52] hover:bg-[#0b6845] text-white px-5 py-3 rounded-lg flex items-center justify-center gap-2 text-sm font-medium w-full sm:w-auto transition-colors"
+            (click)="scrollToCategories()"
+            class="md:flex-1 bg-[#0c7a4b] hover:bg-[#09643d] text-white h-14 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors"
           >
-            <svg lucideDownload [size]="18"></svg>
-            {{ "nav.downloadAppRent" | translate }}
+            <svg lucideSearch [size]="20"></svg>
+            {{ "home.hero.exploreNow" | translate }}
+          </button>
+
+          <button
+            type="button"
+            (click)="scrollToAppDownload()"
+            class="md:flex-1 border-2 border-[#0c7a4b] text-[#0c7a4b] h-14 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#0c7a4b]/5 transition-colors"
+          >
+            <svg lucideUser [size]="20"></svg>
+            {{ "home.hero.becomeProvider" | translate }}
           </button>
         </div>
 
@@ -67,35 +76,45 @@
           @for (item of heroFeatures; track item.titleKey) {
             <div
               appFadeIn
-              class="flex items-center gap-3 text-left hover:-translate-y-1 transition-transform"
+              class="flex flex-col items-center text-center hover:-translate-y-1 transition-transform"
             >
               @switch (item.icon) {
                 @case ("shield-check") {
                   <svg
                     lucideShieldCheck
-                    class="text-[#0d7a52]"
+                    class="text-[#0d7a52] mb-3"
                     [size]="36"
                   ></svg>
                 }
                 @case ("badge-dollar-sign") {
                   <svg
                     lucideBadgeDollarSign
-                    class="text-[#0d7a52]"
+                    class="text-[#0d7a52] mb-3"
                     [size]="36"
                   ></svg>
                 }
                 @case ("handshake") {
-                  <svg lucideHandshake class="text-[#0d7a52]" [size]="36"></svg>
+                  <svg
+                    lucideHandshake
+                    class="text-[#0d7a52] mb-3"
+                    [size]="36"
+                  ></svg>
                 }
                 @case ("map-pin") {
-                  <svg lucideMapPin class="text-[#0d7a52]" [size]="36"></svg>
+                  <svg
+                    lucideMapPin
+                    class="text-[#0d7a52] mb-3"
+                    [size]="36"
+                  ></svg>
                 }
               }
+
               <div>
                 <p class="text-sm font-semibold text-[#111827]">
                   {{ item.titleKey | translate }}
                 </p>
-                <p class="text-xs text-gray-500">
+
+                <p class="text-xs text-gray-500 mt-2">
                   {{ item.subtitleKey | translate }}
                 </p>
               </div>

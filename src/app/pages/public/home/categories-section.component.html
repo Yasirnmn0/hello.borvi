@@ -1,20 +1,21 @@
 <section id="Categories" class="w-full py-20 bg-[#f9fafb] overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
     <div class="text-center">
-      <app-section-heading
-        size="md"
-        [subtitle]="'home.categories.subtitle' | translate"
-      >
+      <app-section-heading size="md">
         {{ "home.categories.title" | translate }}
+        <br />
         <span class="text-[#0c7a4b]">{{
           "home.categories.titleHighlight" | translate
         }}</span>
       </app-section-heading>
-
+      <p class="mt-3 text-[16px] lg:text-[17px] text-slate-500">
+        {{ "home.categories.subtitleLine1" | translate }}<br />
+        {{ "home.categories.subtitleLine2" | translate }}
+      </p>
       <div
-        class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6"
+        class="mt-10 flex flex-col md:flex-row items-center justify-center gap-3"
       >
-        <div class="relative w-full max-w-md group">
+        <div class="relative md:w-[30%] w-full max-w-md group">
           <div
             class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-[#0c7a4b] transition-colors"
           >
@@ -25,17 +26,17 @@
             [placeholder]="'home.categories.searchPlaceholder' | translate"
             [value]="searchQuery()"
             (input)="searchQuery.set($any($event.target).value)"
-            class="w-full h-14 pl-12 pr-6 bg-white border border-gray-200 rounded-2xl shadow-sm outline-none focus:border-[#0c7a4b] focus:ring-4 focus:ring-[#0c7a4b]/5 transition-all text-gray-900 placeholder:text-gray-400"
+            class="w-full h-12 pl-12 pr-6 bg-white border border-gray-200 rounded-2xl shadow-sm outline-none focus:border-[#0c7a4b] focus:ring-4 focus:ring-[#0c7a4b]/5 transition-all text-gray-900 placeholder:text-gray-400"
           />
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-3">
+        <div class="flex flex-wrap items-center justify-center md:gap-2 gap-4">
           @for (cat of categoryFilters; track cat.id) {
             <button
               type="button"
               (click)="activeFilter.set(cat.id)"
               [class]="
-                'px-5 py-3 rounded-xl text-sm font-bold transition-all flex items-center justify-center ' +
+                'px-4 py-3 rounded-xl text-sm font-bold transition-all flex items-center justify-center ' +
                 (activeFilter() === cat.id
                   ? 'bg-[#0c7a4b] text-white shadow-lg shadow-[#0c7a4b]/20'
                   : 'bg-white text-gray-600 border border-gray-100 hover:border-[#0c7a4b] hover:text-[#0c7a4b]')
@@ -57,6 +58,13 @@
                   }
                   @case ("garden") {
                     <svg lucideTrees class="w-4 h-4"></svg>
+                  }
+                  @case ("camping") {
+                    <svg lucideTent class="w-4 h-4"></svg>
+                  }
+
+                  @case ("electronics") {
+                    <svg lucideMonitor class="w-4 h-4"></svg>
                   }
                 }
 
@@ -82,7 +90,7 @@
                   : 'borvi-scroll-right')
               "
             >
-              @for (dup of [0, 1, 2, 3]; track dup) {
+              @for (dup of [0, 1, 2]; track dup) {
                 @for (item of rowItems; track item.id) {
                   <div
                     role="button"

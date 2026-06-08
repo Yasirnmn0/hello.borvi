@@ -23,7 +23,7 @@
         </app-hero-text>
       </div>
 
-      <div class="mt-6 grid grid-cols-2 gap-8 sm:grid-cols-4 px-10 pb-10">
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 px-10 pb-10">
         @for (feat of valueFeatures; track feat.key) {
           <div
             appFadeIn
@@ -63,14 +63,127 @@
     </div>
 
     <div appFadeIn class="relative lg:col-span-7 overflow-hidden">
+      <!-- Background Image -->
       <app-image
-        src="/images/Borvi-1.png"
-        alt="Borvi Rental Equipment"
+        src="/images/Borvi-bg.png"
+        alt="Borvi Community Marketplace"
         [width]="1200"
         [height]="900"
         [priority]="true"
-        className="h-full w-full object-cover"
+        className="w-full h-auto object-cover"
       />
+
+      <!-- Top Heading -->
+      <div
+        class="absolute top-[4%] left-1/2 -translate-x-1/2 text-center text-white w-[90%] md:w-auto"
+      >
+        <h2 class="sm:text-sm md:text-3xl lg:text-4xl sm:font-bold font-black">
+          {{ "about.image.title" | translate }}
+        </h2>
+
+        <p
+          class="text-[8px] sm:text-[8] md:text-lg lg:text-xl sm:font-semibold font-bold text-[#7ed957]"
+        >
+          {{ "about.image.subtitle" | translate }}
+        </p>
+      </div>
+
+      <!-- Feature Icons -->
+      <div
+        class="absolute top-[25%] md:top-[25%] lg:top-[20%] left-1/2 -translate-x-1/2 flex gap-2 md:gap-4 text-white"
+      >
+        <div class="text-center">
+          <svg
+            lucideUsers
+            class="w-3 h-3 md:w-6 md:h-6 lg-w-7 lg:h-7 mx-auto mb-1"
+          ></svg>
+          <p class="text-[4px] md:text-sm lg:text-[12px] font-medium">
+            {{ "about.image.feature1" | translate }}
+          </p>
+        </div>
+
+        <div class="text-center">
+          <svg
+            lucideShieldCheck
+            class="w-3 h-3 md:w-6 md:h-6 lg:w-7 lg:h-7 mx-auto mb-1"
+          ></svg>
+          <p class="text-[4px] md:text-sm lg:text-[12px] font-medium">
+            {{ "about.image.feature2" | translate }}
+          </p>
+        </div>
+
+        <div class="text-center">
+          <svg
+            lucideMapPin
+            class="w-3 h-3 md:w-6 md:h-6 lg:w-7 lg:h-7 mx-auto mb-1"
+          ></svg>
+          <p class="text-[4px] md:text-sm lg:text-[12px] font-medium">
+            {{ "about.image.feature3" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Provider Badge -->
+      <div
+        class="absolute left-[31%] top-[47%] -translate-x-1/2 bg-[#1d4f1f] px-2 md:px-3 py-1 rounded-full text-white text-[4px] md:text-[10px] lg:text-[12px] font-semibold"
+      >
+        {{ "about.image.providerBadge" | translate }}
+      </div>
+
+      <!-- Renter Badge -->
+      <div
+        class="absolute left-[55%] top-[47%] -translate-x-1/2 bg-[#1d4f1f] px-2 md:px-3 py-1 rounded-full text-white text-[4px] md:text-[10px] lg:text-[12px] font-semibold"
+      >
+        {{ "about.image.renterBadge" | translate }}
+      </div>
+
+      <!-- Left Person -->
+      <div
+        class="absolute left-[13%] md:left-[10%] lg:left-[12%] top-[59%] md:top-[57%] lg:top-[59%] text-center"
+      >
+        <h3
+          class="text-[6px] sm:text-sm md:text-base lg:text-lg font-bold text-[#7ed957]"
+        >
+          {{ "about.image.ownerTitle" | translate }}
+        </h3>
+
+        <p
+          class="text-[4px] sm:text-[10px] md:text-xs lg:text-sm opacity-90 text-white"
+          [innerHTML]="'about.image.ownerDesc' | translate"
+        ></p>
+      </div>
+
+      <!-- Right Person -->
+      <div
+        class="absolute right-[30%] md:right-[24%] lg:right-[28%] top-[59%] md:top-[57%] lg:top-[59%] text-center"
+      >
+        <h3
+          class="text-[6px] sm:text-sm md:text-base lg:text-lg font-bold text-[#7ed957]"
+        >
+          {{ "about.image.renterTitle" | translate }}
+        </h3>
+
+        <p
+          class="text-[4px] sm:text-[10px] md:text-xs lg:text-sm opacity-90 text-white"
+          [innerHTML]="'about.image.renterDesc' | translate"
+        ></p>
+      </div>
+
+      <!-- Bottom Community -->
+      <div
+        class="absolute bottom-[5%] md:bottom-[2%] lg:bottom-[3%] left-[43%] -translate-x-1/2 text-center"
+      >
+        <h3
+          class="text-[6px] sm:text-sm md:text-base lg:text-lg font-bold text-[#7ed957]"
+        >
+          {{ "about.image.communityTitle" | translate }}
+        </h3>
+
+        <p
+          class="text-[4px] sm:text-[10px] md:text-xs lg:text-sm opacity-90 text-white"
+          [innerHTML]="'about.image.communityDesc' | translate"
+        ></p>
+      </div>
     </div>
   </div>
 </section>

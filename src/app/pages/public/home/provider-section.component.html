@@ -1,0 +1,69 @@
+<section class="py-16 md:py-20 lg:py-20 bg-[#f9fafb]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="bg-white rounded-[24px] lg:rounded-[32px] border border-slate-100 shadow-sm p-6 sm:p-8 lg:p-10"
+    >
+      <!-- Header -->
+
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- <span
+          class="inline-flex mb-6 items-center rounded-full bg-[#0c7a4b]/10 px-4 py-2 text-xs sm:text-sm font-semibold text-[#0c7a4b]"
+        >
+          {{ "home.providers.badge" | translate }}
+        </span> -->
+        <app-section-heading size="md">
+          {{ "home.providers.title" | translate }}
+          <span class="text-[#0c7a4b]">
+            {{ "home.providers.titleHighlight" | translate }}
+          </span>
+        </app-section-heading>
+
+        <p class="mt-2 text-base sm:text-lg text-slate-500 leading-relaxed">
+          {{ "home.providers.subtitle" | translate }}
+        </p>
+      </div>
+
+      <!-- Benefits -->
+
+      <div
+        class="mt-8 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10"
+      >
+        @for (item of benefits; track item.titleKey) {
+          <div class="text-center">
+            <div
+              class="w-22 h-22 mb-6 mx-auto rounded-full bg-slate-50 flex items-center justify-center shadow-sm"
+            >
+              <app-image
+                [src]="item.image"
+                [alt]="item.titleKey | translate"
+                [width]="100"
+                [height]="100"
+                className="object-contain"
+              />
+            </div>
+            <h3 class="mt-8 text-sm font-bold text-slate-900 leading-snug">
+              {{ item.titleKey | translate }}
+            </h3>
+
+            <p class="mt-2 text-slate-500 leading-relaxed text-[12px]">
+              {{ item.descKey | translate }}
+            </p>
+          </div>
+        }
+      </div>
+
+      <!-- CTA -->
+
+      <div class="mt-8 lg:mt-10 flex justify-center">
+        <button
+          (click)="scrollToAppDownload()"
+          class="w-full sm:w-auto min-w-[280px] h-14 px-8 rounded-2xl bg-[#0c7a4b] text-white font-semibold shadow-lg shadow-[#0c7a4b]/20 hover:bg-[#095f3a] transition-all duration-300 flex items-center justify-center gap-3"
+        >
+          <svg lucideUserPlus class="w-5 h-5"></svg>
+
+          {{ "home.providers.cta" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

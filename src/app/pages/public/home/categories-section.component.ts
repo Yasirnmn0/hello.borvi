@@ -7,6 +7,8 @@ import {
   LucideHouse,
   LucideTruck,
   LucideTrees,
+  LucideTent,
+  LucideMonitor,
 } from '@lucide/angular';
 
 import {
@@ -34,6 +36,8 @@ import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
     LucideHouse,
     LucideTruck,
     LucideTrees,
+    LucideTent,
+    LucideMonitor,
   ],
   templateUrl: './categories-section.component.html',
 })

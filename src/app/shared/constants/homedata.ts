@@ -42,4 +42,42 @@ export const steps = [
     titleKey: 'home.steps.step4Title',
     descKey: 'home.steps.step4Desc',
   },
+  {
+    image: '/images/HowItWorks/step-5.png',
+    titleKey: 'home.steps.step5Title',
+    descKey: 'home.steps.step5Desc',
+  },
+  {
+    image: '/images/HowItWorks/step-6.png',
+    titleKey: 'home.steps.step6Title',
+    descKey: 'home.steps.step6Desc',
+  },
+  {
+    image: '/images/HowItWorks/step-7.png',
+    titleKey: 'home.steps.step7Title',
+    descKey: 'home.steps.step7Desc',
+  },
 ];
+
+export const providerBenefits = [
+  {
+    image: '/images/providers/income.png',
+    titleKey: 'home.providers.benefit1Title',
+    descKey: 'home.providers.benefit1Desc',
+  },
+  {
+    image: '/images/providers/community.png',
+    titleKey: 'home.providers.benefit2Title',
+    descKey: 'home.providers.benefit2Desc',
+  },
+  {
+    image: '/images/providers/sustainability.png',
+    titleKey: 'home.providers.benefit3Title',
+    descKey: 'home.providers.benefit3Desc',
+  },
+  {
+    image: '/images/providers/support.png',
+    titleKey: 'home.providers.benefit4Title',
+    descKey: 'home.providers.benefit4Desc',
+  },
+] as const;

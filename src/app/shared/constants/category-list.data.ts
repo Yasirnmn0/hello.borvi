@@ -3,7 +3,9 @@ export type CategoryFilterId =
   | 'tools'
   | 'household'
   | 'moving'
-  | 'garden';
+  | 'garden'
+  | 'camping'
+  | 'electronics';
 
 export interface CategoryItem {
   id: string;
@@ -105,6 +107,31 @@ export const categoryList: CategoryItem[] = [
     categoryFilter: 'garden',
     image: '/images/Categories/BikeCycle.png',
   },
+  {
+    id: 'tent',
+    categoryFilter: 'camping',
+    image: '/images/Categories/tent.png',
+  },
+  {
+    id: 'camera',
+    categoryFilter: 'electronics',
+    image: '/images/Categories/camera.png',
+  },
+  {
+    id: 'speaker',
+    categoryFilter: 'electronics',
+    image: '/images/Categories/speakers.png',
+  },
+  {
+    id: 'printer',
+    categoryFilter: 'electronics',
+    image: '/images/Categories/printer.png',
+  },
+  {
+    id: 'security',
+    categoryFilter: 'electronics',
+    image: '/images/Categories/camera.png',
+  },
 ];
 
 export const categoryFilters: { id: CategoryFilterId; labelKey: string }[] = [
@@ -113,4 +140,6 @@ export const categoryFilters: { id: CategoryFilterId; labelKey: string }[] = [
   { id: 'household', labelKey: 'home.categories.filters.household' },
   { id: 'moving', labelKey: 'home.categories.filters.moving' },
   { id: 'garden', labelKey: 'home.categories.filters.garden' },
+  { id: 'camping', labelKey: 'home.categories.filters.camping' },
+  { id: 'electronics', labelKey: 'home.categories.filters.electronics' },
 ];

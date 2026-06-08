@@ -194,24 +194,27 @@
   },
   "home": {
     "hero": {
-      "titleLine1": "Rent equipment easily –",
-      "titleLine2": "anytime,",
-      "titleHighlight": "anywhere.",
-      "description": "Tools, cleaning machines, camping gear, bicycles, and more...",
+      "titleLine1": "What you need,",
+      "titleLine2": "someone nearby",
+      "titleHighlight": "might already have.",
+      "description": "Borvi connects people who need something with people who already own it — simple, local and trustworthy.",
+      "exploreNow": "Explore Now",
+      "becomeProvider": "Become a Provider",
+
       "startVendor": "Start as a Vendor",
       "browseCategories": "Categories",
 
-      "feature1Title": "Verified",
-      "feature1Sub": "Users",
+      "feature1Title": "Verified Users",
+      "feature1Sub": "Safe and trustworthy community.",
 
-      "feature2Title": "Better",
-      "feature2Sub": "Prices",
+      "feature2Title": "Fair Prices",
+      "feature2Sub": "Transparent and fair pricing for everyone.",
 
-      "feature3Title": "Easy",
-      "feature3Sub": "Renting",
+      "feature3Title": "Easy Renting",
+      "feature3Sub": "Rent quickly, easily and hassle-free.",
 
-      "feature4Title": "Local",
-      "feature4Sub": "Access"
+      "feature4Title": "Local Access",
+      "feature4Sub": "Find items right in your area."
     },
     "vendorCta": {
       "rentTitle": "Want to rent out equipment?",
@@ -232,16 +235,20 @@
       "scanSuffix": "app"
     },
     "categories": {
-      "title": "Browse Equipment",
-      "titleHighlight": "Categories",
-      "subtitle": "Find the right equipment for your needs",
-      "searchPlaceholder": "Search equipment...",
+      "title": "Everything Near You.",
+      "titleHighlight": "In One Place.",
+      "subtitleLine1": "Find tools, household items, camping gear, electronics",
+      "subtitleLine2": " and much more from people in your community.",
+
+      "searchPlaceholder": "What are you looking for?",
       "filters": {
         "all": "All",
         "tools": "Tools",
         "household": "Household",
         "moving": "Moving",
-        "garden": "Garden"
+        "garden": "Garden",
+        "camping": "Camping",
+        "electronics": "Electronics"
       },
       "empty": "No equipment found matching your criteria"
     },
@@ -266,18 +273,53 @@
       "airpurifier": { "title": "Air Purifiers", "category": "Household" }
     },
     "preview": {
-      "title": "How it",
-      "titleHighlight": "works"
+      "title": "How",
+      "titleHighlight": "Borvi Works",
+      "subtitle": "Rent what you need in just a few simple steps."
     },
+
     "steps": {
-      "step1Title": "Search equipment",
-      "step1Desc": "Discover a wide range of devices.",
-      "step2Title": "Download our app",
-      "step2Desc": "Get our app on Play Store or App Store.",
-      "step3Title": "Book via app",
-      "step3Desc": "Choose device, set duration & book.",
-      "step4Title": "Connect & Arrange Rentals",
-      "step4Desc": "Browse available items, connect with owners."
+      "step1Title": "Discover",
+      "step1Desc": "Browse local listings and find what you need.",
+
+      "step2Title": "Register",
+      "step2Desc": "Download the Borvi app and create your account.",
+
+      "step3Title": "Send Request",
+      "step3Desc": "Choose an item and send a rental request.",
+
+      "step4Title": "Discuss Details",
+      "step4Desc": "Chat with the owner and arrange the rental.",
+
+      "step5Title": "Confirm Rental",
+      "step5Desc": "Confirm the booking and arrange pickup.",
+
+      "step6Title": "Use Item",
+      "step6Desc": "Enjoy the item during the agreed rental period.",
+
+      "step7Title": "Return & Review",
+      "step7Desc": "Return the item and leave a review."
+    },
+
+    "providers": {
+      "badge": "For Providers",
+      "title": "Why Rent Out ",
+      "titleHighlight": "with Borvi?",
+      "subtitle": "Share what you don't use every day and earn from it.",
+
+      "benefit1Title": "Extra Income",
+      "benefit1Desc": "Earn money from items you already own and don't use regularly.",
+
+      "benefit2Title": "Reach Local People",
+      "benefit2Desc": "Connect with trusted people in your local community.",
+
+      "benefit3Title": "Give Items a Purpose",
+      "benefit3Desc": "Give unused items a second life and reduce waste.",
+
+      "benefit4Title": "Support Your Community",
+      "benefit4Desc": "Help build a stronger and more sustainable local community.",
+
+      "cta": "Become a Provider"
     },
     "stats": {
       "community": "Trusted Community",
@@ -339,6 +381,29 @@
         "desc": "Rentals"
       }
     },
+    "image": {
+      "title": "Borvi Connects",
+      "subtitle": "People in Local Communities",
+
+      "ownerTitle": "Owners",
+      "ownerDesc": "Share items<br>you are not using.",
+
+      "renterTitle": "Renters",
+      "renterDesc": "Find what you<br>need nearby.",
+
+      "communityTitle": "Community",
+      "communityDesc": "Rent, share<br>and connect locally.",
+
+      "providerBadge": "Provider",
+      "renterBadge": "Renter",
+
+      "feature1": "Easy Renting",
+      "feature2": "Trusted Owners",
+      "feature3": "Local Community",
+
+      "bottomFeature1": "Wide selection <br> of items for <br> every need",
+      "bottomFeature2": "Local rentals<br> from trusted <br> people"
+    },
     "story": {
       "badge": "Our Story",
       "titleLine1": "Built Around a Simple Idea:",
@@ -349,16 +414,16 @@
     },
     "storyHighlights": {
       "community": {
-        "title": "Community Driven",
-        "desc": "People helping people access what they need"
+        "title": "Community",
+        "desc": "Driven"
       },
       "save": {
-        "title": "Save More",
-        "desc": "Avoid unnecessary purchases"
+        "title": "Save",
+        "desc": "More"
       },
       "resources": {
-        "title": "Use Resources Better",
-        "desc": "Share items that would otherwise sit unused"
+        "title": "Use Resources ",
+        "desc": "Better"
       }
     },
     "stats": {
