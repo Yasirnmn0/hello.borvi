@@ -1,62 +1,68 @@
-<section class="py-0 bg-[#f6f6f6] overflow-hidden">
+<section class="py-20 bg-[#f6f6f6] overflow-hidden">
   <app-container>
     <div
       appFadeIn
-      class="bg-white shadow-md border border-slate-100 rounded-[24px] px-8 py-8 md:py-10"
+      class="bg-white shadow-sm border border-slate-200 rounded-[28px] px-5 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-8"
     >
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 items-center"
+        class="flex flex-col md:flex-row lg:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-200"
       >
-        @for (
-          stat of stats;
-          track stat.label;
-          let i = $index;
-          let last = $last
-        ) {
+        @for (stat of stats; track stat.title; let i = $index) {
           <div
             appFadeIn
             [delay]="i * 80"
-            [class]="
-              'flex items-center gap-4 w-full justify-start sm:justify-center lg:justify-start lg:px-6 hover:-translate-y-1.5 transition-transform ' +
-              (!last ? 'lg:border-r lg:border-slate-200/80' : '')
-            "
+            class="flex-1 flex flex-col items-center text-center px-4 lg:px-6 py-6 lg:py-4"
           >
+            <!-- Icon -->
             <div
-              class="flex items-center justify-center w-14 h-14 rounded-full bg-[#054a29] text-white shrink-0 shadow-inner"
+              class="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full bg-[#ceddd6] flex items-center justify-center shrink-0 shadow-inner"
             >
-              @switch (stat.icon) {
-                @case ("users") {
-                  <svg lucideUsers class="w-6 h-6 stroke-[2]" [size]="24"></svg>
+              <div
+                class="w-14 h-14 sm:w-18 sm:h-18 lg:w-18 lg:h-18 rounded-full bg-[#0A5C36] flex items-center justify-center shrink-0 shadow-inner"
+              >
+                @switch (stat.icon) {
+                  @case ("users") {
+                    <svg
+                      lucideUsers
+                      class="w-6 h-6 lg:w-8 lg:h-8 text-white stroke-[2]"
+                    ></svg>
+                  }
+
+                  @case ("package") {
+                    <svg
+                      lucidePackage
+                      class="w-6 h-6 lg:w-8 lg:h-8 text-white stroke-[2]"
+                    ></svg>
+                  }
+
+                  @case ("layout-grid") {
+                    <svg
+                      lucideLayoutGrid
+                      class="w-6 h-6 lg:w-8 lg:h-8 text-white stroke-[2]"
+                    ></svg>
+                  }
+
+                  @case ("star") {
+                    <svg
+                      lucideStar
+                      class="w-6 h-6 lg:w-8 lg:h-8 text-white stroke-[2]"
+                    ></svg>
+                  }
                 }
-                @case ("package") {
-                  <svg
-                    lucidePackage
-                    class="w-6 h-6 stroke-[2]"
-                    [size]="24"
-                  ></svg>
-                }
-                @case ("layout-grid") {
-                  <svg
-                    lucideLayoutGrid
-                    class="w-6 h-6 stroke-[2]"
-                    [size]="24"
-                  ></svg>
-                }
-                @case ("star") {
-                  <svg lucideStar class="w-6 h-6 stroke-[2]" [size]="24"></svg>
-                }
-              }
+              </div>
             </div>
-            <div class="flex flex-col text-left font-sans">
+            <!-- Content -->
+            <div class="mt-5">
               <h3
-                class="text-[24px] font-bold text-[#111827] tracking-tight leading-none"
+                class="text-[16px] sm:text-[18px] lg:text-[18px] font-bold text-[#111827] leading-tight"
               >
-                {{ stat.value }}
+                {{ stat.title | translate }}
               </h3>
+
               <p
-                class="text-[14px] text-gray-500 font-medium mt-1 leading-tight"
+                class="text-[12px] sm:text-[12px] text-gray-600 mt-2 leading-[1.7] max-w-[260px] mx-auto"
               >
-                {{ stat.label | translate }}
+                {{ stat.description | translate }}
               </p>
             </div>
           </div>

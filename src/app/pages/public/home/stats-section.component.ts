@@ -5,9 +5,11 @@ import {
   LucideStar,
   LucideUsers,
 } from '@lucide/angular';
+
 import { ContainerComponent } from '../../../shared/components/borvi/container.component';
 import { FadeInDirective } from '../../../shared/components/borvi/fade-in.directive';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
+
 @Component({
   selector: 'app-stats-section',
   standalone: true,
@@ -25,23 +27,23 @@ import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 export class StatsSectionComponent {
   readonly stats = [
     {
-      value: '',
-      label: 'home.stats.community',
+      title: 'home.stats.community',
+      description: 'home.stats.communityDesc',
       icon: 'users' as const,
     },
     {
-      value: '',
-      label: 'home.stats.selection',
+      title: 'home.stats.selection',
+      description: 'home.stats.selectionDesc',
       icon: 'package' as const,
     },
     {
-      value: '',
-      label: 'home.stats.rentals',
+      title: 'home.stats.rentals',
+      description: 'home.stats.rentalsDesc',
       icon: 'layout-grid' as const,
     },
     {
-      value: '',
-      label: 'home.stats.secure',
+      title: 'home.stats.secure',
+      description: 'home.stats.secureDesc',
       icon: 'star' as const,
     },
   ];

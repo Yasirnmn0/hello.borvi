@@ -21,7 +21,6 @@ import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
     FadeInDirective,
     HeroTextComponent,
     TranslatePipe,
-
     LucideShieldCheck,
     LucideBadgeDollarSign,
     LucideSearch,

@@ -79,7 +79,7 @@ export class CategoriesSectionComponent {
       chunks.push(items.slice(i, i + size));
     }
 
-    return chunks;
+    return chunks.slice(0, 3);
   });
 
   itemTitle(id: string): string {

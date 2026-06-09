@@ -253,24 +253,150 @@
       "empty": "Keine Ausrüstung entspricht Ihrer Suche"
     },
     "catItems": {
-      "drill": { "title": "Elektrowerkzeuge", "category": "Werkzeuge" },
-      "cleaner": { "title": "Reinigungsgeräte", "category": "Haushalt" },
-      "lawn": { "title": "Gartenpflege", "category": "Garten" },
-      "tent": { "title": "Camping & Outdoor", "category": "Garten" },
-      "bike": { "title": "Fahrräder & Sport", "category": "Transport" },
-      "ladder": { "title": "Bauwerkzeuge", "category": "Werkzeuge" },
-      "speaker": { "title": "Audio-Ausrüstung", "category": "Haushalt" },
-      "camera": { "title": "Fotografie", "category": "Haushalt" },
-      "party": { "title": "Partybedarf", "category": "Haushalt" },
-      "mixer": { "title": "Küchengeräte", "category": "Haushalt" },
-      "printer": { "title": "Bürogeräte", "category": "Haushalt" },
-      "generator": { "title": "Generatoren", "category": "Werkzeuge" },
-      "security": { "title": "Haussicherheit", "category": "Haushalt" },
-      "fitness": { "title": "Fitnessgeräte", "category": "Transport" },
-      "lighting": { "title": "Event-Beleuchtung", "category": "Haushalt" },
-      "handtools": { "title": "Handwerkzeuge", "category": "Werkzeuge" },
-      "outdoor": { "title": "Outdoor-Spiele", "category": "Garten" },
-      "airpurifier": { "title": "Luftreiniger", "category": "Haushalt" }
+      "drill": {
+        "title": "Bohrmaschine",
+        "category": "Werkzeuge"
+      },
+
+      "dust": {
+        "title": "Staubsammler",
+        "category": "Werkzeuge"
+      },
+
+      "DWE": {
+        "title": "DeWalt Schleifer",
+        "category": "Werkzeuge"
+      },
+
+      "ladder": {
+        "title": "Bauleitere",
+        "category": "Werkzeuge"
+      },
+
+      "Invertec": {
+        "title": "Schweißmaschine",
+        "category": "Werkzeuge"
+      },
+
+      "saw": {
+        "title": "Elektrische Säge",
+        "category": "Werkzeuge"
+      },
+
+      "cooker": {
+        "title": "Küchenmixer",
+        "category": "Haushalt"
+      },
+
+      "fries": {
+        "title": "Heißluftfritteuse",
+        "category": "Haushalt"
+      },
+
+      "cookingwear": {
+        "title": "Kochgeschirr Set",
+        "category": "Haushalt"
+      },
+
+      "Burner": {
+        "title": "Gasbrenner",
+        "category": "Haushalt"
+      },
+
+      "cleaner": {
+        "title": "Staubsauger",
+        "category": "Haushalt"
+      },
+
+      "bike": {
+        "title": "Mountainbike",
+        "category": "Transport"
+      },
+
+      "generator": {
+        "title": "Tragbarer Generator",
+        "category": "Transport"
+      },
+
+      "move": {
+        "title": "Transportwagen",
+        "category": "Transport"
+      },
+
+      "hand": {
+        "title": "Sackkarre",
+        "category": "Transport"
+      },
+
+      "hand-1": {
+        "title": "Schwerlastwagen",
+        "category": "Transport"
+      },
+
+      "lawn": {
+        "title": "Rasenmäher",
+        "category": "Garten"
+      },
+
+      "garden": {
+        "title": "Gartengeräte",
+        "category": "Garten"
+      },
+
+      "water": {
+        "title": "Wasserschlauch",
+        "category": "Garten"
+      },
+
+      "showel": {
+        "title": "Gartenschaufel",
+        "category": "Garten"
+      },
+
+      "tent": {
+        "title": "Campingzelt",
+        "category": "Camping"
+      },
+
+      "chair": {
+        "title": "Campingstuhl",
+        "category": "Camping"
+      },
+
+      "camp": {
+        "title": "Camping Set",
+        "category": "Camping"
+      },
+
+      "selender": {
+        "title": "Schlafsack",
+        "category": "Camping"
+      },
+
+      "washer": {
+        "title": "Hochdruckreiniger",
+        "category": "Elektronik"
+      },
+
+      "washing": {
+        "title": "Waschmaschine",
+        "category": "Elektronik"
+      },
+
+      "juicer": {
+        "title": "Entsafter Mixer",
+        "category": "Elektronik"
+      },
+
+      "catle": {
+        "title": "Elektrischer Wasserkocher",
+        "category": "Elektronik"
+      },
+
+      "electric": {
+        "title": "Elektrische Geräte",
+        "category": "Elektronik"
+      }
     },
     "preview": {
       "title": "So einfach",
@@ -323,9 +449,16 @@
     },
     "stats": {
       "community": "Vertrauenswürdige Community",
+      "communityDesc": "Echte Menschen, verifizierte Profile und Bewertungen, auf die du dich verlassen kannst.",
+
       "selection": "Vielfältige Auswahl",
+      "selectionDesc": "Entdecke eine große Auswahl an Artikeln für jede Gelegenheit – von Werkzeugen bis hin zu Haushaltsgegenständen.",
+
       "rentals": "Lokale Vermietungen",
-      "secure": "Sicher & Einfach"
+      "rentalsDesc": "Spare Zeit und Geld, indem du Dinge von Menschen in deiner Nähe mietest.",
+
+      "secure": "Sicher & Einfach",
+      "secureDesc": "Sichere Zahlungen, klarer Schutz und ein einfacher Ablauf von Anfang bis Ende."
     },
     "testimonials": {
       "title": "Was unsere Kunden sagen",
@@ -670,6 +803,7 @@
     "email": "Bitte geben Sie eine gültige E-Mail ein",
     "minLength": "Mindestens {{min}} Zeichen",
     "minValue": "Mindestwert: {{min}}",
+    "minAge": "Du musst mindestens {{requiredAge}} Jahre alt sein",
     "invalid": "Ungültige Eingabe"
   },
   "vendor": {

@@ -253,24 +253,150 @@
       "empty": "No equipment found matching your criteria"
     },
     "catItems": {
-      "drill": { "title": "Power Tools", "category": "Tools" },
-      "cleaner": { "title": "Cleaning Equipment", "category": "Household" },
-      "lawn": { "title": "Garden Care", "category": "Garden" },
-      "tent": { "title": "Camping & Outdoor", "category": "Garden" },
-      "bike": { "title": "Bikes & Sports", "category": "Moving" },
-      "ladder": { "title": "Construction Tools", "category": "Tools" },
-      "speaker": { "title": "Audio Equipment", "category": "Household" },
-      "camera": { "title": "Photography", "category": "Household" },
-      "party": { "title": "Party Supplies", "category": "Household" },
-      "mixer": { "title": "Kitchen Appliances", "category": "Household" },
-      "printer": { "title": "Office Equipment", "category": "Household" },
-      "generator": { "title": "Generators", "category": "Tools" },
-      "security": { "title": "Home Security", "category": "Household" },
-      "fitness": { "title": "Fitness Equipment", "category": "Moving" },
-      "lighting": { "title": "Event Lighting", "category": "Household" },
-      "handtools": { "title": "Hand Tools", "category": "Tools" },
-      "outdoor": { "title": "Outdoor Games", "category": "Garden" },
-      "airpurifier": { "title": "Air Purifiers", "category": "Household" }
+      "drill": {
+        "title": "Power Drill",
+        "category": "Tools"
+      },
+
+      "dust": {
+        "title": "Dust Collector",
+        "category": "Tools"
+      },
+
+      "DWE": {
+        "title": "DeWalt Grinder",
+        "category": "Tools"
+      },
+
+      "ladder": {
+        "title": "Construction Ladder",
+        "category": "Tools"
+      },
+
+      "Invertec": {
+        "title": "Welding Machine",
+        "category": "Tools"
+      },
+
+      "saw": {
+        "title": "Electric Saw",
+        "category": "Tools"
+      },
+
+      "cooker": {
+        "title": "Kitchen Mixer",
+        "category": "Household"
+      },
+
+      "fries": {
+        "title": "Air Fryer",
+        "category": "Household"
+      },
+
+      "cookingwear": {
+        "title": "Cooking Set",
+        "category": "Household"
+      },
+
+      "Burner": {
+        "title": "Gas Burner",
+        "category": "Household"
+      },
+
+      "cleaner": {
+        "title": "Vacuum Cleaner",
+        "category": "Household"
+      },
+
+      "bike": {
+        "title": "Mountain Bike",
+        "category": "Moving"
+      },
+
+      "generator": {
+        "title": "Portable Generator",
+        "category": "Moving"
+      },
+
+      "move": {
+        "title": "Moving Trolley",
+        "category": "Moving"
+      },
+
+      "hand": {
+        "title": "Hand Truck",
+        "category": "Moving"
+      },
+
+      "hand-1": {
+        "title": "Heavy Duty Cart",
+        "category": "Moving"
+      },
+
+      "lawn": {
+        "title": "Lawn Mower",
+        "category": "Garden"
+      },
+
+      "garden": {
+        "title": "Garden Tools",
+        "category": "Garden"
+      },
+
+      "water": {
+        "title": "Water Hose",
+        "category": "Garden"
+      },
+
+      "showel": {
+        "title": "Garden Shovel",
+        "category": "Garden"
+      },
+
+      "tent": {
+        "title": "Camping Tent",
+        "category": "Camping"
+      },
+
+      "chair": {
+        "title": "Camping Chair",
+        "category": "Camping"
+      },
+
+      "camp": {
+        "title": "Camping Set",
+        "category": "Camping"
+      },
+
+      "selender": {
+        "title": "Sleeping Bag",
+        "category": "Camping"
+      },
+
+      "washer": {
+        "title": "Pressure Washer",
+        "category": "Electronics"
+      },
+
+      "washing": {
+        "title": "Washing Machine",
+        "category": "Electronics"
+      },
+
+      "juicer": {
+        "title": "Juicer Blender",
+        "category": "Electronics"
+      },
+
+      "catle": {
+        "title": "Electric Kettle",
+        "category": "Electronics"
+      },
+
+      "electric": {
+        "title": "Electric Appliances",
+        "category": "Electronics"
+      }
     },
     "preview": {
       "title": "How",
@@ -323,9 +449,16 @@
     },
     "stats": {
       "community": "Trusted Community",
+      "communityDesc": "Real people, verified profiles, and reviews you can rely on.",
+
       "selection": "Wide Selection",
+      "selectionDesc": "Discover a wide variety of items for every occasion — from tools to household essentials.",
+
       "rentals": "Local Rentals",
-      "secure": "Safe & Easy"
+      "rentalsDesc": "Save time and money by renting items from people nearby.",
+
+      "secure": "Safe & Easy",
+      "secureDesc": "Secure payments, clear protection, and a smooth experience from start to finish."
     },
     "testimonials": {
       "title": "What Our Customers Say",
@@ -672,6 +805,7 @@
     "email": "Please enter a valid email",
     "minLength": "At least {{min}} characters",
     "minValue": "Minimum value: {{min}}",
+    "minAge": "You must be at least {{requiredAge}} years old",
     "invalid": "Invalid input"
   },
   "vendor": {

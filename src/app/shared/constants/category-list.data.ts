@@ -19,118 +19,168 @@ export const categoryList: CategoryItem[] = [
   {
     id: 'drill',
     categoryFilter: 'tools',
-    image: '/images/Categories/drill.png',
+    image: '/images/Tools/drill.png',
   },
   {
-    id: 'cleaner',
+    id: 'dust',
     categoryFilter: 'tools',
-    image: '/images/Categories/Cleaner1.png',
+    image: '/images/Tools/dust.png',
   },
   {
-    id: 'lawn',
+    id: 'DWE',
     categoryFilter: 'tools',
-    image: '/images/Categories/lawnmower1.png',
+    image: '/images/Tools/DWE.png',
   },
   {
     id: 'ladder',
     categoryFilter: 'tools',
-    image: '/images/Categories/ladder.png',
+    image: '/images/Tools/ladder.png',
   },
   {
-    id: 'handtools',
+    id: 'Invertec',
     categoryFilter: 'tools',
-    image: '/images/Categories/drill.png',
+    image: '/images/Tools/Invertec.png',
   },
+  {
+    id: 'saw',
+    categoryFilter: 'tools',
+    image: '/images/Tools/saw.png',
+  },
+  // {
+  //   id: 'toolbox',
+  //   categoryFilter: 'tools',
+  //   image: '/images/Tools/toolbox.png',
+  // },
 
   // HOUSEHOLD
   {
-    id: 'mixer',
+    id: 'cooker',
     categoryFilter: 'household',
-    image: '/images/Categories/mixer.png',
+    image: '/images/Household/mixer.png',
   },
   {
-    id: 'airpurifier',
+    id: 'fries',
     categoryFilter: 'household',
-    image: '/images/Categories/Cleaner1.png',
+    image: '/images/Household/fries-1.png',
   },
   {
-    id: 'speaker',
+    id: 'cookingwear',
     categoryFilter: 'household',
-    image: '/images/Categories/speakers.png',
+    image: '/images/Household/cookingwear.png',
   },
   {
-    id: 'party',
+    id: 'Burner',
     categoryFilter: 'household',
-    image: '/images/Categories/party.png',
+    image: '/images/Household/Burner.png',
   },
   {
-    id: 'lighting',
+    id: 'cleaner',
     categoryFilter: 'household',
-    image: '/images/Categories/party.png',
-  },
-  {
-    id: 'camera',
-    categoryFilter: 'household',
-    image: '/images/Categories/camera.png',
-  },
-  {
-    id: 'security',
-    categoryFilter: 'household',
-    image: '/images/Categories/camera.png',
+    image: '/images/Household/cleaner.png',
   },
 
   // MOVING
   {
     id: 'bike',
     categoryFilter: 'moving',
-    image: '/images/Categories/BikeCycle.png',
+    image: '/images/Moving/BikeCycle.png',
   },
   {
     id: 'generator',
     categoryFilter: 'moving',
-    image: '/images/Categories/Genrator.png',
+    image: '/images/Moving/Genrator.png',
   },
   {
-    id: 'printer',
+    id: 'move',
     categoryFilter: 'moving',
-    image: '/images/Categories/printer.png',
+    image: '/images/Moving/move.png',
   },
-
+  {
+    id: 'hand',
+    categoryFilter: 'moving',
+    image: '/images/Moving/hand.png',
+  },
+  {
+    id: 'hand-1',
+    categoryFilter: 'moving',
+    image: '/images/Moving/hand-1.png',
+  },
   // GARDEN
   {
-    id: 'tent',
+    id: 'lawn',
     categoryFilter: 'garden',
-    image: '/images/Categories/tent.png',
+    image: '/images/Garden/lawn.png',
   },
   {
-    id: 'outdoor',
+    id: 'saw',
     categoryFilter: 'garden',
-    image: '/images/Categories/BikeCycle.png',
+    image: '/images/Garden/saw.png',
   },
+  {
+    id: 'garden',
+    categoryFilter: 'garden',
+    image: '/images/Garden/garden.png',
+  },
+  {
+    id: 'water',
+    categoryFilter: 'garden',
+    image: '/images/Garden/water.png',
+  },
+  {
+    id: 'showel',
+    categoryFilter: 'garden',
+    image: '/images/Garden/showel.png',
+  },
+
+  // camping
+
   {
     id: 'tent',
     categoryFilter: 'camping',
-    image: '/images/Categories/tent.png',
+    image: '/images/Camping/tent-2.png',
   },
   {
-    id: 'camera',
-    categoryFilter: 'electronics',
-    image: '/images/Categories/camera.png',
+    id: 'chair',
+    categoryFilter: 'camping',
+    image: '/images/Camping/chair.png',
   },
   {
-    id: 'speaker',
-    categoryFilter: 'electronics',
-    image: '/images/Categories/speakers.png',
+    id: 'camp',
+    categoryFilter: 'camping',
+    image: '/images/Camping/camp.png',
   },
   {
-    id: 'printer',
+    id: 'selender',
+    categoryFilter: 'camping',
+    image: '/images/Camping/selender.png',
+  },
+
+  // Electronic
+
+  {
+    id: 'washer',
     categoryFilter: 'electronics',
-    image: '/images/Categories/printer.png',
+    image: '/images/Electronics/washer.png',
   },
   {
-    id: 'security',
+    id: 'washing',
     categoryFilter: 'electronics',
-    image: '/images/Categories/camera.png',
+    image: '/images/Electronics/washing.png',
+  },
+  {
+    id: 'juicer',
+    categoryFilter: 'electronics',
+    image: '/images/Electronics/juicer.png',
+  },
+  {
+    id: 'catle',
+    categoryFilter: 'electronics',
+    image: '/images/Electronics/catle.png',
+  },
+  {
+    id: 'electric',
+    categoryFilter: 'electronics',
+    image: '/images/Electronics/electric-item.png',
   },
 ];
 
